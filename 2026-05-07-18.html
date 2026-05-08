@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Briefing — 2026-05-07 18:00</title>
+	<style>
+		:root {
+			--text: #1f2937;
+			--bg: #f9fafb;
+			--border: #e5e7eb;
+			--accent: #3b82f6;
+			--up: #10b981;
+			--down: #ef4444;
+		}
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			background: var(--bg);
+			color: var(--text);
+			line-height: 1.6;
+			padding: 20px;
+		}
+		.container {
+			max-width: 860px;
+			margin: 0 auto;
+			background: white;
+			border-radius: 8px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+			overflow: hidden;
+		}
+		header {
+			background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+			color: white;
+			padding: 32px 24px;
+			text-align: center;
+		}
+		header h1 {
+			font-size: 28px;
+			margin-bottom: 8px;
+		}
+		header p {
+			font-size: 14px;
+			opacity: 0.9;
+		}
+		.content {
+			padding: 32px 24px;
+		}
+		section {
+			margin-bottom: 36px;
+		}
+		section h2 {
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 16px;
+			color: var(--text);
+			border-bottom: 2px solid var(--border);
+			padding-bottom: 10px;
+		}
+		section h3 {
+			font-size: 14px;
+			font-weight: 600;
+			margin-top: 20px;
+			margin-bottom: 12px;
+			color: #374151;
+		}
+		.market-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 16px;
+			margin-bottom: 16px;
+		}
+		.market-item {
+			border: 1px solid var(--border);
+			border-radius: 6px;
+			padding: 16px;
+			background: #fafafa;
+		}
+		.market-item .label {
+			font-size: 13px;
+			color: #6b7280;
+			margin-bottom: 4px;
+		}
+		.market-item .value {
+			font-size: 22px;
+			font-weight: bold;
+			color: var(--text);
+			margin-bottom: 4px;
+		}
+		.market-item .change {
+			font-size: 13px;
+			font-weight: 500;
+		}
+		.change.up { color: var(--up); }
+		.change.down { color: var(--down); }
+		.source-note {
+			font-size: 12px;
+			color: #9ca3af;
+			margin-top: 8px;
+		}
+		.news-list {
+			list-style: none;
+		}
+		.news-item {
+			margin-bottom: 20px;
+			padding-bottom: 16px;
+			border-bottom: 1px solid var(--border);
+		}
+		.news-item:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		.news-item h4 {
+			font-size: 14px;
+			font-weight: 600;
+			margin-bottom: 6px;
+		}
+		.news-item a {
+			color: var(--accent);
+			text-decoration: none;
+		}
+		.news-item a:hover { text-decoration: underline; }
+		.news-item p {
+			font-size: 13px;
+			color: #4b5563;
+			margin-bottom: 6px;
+		}
+		.news-source {
+			font-size: 12px;
+			color: #9ca3af;
+		}
+		.post-card {
+			border: 1px solid var(--border);
+			border-radius: 6px;
+			padding: 16px;
+			margin-bottom: 16px;
+			background: #fafafa;
+		}
+		.post-card .post-text {
+			font-size: 13px;
+			line-height: 1.6;
+			margin-bottom: 10px;
+			color: var(--text);
+		}
+		.post-card .post-time {
+			font-size: 12px;
+			color: #9ca3af;
+			margin-bottom: 8px;
+		}
+		.post-card a {
+			display: inline-block;
+			font-size: 12px;
+			color: var(--accent);
+			text-decoration: none;
+			padding: 6px 12px;
+			background: white;
+			border: 1px solid var(--border);
+			border-radius: 4px;
+			margin-top: 8px;
+		}
+		.post-card a:hover { background: #f3f4f6; }
+		.no-items {
+			font-size: 13px;
+			color: #9ca3af;
+			padding: 16px;
+			background: #f9fafb;
+			border-radius: 4px;
+			border-left: 3px solid var(--border);
+		}
+		footer {
+			background: #f3f4f6;
+			padding: 16px 24px;
+			font-size: 12px;
+			color: #9ca3af;
+			text-align: center;
+			border-top: 1px solid var(--border);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Briefing — 2026-05-07 18:00</h1>
+			<p>Market snapshot and news digest | Generated 2026-05-07 18:40 PDT</p>
+		</header>
+
+		<div class="content">
+			<!-- Market Snapshot Section -->
+			<section id="market">
+				<h2>Market Snapshot</h2>
+
+				<h3>Oil</h3>
+				<div class="market-grid">
+					<div class="market-item">
+						<div class="label">WTI Crude</div>
+						<div class="value">$94.81</div>
+						<div class="change down">↓ 0.28%</div>
+						<div class="source-note">As of May 7 | CNBC</div>
+					</div>
+					<div class="market-item">
+						<div class="label">Brent Crude</div>
+						<div class="value">$100.06</div>
+						<div class="change down">↓ ~1.0%</div>
+						<div class="source-note">As of May 7 | CNBC</div>
+					</div>
+				</div>
+
+				<h3>Gold</h3>
+				<div class="market-grid">
+					<div class="market-item">
+						<div class="label">Spot Gold (XAU/USD)</div>
+						<div class="value">$4,753</div>
+						<div class="change up">↑ 1.0%+</div>
+						<div class="source-note">As of May 7 | Multiple sources</div>
+					</div>
+				</div>
+
+				<h3>U.S. Equity Indices — Market Closed</h3>
+				<div class="market-grid">
+					<div class="market-item">
+						<div class="label">S&amp;P 500 (Close)</div>
+						<div class="value">7,337.11</div>
+						<div class="change down">↓ 0.38%</div>
+						<div class="source-note">May 7, 2026 | CNBC</div>
+					</div>
+					<div class="market-item">
+						<div class="label">Dow Jones (Close)</div>
+						<div class="value">49,596.97</div>
+						<div class="change down">↓ 0.63%</div>
+						<div class="source-note">May 7, 2026 | CNBC</div>
+					</div>
+					<div class="market-item">
+						<div class="label">Nasdaq Composite (Close)</div>
+						<div class="value">25,806.20</div>
+						<div class="change down">↓ 0.13%</div>
+						<div class="source-note">May 7, 2026 | CNBC</div>
+					</div>
+				</div>
+
+				<p style="font-size: 12px; color: #9ca3af; margin-top: 16px;">
+					<strong>Note:</strong> Market closed at 1:00 PM Pacific. Indices pulled back from record highs on May 6, with Energy (−1.95%) and Industrials (−1.66%) leading declines as investors awaited Iran's response to U.S. peace proposal. |
+					<a href="https://www.cnbc.com" style="color: #3b82f6;">CNBC</a>
+				</p>
+			</section>
+
+			<!-- Top Global Headlines -->
+			<section id="headlines">
+				<h2>Top Global Headlines</h2>
+				<ul class="news-list">
+					<li class="news-item">
+						<h4><a href="https://www.cnbc.com/2026/05/07/oil-prices-today-trump-iran-strait-of-hormuz-us-crude-brent-.html">U.S. and Iran Move Toward Peace Deal; Strait of Hormuz Remains Closed</a></h4>
+						<p>Negotiations accelerated on a memo to end the war, with discussions covering nuclear issues, asset unfreezing, and Strait of Hormuz security. Military escalation continued as both sides reported strikes, though oil prices fell on deal optimism.</p>
+						<div class="news-source">CNBC</div>
+					</li>
+					<li class="news-item">
+						<h4><a href="https://www.theglobeandmail.com/investing/markets/stocks/AMD/pressreleases/1776204/stock-market-news-for-may-7-2026/">AMD Surges 18.6% on Strong Earnings Beat; HawkEye 360 Debuts</a></h4>
+						<p>Advanced Micro Devices reported Q1 earnings of $1.37 per share, beating consensus of $1.30. Intelligence firm HawkEye 360 jumped 28% in its NYSE debut near $33.50.</p>
+						<div class="news-source">Yahoo Finance</div>
+					</li>
+					<li class="news-item">
+						<h4><a href="https://www.theasiacable.com/p/asia-daily-may-7-2026/">China Backs Iran Peace Push; Security Preparations Underway for Trump Visit</a></h4>
+						<p>Beijing urged Iran to pursue diplomatic resolution in talks with Foreign Minister Wang Yi. Security buildup visible on Beijing highways ahead of Trump's May 14–15 leadership summit with China.</p>
+						<div class="news-source">The Asia Cable</div>
+					</li>
+					<li class="news-item">
+						<h4><a href="https://finance.yahoo.com/markets/stocks/articles/tesla-xai-spacex-deals-reshape-100906354.html">Tesla Reports Continued Growth in China; April Sales Up 35.96% Year-Over-Year</a></h4>
+						<p>Tesla China wholesale sales reached 79,478 units in April, marking a sixth consecutive month of annual growth. However, April declined 7.23% month-over-month amid intensifying local competition.</p>
+						<div class="news-source">Yahoo Finance</div>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Topic Spotlights -->
+			<section id="spotlights">
+				<h2>Topic Spotlights</h2>
+
+				<h3>Tesla</h3>
+				<ul class="news-list">
+					<li class="news-item">
+						<h4><a href="https://www.teslarati.com/tesla-begins-factoring-international-designs-in-full-self-driving-visualization/">Tesla Brings Regional Vehicle Designs to Full Self-Driving</a></h4>
+						<p>Update 2026.14 now renders region-specific vehicles in FSD visualization—European owners see European-style cabs. NHTSA recognized 2026 Model Y as first vehicle to pass new ADAS benchmark.</p>
+						<div class="news-source">Teslarati</div>
+					</li>
+				</ul>
+
+				<h3>US–Iran Conflict</h3>
+				<ul class="news-list">
+					<li class="news-item">
+						<h4><a href="https://www.aljazeera.com/news/liveblog/2026/5/7/iran-war-live-trump-says-deal-with-tehran-possible-israel-bombs-beirut">Iran Accuses U.S. of Ceasefire Violation; Gas Prices Surge</a></h4>
+						<p>Iran's military said it retaliated after U.S. forces targeted an Iranian oil tanker. Strait of Hormuz closed since May 4 with no recorded transits. National average gas jumped to $4.56/gallon from $2.98/gallon before the war.</p>
+						<div class="news-source">Al Jazeera</div>
+					</li>
+				</ul>
+
+				<h3>Economy &amp; Markets</h3>
+				<ul class="news-list">
+					<li class="news-item">
+						<h4><a href="https://www.fool.com/coverage/stock-market-today/2026/05/07/stock-market-today-may-7-rally-falters-as-oil-prices-rise-again/">Initial Jobless Claims Rise Slightly; Earnings Beat Continues</a></h4>
+						<p>Initial unemployment filings totaled 200,000 for week ended May 2, up 10,000 but below 206,000 consensus. April job cuts climbed sharply; Whirlpool lost 21% after missing earnings and lowering FY guidance.</p>
+						<div class="news-source">The Motley Fool</div>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Elon Musk on X -->
+			<section id="elon-x">
+				<h2>Elon Musk on X — Last 12 Hours</h2>
+
+				<div class="post-card">
+					<div class="post-text"><strong>Cybertruck Engineering:</strong> "Only when you drive the Cybertruck do you realize how incredible it is: a bulletproof tank that moves like a million dollar sports car! Reason for the angular shape is that the thick, ultra-hard stainless steel body panels cannot be stamped like the thin, feeble, paper-strength mild steel of other trucks."</div>
+					<div class="post-time">12:01 PM PDT, May 7, 2026</div>
+					<a href="https://x.com/elonmusk/status/2052463759860576415">View on X</a>
+				</div>
+
+				<div class="post-card">
+					<div class="post-text"><strong>Tesla Semi Power Systems:</strong> Repost from Tesla Semi about powering refrigerated trailers and other equipment with up to 25kW from Semi's ePTO system.</div>
+					<div class="post-time">3:59 PM PDT, May 7, 2026</div>
+					<a href="https://x.com/elonmusk/status/2052523667612135845">View on X</a>
+				</div>
+
+				<div class="post-card">
+					<div class="post-text"><strong>Grok Voice for Support:</strong> "Try Grok Voice for your customer support" — Repost from xAI highlighting Grok Voice Think Fast 1.0's ability to handle complex workflows with speed and accuracy in hard-to-hear environments.</div>
+					<div class="post-time">4:24 PM PDT, May 7, 2026</div>
+					<a href="https://x.com/elonmusk/status/2052530063913189879">View on X</a>
+				</div>
+			</section>
+
+		</div>
+
+		<footer>
+			<p>Generated by Cowork briefing job | 2026-05-07 18:40:13 PDT</p>
+		</footer>
+	</div>
+</body>
+</html>
