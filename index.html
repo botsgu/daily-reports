@@ -76,12 +76,6 @@
             font-size: 12px;
             margin-top: 4px;
         }
-        
-        .empty {
-            text-align: center;
-            color: #999;
-            padding: 40px 20px;
-        }
     </style>
 </head>
 <body>
@@ -89,45 +83,12 @@
         <h1>📊 Daily Reports</h1>
         <p class="subtitle">Morning briefing reports with market data, news, and insights</p>
         
-        <ul class="reports-list" id="reportsList">
-            <li class="empty">Loading reports...</li>
+        <ul class="reports-list">
+            <li class="report-item">
+                <a href="2026-05-07-am.html" class="report-link">2026-05-07-am.html</a>
+                <div class="report-date">May 7, 2026 - Morning Report</div>
+            </li>
         </ul>
     </div>
-    
-    <script>
-        // Fetch the directory listing
-        fetch('.')
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const links = Array.from(doc.querySelectorAll('a'))
-                    .map(a => a.getAttribute('href'))
-                    .filter(href => href && href.endsWith('.html') && !href.includes('index'));
-                
-                const list = document.getElementById('reportsList');
-                list.innerHTML = '';
-                
-                if (links.length === 0) {
-                    list.innerHTML = '<li class="empty">No reports available yet</li>';
-                    return;
-                }
-                
-                links.sort().reverse().forEach(href => {
-                    const li = document.createElement('li');
-                    li.className = 'report-item';
-                    li.innerHTML = `
-                        <a href="${href}" class="report-link">${href}</a>
-                        <div class="report-date">Report file</div>
-                    `;
-                    list.appendChild(li);
-                });
-            })
-            .catch(error => {
-                const list = document.getElementById('reportsList');
-                list.innerHTML = '<li class="empty">Unable to load reports</li>';
-                console.error('Error:', error);
-            });
-    </script>
 </body>
 </html>
