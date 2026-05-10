@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — 2026-05-09 20:00</title>
+<style>
+  :root {
+    --fg: #1a1a1a;
+    --muted: #666;
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --border: #e5e5e2;
+    --accent: #2a5b8a;
+    --up: #1a7a3e;
+    --down: #b32424;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  header.page {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+  }
+  header.page h1 {
+    margin: 0 0 6px 0;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  header.page .meta {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  section h2 {
+    margin: 0 0 14px 0;
+    font-size: 20px;
+    letter-spacing: -0.005em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  section h3 {
+    margin: 18px 0 8px 0;
+    font-size: 16px;
+    color: var(--accent);
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ol.headlines, ol.spotlight { padding-left: 22px; margin: 0; }
+  ol.headlines li, ol.spotlight li { margin-bottom: 14px; }
+  .src {
+    color: var(--muted);
+    font-size: 13px;
+    margin-left: 4px;
+  }
+  .pubtime {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: 6px;
+  }
+  .summary {
+    margin-top: 4px;
+    color: #333;
+  }
+  /* Market snapshot grid */
+  .snapshot {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .quote {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: #fafafa;
+  }
+  .quote .name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+  }
+  .quote .label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-left: 6px;
+  }
+  .quote .price {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .quote .change.up { color: var(--up); }
+  .quote .change.down { color: var(--down); }
+  .quote .asof {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .sources {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+  /* Elon cards */
+  .post {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    background: #fafafa;
+  }
+  .post .ph {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .post .body {
+    white-space: pre-wrap;
+    font-size: 15px;
+  }
+  .post .actions {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  footer.page {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 20px 14px 40px; }
+    section { padding: 16px 16px; }
+    header.page h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>Briefing — 2026-05-09 20:00</h1>
+    <div class="meta">Saturday · Generated 2026-05-09 20:50 PT · U.S. equity markets closed (weekend)</div>
+  </header>
+
+  <section>
+    <h2>Market Snapshot</h2>
+    <div class="snapshot">
+      <div class="quote">
+        <div><span class="name">WTI Crude</span><span class="label">Friday Close</span></div>
+        <div class="price">$95.42</div>
+        <div class="asof">per barrel · weekly loss &gt;6%</div>
+      </div>
+      <div class="quote">
+        <div><span class="name">Brent Crude</span><span class="label">Friday Close</span></div>
+        <div class="price">$101.29</div>
+        <div class="asof">per barrel · weekly loss &gt;6%</div>
+      </div>
+      <div class="quote">
+        <div><span class="name">Gold (Spot XAU/USD)</span><span class="label">May 8 Close</span></div>
+        <div class="price">$4,732.66</div>
+        <div class="change up">+0.63% on the day</div>
+        <div class="asof">as of May 8, 2026 (Trading Economics: $4,715.85; Fortune intraday $4,740.37)</div>
+      </div>
+      <div class="quote">
+        <div><span class="name">S&amp;P 500</span><span class="label">Friday Close</span></div>
+        <div class="price">7,398.93</div>
+        <div class="change up">+0.84% · new record</div>
+        <div class="asof">close on May 8, 2026</div>
+      </div>
+      <div class="quote">
+        <div><span class="name">Dow Jones Industrial Average</span><span class="label">Friday Close</span></div>
+        <div class="price">49,609.16</div>
+        <div class="change up">+12.19 (+0.02%)</div>
+        <div class="asof">close on May 8, 2026</div>
+      </div>
+      <div class="quote">
+        <div><span class="name">Nasdaq Composite</span><span class="label">Friday Close</span></div>
+        <div class="price">26,247.08</div>
+        <div class="change up">+1.71% · new record</div>
+        <div class="asof">close on May 8, 2026</div>
+      </div>
+    </div>
+    <div class="sources">
+      Sources:
+      <a href="https://www.cnbc.com/2026/05/07/stock-market-today-live-updates.html">CNBC — Stock market May 8, 2026</a> ·
+      <a href="https://www.thestreet.com/latest-news/stock-market-today-may-8-2026-updates">TheStreet — Stock market May 8, 2026</a> ·
+      <a href="https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html">CNBC — Oil prices May 8, 2026</a> ·
+      <a href="https://fortune.com/article/current-price-of-gold-05-08-2026/">Fortune — Gold price May 8, 2026</a> ·
+      <a href="https://tradingeconomics.com/commodity/gold">Trading Economics — Gold</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Top Global Headlines</h2>
+    <ol class="headlines">
+      <li>
+        <a href="https://www.cnn.com/2026/05/09/world/live-news/iran-war-news">Iran vows to retaliate against U.S. if its ships face further attacks during ceasefire</a>
+        <span class="src">— CNN</span><span class="pubtime">· 2026-05-09 (live updates) PT</span>
+        <div class="summary">Tehran warned of a "heavy assault" on U.S. assets in the region as both sides traded strikes around the Strait of Hormuz, while Washington awaits Iran's reply to a U.S. proposal.</div>
+      </li>
+      <li>
+        <a href="https://www.cnbc.com/2026/05/09/us-and-iran-are-no-closer-to-ending-war-tehrans-response-awaited.html">U.S. and Iran no closer to ending war as Qatari LNG tanker sails toward Hormuz</a>
+        <span class="src">— CNBC</span><span class="pubtime">· 2026-05-09 PT</span>
+        <div class="summary">Secretary Rubio said a response was expected within hours, but a day later there was no sign of movement. A Qatari LNG vessel heading for the strait would be the first such transit since the conflict began.</div>
+      </li>
+      <li>
+        <a href="https://www.thestreet.com/latest-news/stock-market-today-may-8-2026-updates">Stocks jump to fresh records as April jobs report tops estimates</a>
+        <span class="src">— TheStreet</span><span class="pubtime">· 2026-05-08 PT</span>
+        <div class="summary">The S&amp;P 500 and Nasdaq closed at all-time highs after a stronger-than-expected April payrolls print (115k vs. 65k expected); unemployment held at 4.3%.</div>
+      </li>
+      <li>
+        <a href="https://www.cnbc.com/2026/05/09/spacex-ipo-jim-cramer-linde-stock-winner.html">SpaceX IPO seen as a boon to industrial gases supplier Linde</a>
+        <span class="src">— CNBC</span><span class="pubtime">· 2026-05-09 PT</span>
+        <div class="summary">Coverage of an upcoming SpaceX IPO highlighted Linde as an indirect beneficiary, given its role supplying liquid oxygen and other industrial gases used in launch operations.</div>
+      </li>
+      <li>
+        <a href="https://www.aljazeera.com/news/liveblog/2026/5/9/iran-war-live-tehrans-reply-to-us-deal-expected-amid-clashes-in-hormuz">Hezbollah claims 26 attacks Friday, including two strikes inside Israel</a>
+        <span class="src">— Al Jazeera</span><span class="pubtime">· 2026-05-09 PT</span>
+        <div class="summary">The Iran-backed group publicly claimed cross-border strikes for the first time since the mid-April truce, raising concerns about widening of the conflict.</div>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Topic Spotlights</h2>
+
+    <h3>Tesla</h3>
+    <ol class="spotlight">
+      <li>
+        <a href="https://www.notateslaapp.com/news/3461/teslas-roadmap-for-2026">End of an era: last Model S and Model X units rolling off the line</a>
+        <span class="src">— Not a Tesla App</span><span class="pubtime">· time unknown</span>
+        <div class="summary">Tesla is preparing a celebration event in May to mark the end of Model S/X production, with Signature Edition trims as the final units before Fremont retools toward Optimus and other mass-market projects.</div>
+      </li>
+      <li>
+        <a href="https://www.heygotrade.com/en/blog/Tesla-TSLA-May-2026-Buy-Hold-Or-Sell-Delivery-Slowdown/">Robotaxi expanding; FSD subscribers reach 1.3M in Q1</a>
+        <span class="src">— HeyGoTrade</span><span class="pubtime">· time unknown</span>
+        <div class="summary">Tesla's robotaxi service is now live in Austin, Dallas and Houston, with management guiding to roughly a dozen U.S. states by year-end. FSD paid subscribers were reported at ~1.3 million.</div>
+      </li>
+      <li>
+        <a href="https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q1-2026-Update.pdf">2026 Model Y first vehicle to pass NHTSA's new ADAS benchmark</a>
+        <span class="src">— Tesla / NHTSA</span><span class="pubtime">· time unknown</span>
+        <div class="summary">NHTSA's updated New Car Assessment Program included eight ADAS evaluations; Model Y reportedly passed all eight, the first vehicle to clear the new bar.</div>
+      </li>
+    </ol>
+
+    <h3>U.S.–Iran</h3>
+    <ol class="spotlight">
+      <li>
+        <a href="https://www.cnn.com/2026/05/09/world/live-news/iran-war-news">Iran threatens "heavy assault" if its ships are hit again</a>
+        <span class="src">— CNN</span><span class="pubtime">· 2026-05-09 PT</span>
+        <div class="summary">IRGC Aerospace Force commander Gen. Mousavi said Iranian missiles and drones are "locked on American targets" and awaiting orders to fire, raising the temperature of an already fragile ceasefire.</div>
+      </li>
+      <li>
+        <a href="https://www.aljazeera.com/news/2026/5/8/what-we-know-about-irans-response-to-the-latest-us-ceasefire-proposal">What we know about Iran's response to the latest U.S. ceasefire proposal</a>
+        <span class="src">— Al Jazeera</span><span class="pubtime">· 2026-05-08 PT</span>
+        <div class="summary">Tehran is reviewing a U.S. proposal said to address the Strait of Hormuz first, with nuclear questions deferred. Witkoff and Rubio met Qatar's PM in Miami; a Qatari LNG tanker is approaching the strait.</div>
+      </li>
+      <li>
+        <a href="https://www.cnn.com/2026/05/05/world/live-news/iran-war-news">Trump pauses U.S. effort to escort ships through Hormuz while blockade remains</a>
+        <span class="src">— CNN</span><span class="pubtime">· 2026-05-05 PT</span>
+        <div class="summary">The administration suspended escort operations as the strait remained effectively blockaded, leaving merchant traffic exposed and oil markets jumpy.</div>
+      </li>
+    </ol>
+
+    <h3>Economy &amp; Markets</h3>
+    <ol class="spotlight">
+      <li>
+        <a href="https://www.thestreet.com/latest-news/stock-market-today-may-8-2026-updates">April jobs print of 115k topples expectations</a>
+        <span class="src">— TheStreet</span><span class="pubtime">· 2026-05-08 PT</span>
+        <div class="summary">Healthcare and transportation/warehousing led gains; March and April were the first back-to-back six-figure prints since late 2024. Unemployment steady at 4.3%.</div>
+      </li>
+      <li>
+        <a href="https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html">Nvidia's AI equity bets surpass $40 billion in 2026</a>
+        <span class="src">— CNBC</span><span class="pubtime">· 2026-05-09 PT</span>
+        <div class="summary">Nvidia disclosed deals including up to $2.1 billion to data-center operator IREN, broadening its strategy of capitalizing customers and partners. AMD shares jumped 11.4% on May 7 on related optimism.</div>
+      </li>
+      <li>
+        <a href="https://www.usbank.com/investing/financial-perspectives/market-news/is-a-market-correction-coming.html">Consumer sentiment slumps on energy-price shock</a>
+        <span class="src">— U.S. Bank Wealth Management</span><span class="pubtime">· time unknown</span>
+        <div class="summary">University of Michigan's preliminary May reading printed 48.2, down 3.2% from April, as gasoline prices surged on the Iran conflict.</div>
+      </li>
+    </ol>
+
+    <h3>China</h3>
+    <ol class="spotlight">
+      <li>
+        <a href="http://global.chinadaily.com.cn/">May Day box office tops 750 million yuan, beating 2025</a>
+        <span class="src">— China Daily</span><span class="pubtime">· time unknown</span>
+        <div class="summary">China's 2026 Labor Day holiday box office closed above ~$110M-equivalent, surpassing the same period last year, signaling resilience in domestic discretionary spend.</div>
+      </li>
+      <li>
+        <a href="http://global.chinadaily.com.cn/">Hangzhou deploys "robot police squadron" for traffic management during holiday</a>
+        <span class="src">— China Daily</span><span class="pubtime">· time unknown</span>
+        <div class="summary">During the Labor Day holiday, Hangzhou rolled out a fully operational robot squad to assist with traffic enforcement at key intersections — a continued public push on civic robotics.</div>
+      </li>
+      <li>
+        <a href="http://global.chinadaily.com.cn/">Chang'e-8 lunar lander to deploy a robot for instrument installation</a>
+        <span class="src">— China Daily</span><span class="pubtime">· time unknown</span>
+        <div class="summary">Chinese space program details indicate a robot will transport, deploy and install instruments and sensors at lunar locations after the Chang'e-8 probe lands.</div>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Elon Musk on X — Last 12 Hours</h2>
+
+    <div class="post">
+      <div class="ph">2026-05-09 16:29 PT · 4h ago · @elonmusk</div>
+      <div class="body">Grok Imagine</div>
+      <div class="actions"><a href="https://x.com/elonmusk/status/2053255966062432742">View post →</a></div>
+    </div>
+
+    <div class="post">
+      <div class="ph">2026-05-09 15:46 PT · 5h ago · @elonmusk reposted @XFreeze</div>
+      <div class="body">Reposted: Starlink hits all-time high U.S. speeds per Ookla — median downloads above 100 Mbps in 49 states, with cable-tier or better performance for many users (paraphrased).</div>
+      <div class="actions"><a href="https://x.com/XFreeze/status/2053245202605969664">View post →</a></div>
+    </div>
+
+    <div class="post">
+      <div class="ph">2026-05-09 14:47 PT · 6h ago · @elonmusk</div>
+      <div class="body">(Media-only post — no text body captured.)</div>
+      <div class="actions"><a href="https://x.com/elonmusk/status/2053230433299771580">View post →</a></div>
+    </div>
+
+    <div class="post">
+      <div class="ph">2026-05-09 14:45 PT · 6h ago · @elonmusk</div>
+      <div class="body">Full stack engineering</div>
+      <div class="actions"><a href="https://x.com/elonmusk/status/2053229960849211692">View post →</a></div>
+    </div>
+
+    <div class="post">
+      <div class="ph">2026-05-09 13:36 PT · 7h ago · @elonmusk</div>
+      <div class="body">True</div>
+      <div class="actions"><a href="https://x.com/elonmusk/status/2053212658212700286">View post →</a></div>
+    </div>
+
+    <div class="post">
+      <div class="ph">2026-05-09 12:04 PT · 8h ago · @elonmusk reposted @ArthurMacwaters</div>
+      <div class="body">Reposted: "Sufficiently advanced engineering is indistinguishable from art."</div>
+      <div class="actions"><a href="https://x.com/ArthurMacwaters/status/2053189445407658093">View post →</a></div>
+    </div>
+
+  </section>
+
+  <footer class="page">
+    Generated by Cowork briefing job · 2026-05-09 20:50 PT
+  </footer>
+</div>
+</body>
+</html>
