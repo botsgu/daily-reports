@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing — 2026-05-17 23:00</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+            background: #f9f9f9;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            padding: 40px;
+        }
+
+        header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .header-meta {
+            font-size: 13px;
+            color: #666;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #000;
+            border-left: 4px solid #1d9bf0;
+            padding-left: 12px;
+        }
+
+        h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            color: #000;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .market-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 16px;
+            background: #fafafa;
+        }
+
+        .market-card-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .market-card-value {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .market-card-change {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .positive {
+            color: #17bf63;
+        }
+
+        .negative {
+            color: #e7165f;
+        }
+
+        .market-card-note {
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 8px;
+            margin-top: 8px;
+        }
+
+        .sources {
+            font-size: 12px;
+            color: #666;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .sources a {
+            color: #1d9bf0;
+            text-decoration: none;
+        }
+
+        .sources a:hover {
+            text-decoration: underline;
+        }
+
+        .news-list {
+            list-style: none;
+        }
+
+        .news-item {
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-headline {
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .news-headline a {
+            color: #1d9bf0;
+            text-decoration: none;
+        }
+
+        .news-headline a:hover {
+            text-decoration: underline;
+        }
+
+        .news-meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .news-source {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .news-time {
+            color: #999;
+            font-size: 0.9em;
+            margin-left: 4px;
+        }
+
+        .news-summary {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 0;
+        }
+
+        .post-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 16px;
+            background: #fafafa;
+        }
+
+        .post-text {
+            font-size: 14px;
+            color: #000;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .post-timestamp {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .post-link {
+            font-size: 12px;
+        }
+
+        .post-link a {
+            color: #1d9bf0;
+            text-decoration: none;
+        }
+
+        .post-link a:hover {
+            text-decoration: underline;
+        }
+
+        .no-items {
+            font-style: italic;
+            color: #999;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Briefing — 2026-05-17 23:00</h1>
+            <div class="header-meta">Saturday, May 17, 2026 at 11:37 PM PT (Markets Closed)</div>
+        </header>
+
+        <section id="market-snapshot">
+            <h2>Market Snapshot</h2>
+            <p style="font-size: 13px; color: #666; margin-bottom: 16px; background: #f5f5f5; padding: 12px; border-left: 3px solid #ffc933;">
+                <strong>Note:</strong> Markets are closed (Saturday evening). Data reflects Friday, May 15, 2026 closing prices.
+            </p>
+
+            <div class="market-grid">
+                <div class="market-card">
+                    <div class="market-card-title">WTI Crude Oil</div>
+                    <div class="market-card-value">$106.00</div>
+                    <div class="market-card-change positive">↑ 4.5% (Friday)</div>
+                    <div class="market-card-note">Continued gains from Strait of Hormuz closure concerns</div>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-card-title">Brent Crude Oil</div>
+                    <div class="market-card-value">$109.26</div>
+                    <div class="market-card-change positive">↑ 3.35%</div>
+                    <div class="market-card-note">Rose above $109 on Friday; +8.1% weekly</div>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-card-title">Gold Spot</div>
+                    <div class="market-card-value">$4,532</div>
+                    <div class="market-card-change">As of May 15 close</div>
+                    <div class="market-card-note">Last trading day (Friday), bid/ask around $4,532–$4,540</div>
+                </div>
+            </div>
+
+            <div class="market-grid">
+                <div class="market-card">
+                    <div class="market-card-title">S&P 500</div>
+                    <div class="market-card-value">7,408.50</div>
+                    <div class="market-card-change negative">↓ 1.24%</div>
+                    <div class="market-card-note">Friday close (May 15, 2026)</div>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-card-title">Dow Jones Industrial</div>
+                    <div class="market-card-value">49,526.17</div>
+                    <div class="market-card-change negative">↓ 1.07%</div>
+                    <div class="market-card-note">Friday close; off 537 points</div>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-card-title">Nasdaq Composite</div>
+                    <div class="market-card-value">26,225.14</div>
+                    <div class="market-card-change negative">↓ 1.54%</div>
+                    <div class="market-card-note">Friday close; tech weakness</div>
+                </div>
+            </div>
+
+            <div class="sources">
+                <strong>Sources:</strong>
+                <a href="https://finance.yahoo.com/quote/%5EGSPC/history/">Yahoo Finance</a>,
+                <a href="https://www.investing.com/commodities/crude-oil-historical-data">Investing.com</a>,
+                <a href="https://www.cnbc.com/2026/05/14/stock-market-today-live-updates.html">CNBC</a>
+            </div>
+        </section>
+
+        <section id="headlines">
+            <h2>Top Global Headlines</h2>
+            <ol class="news-list" style="list-style-position: inside;">
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.usnews.com/news/top-news/articles/2026-05-17/china-to-buy-at-least-17-billion-in-us-agricultural-products-annually-white-house-says">Trump-Xi Summit: China to Buy $17 Billion in U.S. Agricultural Products Annually</a></div>
+                    <div class="news-meta"><span class="news-source">U.S. News &amp; World Report</span><span class="news-time">2026-05-17 — time from summit</span></div>
+                    <div class="news-summary">President Trump and President Xi reached consensus during a state visit to China, including major agricultural purchases and restoration of market access for U.S. beef. Both leaders agreed Iran cannot have nuclear weapons and committed to reopening the Strait of Hormuz.</div>
+                </li>
+
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/16/iran-war-live-lebanon-israel-extend-truce-tehran-ready-for-more-us-talks">Ceasefire on 'Massive Life Support': Israel and U.S. Prep for Renewed Iran Operations</a></div>
+                    <div class="news-meta"><span class="news-source">Al Jazeera</span><span class="news-time">2026-05-16 — 2026-05-17 13:00 PT</span></div>
+                    <div class="news-summary">Israel and the U.S. are carrying out intense preparations to renew attacks on Iran, possibly within days. Trump called Iran's counterproposal "unacceptable," citing demands for compensation and control of the Strait of Hormuz. The 74-day conflict has already cost $29 billion.</div>
+                </li>
+
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.cnbc.com/2026/05/17/stock-market-today-live-updates.html">Oil Spikes to Two-Week High Following UAE Nuclear Plant Drone Attack</a></div>
+                    <div class="news-meta"><span class="news-source">CNBC</span><span class="news-time">2026-05-17 — morning PT</span></div>
+                    <div class="news-summary">WTI crude futures climbed to $107.26 (+1.8%) and Brent rose to $110.47 (+1.1%) after a drone attack targeted a nuclear power plant in the United Arab Emirates. The incident escalated Middle East tensions and led traders to abandon hopes for Fed rate cuts in 2026. Dow Jones futures fell 417 points.</div>
+                </li>
+
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.notateslaapp.com/software-updates/version/2026.14.6.6/release-notes">Tesla Rolls Out FSD V14.3.3 with 33% Faster Actually Smart Summon</a></div>
+                    <div class="news-meta"><span class="news-source">Electrek / NoTeslaApp</span><span class="news-time">2026-05-17 — today PT</span></div>
+                    <div class="news-summary">Tesla released FSD V14.3.3 (software version 2026.14.6.6) featuring a 33% speed increase to Actually Smart Summon, now capping at 8 mph (up from 6 mph). The update merges Spring 2026 features with the FSD branch for the first time. Tesla also raised Model Y prices by $1,000.</div>
+                </li>
+            </ol>
+        </section>
+
+        <section id="topic-spotlights">
+            <h2>Topic Spotlights</h2>
+
+            <h3>Tesla</h3>
+            <ul class="news-list">
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.notateslaapp.com/software-updates/version/2026.14.6.6/release-notes">FSD V14.3.3 Software Update: Speed Boost and New Self-Driving App</a></div>
+                    <div class="news-meta"><span class="news-source">Electrek</span><span class="news-time">2026-05-17 — today PT</span></div>
+                    <div class="news-summary">FSD V14.3.3 increases Actually Smart Summon speed by 33% to 8 mph. New Self-Driving app allows single-tap subscription and enables users to view usage stats. Stock currently trading at $418.57.</div>
+                </li>
+            </ul>
+
+            <h3>US–Iran Conflict</h3>
+            <ul class="news-list">
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/16/iran-war-live-lebanon-israel-extend-truce-tehran-ready-for-more-us-talks">Fragile Ceasefire at Risk: Trump Rejects Iran Proposal, Preparations Underway for Renewed Strikes</a></div>
+                    <div class="news-meta"><span class="news-source">Al Jazeera</span><span class="news-time">2026-05-16/17 — 2026-05-17 13:00 PT</span></div>
+                    <div class="news-summary">Trump administration dismissed Iran's counterproposal as "unacceptable" after Tehran demanded compensation and control of the Strait of Hormuz. Israel and U.S. preparing for possible renewed military operations. Ceasefire begun mid-April remains on precarious footing.</div>
+                </li>
+
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/16/iran-war-live-lebanon-israel-extend-truce-tehran-ready-for-more-us-talks">Drone Attack on UAE Nuclear Facility Escalates Regional Tensions</a></div>
+                    <div class="news-meta"><span class="news-source">CNBC / Al Jazeera</span><span class="news-time">2026-05-17 — morning PT</span></div>
+                    <div class="news-summary">Unmanned drone struck a UAE nuclear power plant, raising fears of broader Middle East escalation. Incident pushed oil prices to two-week highs and rattled global markets.</div>
+                </li>
+            </ul>
+
+            <h3>Economy &amp; Markets</h3>
+            <ul class="news-list">
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.cnbc.com/2026/05/17/stock-market-today-live-updates.html">Markets Slide on Inflation Data and Energy Crisis; Earnings Season Looms</a></div>
+                    <div class="news-meta"><span class="news-source">CNBC / TheStreet</span><span class="news-time">2026-05-17 — morning PT</span></div>
+                    <div class="news-summary">Friday's decline (S&P -1.24%, Dow -1.07%, Nasdaq -1.54%) reflects accelerating inflation data and region tensions spiking oil. Traders have fully ruled out Fed rate cuts for 2026. Nvidia earnings due Wednesday; Target and Walmart earnings follow.</div>
+                </li>
+            </ul>
+
+            <h3>China</h3>
+            <ul class="news-list">
+                <li class="news-item">
+                    <div class="news-headline"><a href="https://www.usnews.com/news/top-news/articles/2026-05-17/china-to-buy-at-least-17-billion-in-us-agricultural-products-annually-white-house-says">Trump-Xi Summit Produces Major Trade Wins: Agricultural Deal and Market Access Restored</a></div>
+                    <div class="news-meta"><span class="news-source">U.S. News &amp; World Report / White House</span><span class="news-time">2026-05-17 — today PT</span></div>
+                    <div class="news-summary">China committed to purchasing at least $17 billion annually in U.S. agricultural products (2026 prorated, 2027, 2028). Market access restored for over 400 U.S. beef facilities; poultry imports resuming. Trump and Xi agreed on reopening Strait of Hormuz and preventing Iranian nuclear weapons. Fall return visit to Washington planned.</div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="elon-musk-x">
+            <h2>Elon Musk on X — Last 12 Hours</h2>
+            <p style="font-size: 13px; color: #666; margin-bottom: 16px;">Search conducted at 2026-05-17 23:37 PT. Retrieved posts from approximately 1:37 PM PT onward.</p>
+
+            <div class="post-card">
+                <div class="post-text">𝕏 now has over a billion downloads</div>
+                <div class="post-timestamp">2026-05-17 13:37 PT (approx. 10 hours ago)</div>
+                <div class="post-link">
+                    <a href="https://x.com/elonmusk/status/2056105680294297797">Direct link to post</a>
+                </div>
+                <div style="font-size: 12px; color: #999; margin-top: 8px;">
+                    This was a quote post reacting to <strong>@teslaownersSV</strong>'s announcement that X has exceeded 1 billion downloads with a 4.3-star rating across 22.9 million reviews. Post highlights the platform's transformation under Musk's leadership.
+                </div>
+            </div>
+
+            <p class="no-items" style="margin-top: 16px;">
+                Only one post found in the past 12 hours. Elon has not posted additional items since approximately 1:37 PM PT on May 17, 2026. Profile primarily displays older pinned and quoted posts.
+            </p>
+        </section>
+
+        <footer>
+            <p>Generated by Cowork briefing job on 2026-05-17 at 23:37 PT</p>
+        </footer>
+    </div>
+</body>
+</html>
