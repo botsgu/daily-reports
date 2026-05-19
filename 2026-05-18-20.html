@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — 2026-05-18 20:00</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #666;
+    --border: #e5e5e0;
+    --accent: #2b5cb8;
+    --up: #1a7f37;
+    --down: #c0392b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px 48px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+  }
+  header h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  header .meta { color: var(--muted); font-size: 14px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 22px;
+  }
+  section h2 {
+    margin: 0 0 14px;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    color: var(--accent);
+  }
+  section h3 {
+    margin: 18px 0 8px;
+    font-size: 16px;
+    color: #333;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .tile {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: #fbfbf8;
+  }
+  .tile .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .tile .val {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .tile .chg { font-size: 13px; margin-top: 2px; }
+  .tile .asof {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .up { color: var(--up); }
+  .down { color: var(--down); }
+  .news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .news-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .news-list li:last-child { border-bottom: none; }
+  .headline {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--accent);
+  }
+  .headline:hover { text-decoration: underline; }
+  .meta-line {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .summary {
+    margin-top: 4px;
+    font-size: 14.5px;
+    color: #333;
+  }
+  .x-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    background: #fbfbf8;
+  }
+  .x-card .x-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .x-card .x-body {
+    font-size: 14.5px;
+    white-space: pre-wrap;
+  }
+  .x-card a { color: var(--accent); }
+  footer {
+    margin-top: 36px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+  .src-line {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .src-line a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Briefing — 2026-05-18 20:00</h1>
+  <div class="meta">Generated Monday, May 18, 2026 · 20:00 PT (evening run)</div>
+</header>
+
+<section>
+  <h2>Market Snapshot</h2>
+  <div class="grid">
+    <div class="tile">
+      <div class="label">S&amp;P 500 — Close</div>
+      <div class="val">7,403.05</div>
+      <div class="chg down">−0.07%</div>
+      <div class="asof">As of 2026-05-18 close · Reuters/TheStreet</div>
+    </div>
+    <div class="tile">
+      <div class="label">Dow Jones — Close</div>
+      <div class="val">49,686.12</div>
+      <div class="chg up">+0.32% (+159.95)</div>
+      <div class="asof">As of 2026-05-18 close · TheStreet</div>
+    </div>
+    <div class="tile">
+      <div class="label">Nasdaq Composite — Close</div>
+      <div class="val">26,090.73</div>
+      <div class="chg down">−0.51%</div>
+      <div class="asof">As of 2026-05-18 close · TheStreet</div>
+    </div>
+    <div class="tile">
+      <div class="label">WTI Crude — Front-month</div>
+      <div class="val">~$105 / bbl</div>
+      <div class="chg">Volatile; spiked above $108 intraday</div>
+      <div class="asof">As of 2026-05-18 · Trading Economics</div>
+    </div>
+    <div class="tile">
+      <div class="label">Brent Crude — Front-month</div>
+      <div class="val">~$102 / bbl</div>
+      <div class="chg">Spiked above $111 intraday before easing</div>
+      <div class="asof">As of 2026-05-18 · Trading Economics</div>
+    </div>
+    <div class="tile">
+      <div class="label">Gold — Spot</div>
+      <div class="val">$4,542 / oz</div>
+      <div class="chg down">−0.12%</div>
+      <div class="asof">As of 2026-05-18 · Trading Economics / Fortune</div>
+    </div>
+  </div>
+  <div class="src-line">
+    Sources:
+    <a href="https://www.thestreet.com/latest-news/stock-market-today-may-18-2026-updates" target="_blank" rel="noopener">TheStreet</a> ·
+    <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener">TradingEconomics WTI</a> ·
+    <a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank" rel="noopener">TradingEconomics Brent</a> ·
+    <a href="https://tradingeconomics.com/commodity/gold" target="_blank" rel="noopener">TradingEconomics Gold</a> ·
+    <a href="https://fortune.com/article/current-price-of-gold-05-18-2026/" target="_blank" rel="noopener">Fortune (gold)</a>
+  </div>
+</section>
+
+<section>
+  <h2>Top Global Headlines</h2>
+  <ol class="news-list">
+    <li>
+      <a class="headline" href="https://www.aljazeera.com/amp/news/liveblog/2026/5/18/iran-war-live-trump-warns-clock-ticking-saudi-uae-report-drone-attacks" target="_blank" rel="noopener">Trump says Gulf states asked U.S. to hold off planned Iran strike</a>
+      <div class="meta-line">Al Jazeera · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Trump said Qatar, Saudi Arabia and the UAE asked him to delay a Tuesday strike on Iran to allow for negotiations. Iran reportedly sent a response to the latest U.S. proposal via Pakistan.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://www.thestreet.com/latest-news/stock-market-today-may-18-2026-updates" target="_blank" rel="noopener">U.S. stocks mixed as 10-year yield hits one-year high</a>
+      <div class="meta-line">TheStreet · <span style="color:#666;font-size:0.9em">2026-05-18 (close)</span></div>
+      <div class="summary">S&amp;P 500 and Nasdaq logged a second straight day of losses while the Dow gained 159.95 points; rising oil and bond yields stoked Fed-hike worries.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://www.caixinglobal.com/2026-05-18/cover-story-beijing-summit-signals-a-reset-in-us-china-relations-102444817.html" target="_blank" rel="noopener">Beijing summit signals reset in U.S.–China relations</a>
+      <div class="meta-line">Caixin Global · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Xi and Trump described a framework of "constructive strategic stability" after their summit; China committed to at least $17B in U.S. agricultural purchases over three years.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://www.cnn.com/2026/05/18/world/video/iran-tehran-call-to-arms-chance-intldsk" target="_blank" rel="noopener">Iranians urged to prepare for war as rallies spread</a>
+      <div class="meta-line">CNN · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">State-sponsored rallies expanded across Iran, with weapons training in public squares and on state TV as anti-U.S. chants intensified.</div>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>Topic Spotlights</h2>
+
+  <h3>Tesla</h3>
+  <ol class="news-list">
+    <li>
+      <a class="headline" href="https://www.tradingkey.com/news/market-movers/261906945-market-movers-tsla-20260518" target="_blank" rel="noopener">Tesla (TSLA) drops 3.04% to $422.24 on weak China sales</a>
+      <div class="meta-line">TradingKey · <span style="color:#666;font-size:0.9em">2026-05-18 (intraday)</span></div>
+      <div class="summary">Shares fell from a prior close of $443.30 as April China sales reportedly dropped over 53% month-over-month and Q1 deliveries missed targets.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://www.cbtnews.com/cbt-automotive-newscast-may-18-2026/" target="_blank" rel="noopener">Tesla raises Model Y prices in the U.S.</a>
+      <div class="meta-line">CBT News · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Tesla hiked Model Y prices in the U.S. market amid broader auto-industry pricing moves and used-inventory shifts.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://www.nhtsa.gov/press-releases/tesla-model-y-first-vehicle-pass-nhtsa-new-advanced-driver-assistance-system-tests" target="_blank" rel="noopener">NHTSA says Model Y is first to pass new ADAS tests</a>
+      <div class="meta-line">NHTSA · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">The U.S. Department of Transportation announced the Model Y was the first vehicle to pass NHTSA's new advanced driver-assistance system evaluations.</div>
+    </li>
+  </ol>
+
+  <h3>US–Iran</h3>
+  <ol class="news-list">
+    <li>
+      <a class="headline" href="https://www.aljazeera.com/amp/news/liveblog/2026/5/18/iran-war-live-trump-warns-clock-ticking-saudi-uae-report-drone-attacks" target="_blank" rel="noopener">Trump pauses planned Tuesday strike at Gulf states' request</a>
+      <div class="meta-line">Al Jazeera · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Qatar, Saudi Arabia and the UAE asked Washington to hold off to enable "serious negotiations"; Iran returned a response via Pakistani mediation.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener">Lebanon death toll exceeds 3,000 since war began</a>
+      <div class="meta-line">Reuters / Al Jazeera roundup · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Lebanese health officials say more than 3,000 have died and over 1 million people have been displaced amid the regional conflict.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://www.aljazeera.com/amp/news/liveblog/2026/5/18/iran-war-live-trump-warns-clock-ticking-saudi-uae-report-drone-attacks" target="_blank" rel="noopener">Sen. Murphy slams "disastrous war" as gas tops $5/gal</a>
+      <div class="meta-line">Al Jazeera (citing Sen. Chris Murphy) · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Democratic Sen. Chris Murphy criticized the war over surging energy costs, citing nearly $5/gal gasoline and almost $6/gal diesel in Connecticut.</div>
+    </li>
+  </ol>
+
+  <h3>Economy</h3>
+  <ol class="news-list">
+    <li>
+      <a class="headline" href="https://www.thestreet.com/latest-news/stock-market-today-may-18-2026-updates" target="_blank" rel="noopener">10-year Treasury yield hits highest level in a year</a>
+      <div class="meta-line">TheStreet · <span style="color:#666;font-size:0.9em">2026-05-18 (close)</span></div>
+      <div class="summary">Rising oil prices and renewed inflation worries pushed long yields higher, with investors awaiting Nvidia and Target earnings on Wednesday.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://finance.yahoo.com/markets/stocks/articles/company-news-may-18-2026-120500233.html" target="_blank" rel="noopener">Publicis to buy LiveRamp for $2.5B; RAMP jumps 27%</a>
+      <div class="meta-line">Yahoo Finance · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Advertising firm Publicis Groupe agreed to acquire LiveRamp Holdings in an all-cash deal valued at $2.5 billion.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-may-18-120100990.html" target="_blank" rel="noopener">BofA: tech layoffs were 40% of April job cuts</a>
+      <div class="meta-line">Yahoo Finance · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Bank of America flagged that information-technology layoffs accounted for 40% of April job cuts, citing potential consumption-growth risks.</div>
+    </li>
+  </ol>
+
+  <h3>China</h3>
+  <ol class="news-list">
+    <li>
+      <a class="headline" href="https://www.caixinglobal.com/2026-05-18/cover-story-beijing-summit-signals-a-reset-in-us-china-relations-102444817.html" target="_blank" rel="noopener">Xi–Trump summit signals "constructive strategic stability"</a>
+      <div class="meta-line">Caixin Global · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Beijing and Washington described a new framework, though analysts say the meeting didn't yield breakthrough trade deals.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://www.cbsnews.com/news/trump-xi-jinping-china-trade-deals-boeing/" target="_blank" rel="noopener">China to buy up to 750 Boeing aircraft, Trump says</a>
+      <div class="meta-line">CBS News · <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span></div>
+      <div class="summary">Trump said China agreed to purchase 200 Boeing planes initially, with the total potentially growing to 750 over time.</div>
+    </li>
+    <li>
+      <a class="headline" href="https://www.thestandard.com.hk/news/article/332240/Morning-Recap-May-18-2026" target="_blank" rel="noopener">5.2-magnitude earthquake strikes Guangxi</a>
+      <div class="meta-line">The Standard (HK) · <span style="color:#666;font-size:0.9em">2026-05-18 00:21 PT (approx)</span></div>
+      <div class="summary">A 5.2-magnitude quake hit Guangxi shortly after midnight local time, with tremors felt as far as Hong Kong.</div>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>Elon Musk on X — Last 12 Hours</h2>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 18:30 PT · <a href="https://x.com/elonmusk/status/2056547935752441863" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">"Vera nice, Vera nice …" (quoting @NVIDIA / @nvidia announcing the NVIDIA Vera CPU for SpaceX)</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 13:49 PT · <a href="https://x.com/elonmusk/status/2056477364134044055" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @SawyerMerritt: Elon Musk's lawyer Marc Toberoff reacts to the OpenAI verdict — "Appeal. This war is not over." (CNBC clip)</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 13:47 PT · <a href="https://x.com/elonmusk/status/2056476778953093308" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">"Insane" — quoted a post criticizing UK primary-school curricula. (Strong opinion post; paraphrased context.)</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 13:39 PT (Pinned) · <a href="https://x.com/elonmusk/status/2056474896641782077" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">On the OpenAI case: argues the judge and jury ruled only on a calendar technicality, not the merits, and accuses Altman and Brockman of enriching themselves "by stealing a charity." (Paraphrased / short quoted phrase.)</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 13:38 PT · <a href="https://x.com/boringcompany/status/2056474443212574931" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @boringcompany update.</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 17:27 PT · <a href="https://x.com/cb_doge/status/2056532081145253927" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @cb_doge: photo of Elon meeting NVIDIA's Ian Buck, who handed over the new Vera CPU for SpaceXAI.</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 16:19 PT · <a href="https://x.com/cremieuxrecueil/status/2056515000823640289" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @cremieuxrecueil: "Last year, China added as much energy to its grid as Germany has in total." (Our World in Data chart.)</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 14:05 PT · <a href="https://x.com/techdevnotes/status/2056481263087649224" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @techdevnotes: Grok Build now has a Command Palette (Ctrl+P).</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 11:56 PT · <a href="https://x.com/OpenRouter/status/2056448867982606754" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @OpenRouter: three new Grok creative-stack models are live — Grok Imagine Image, Grok Imagine Video, and Grok Voice TTS 1.0 (5 voices, 20+ languages).</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 13:33 PT · <a href="https://x.com/teslaownersSV/status/2056473393499889841" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @teslaownersSV: commentary that Judge Yvonne Gonzalez Rogers "waved off" Elon's OpenAI appeal on statute-of-limitations grounds.</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 10:36 PT · <a href="https://x.com/scaling01/status/2056428840658813267" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @scaling01: "xAI might be able to cook with Cursor data + 10T model."</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 10:28 PT · <a href="https://x.com/sualehasif996/status/2056426664066756941" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @sualehasif996: claims "really really good at RL"; Composer 2.5 is "fighting well-above its weight class"; teaser for the next release with @SpaceXAI scaling.</div>
+  </div>
+
+  <div class="x-card">
+    <div class="x-meta">@elonmusk · 2026-05-18 10:10 PT · <a href="https://x.com/DanPerks/status/2056422125720797318" target="_blank" rel="noopener">view post</a></div>
+    <div class="x-body">Reposted @DanPerks: notes the team did an internal test of "this model" last week (xAI-related, paraphrased).</div>
+  </div>
+
+  <p style="font-size:12px;color:#666;margin-top:10px;">Note: Some post bodies above are short paraphrases of longer threads or quote-tweets; click through for full context.</p>
+</section>
+
+<footer>
+  Generated by Cowork briefing job · 2026-05-18 20:00 PT
+</footer>
+
+</div>
+</body>
+</html>
