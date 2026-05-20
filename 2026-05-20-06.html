@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — 2026-05-20 06:00</title>
+<style>
+  :root{
+    --bg:#f4f4f1; --card:#ffffff; --ink:#1c1c1a; --muted:#6b6b66;
+    --line:#e4e4df; --accent:#2b5797; --up:#1a7f37; --down:#c0392b;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px; margin:0 auto; padding:28px 20px 60px;}
+  header{border-bottom:2px solid var(--line); padding-bottom:18px; margin-bottom:26px;}
+  h1{font-size:1.7rem; margin:0 0 6px; letter-spacing:-.01em;}
+  .sub{color:var(--muted); font-size:.92rem;}
+  h2{
+    font-size:1.18rem; margin:34px 0 14px; padding-bottom:6px;
+    border-bottom:1px solid var(--line);
+  }
+  h3{font-size:1rem; margin:22px 0 10px; color:var(--accent);}
+  section{margin-bottom:8px;}
+  .grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:14px 0 10px;
+  }
+  .tile{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:14px 14px 12px;
+  }
+  .tile .label{font-size:.74rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted);}
+  .tile .val{font-size:1.32rem; font-weight:650; margin:5px 0 2px;}
+  .tile .chg{font-size:.9rem; font-weight:600;}
+  .tile .note{font-size:.74rem; color:var(--muted); margin-top:5px;}
+  .up{color:var(--up);}
+  .down{color:var(--down);}
+  .flat{color:var(--muted);}
+  .srcline{font-size:.78rem; color:var(--muted); margin-top:8px;}
+  .srcline a{color:var(--accent); text-decoration:none;}
+  ol.news{padding-left:22px; margin:6px 0;}
+  ol.news li{margin-bottom:16px;}
+  .hl a{color:var(--accent); text-decoration:none; font-weight:600;}
+  .hl a:hover{text-decoration:underline;}
+  .meta{font-size:.82rem; color:var(--muted); margin:2px 0 3px;}
+  .time{color:#888; font-size:.9em;}
+  .summary{font-size:.94rem;}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:13px 15px; margin-bottom:12px;
+  }
+  .card .who{font-weight:650; font-size:.95rem;}
+  .card .when{font-size:.78rem; color:var(--muted); margin-bottom:6px;}
+  .card .body{font-size:.94rem;}
+  .card .link{font-size:.82rem; margin-top:7px;}
+  .card .link a{color:var(--accent); text-decoration:none;}
+  .tag{
+    display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.05em;
+    background:#eef1f7; color:var(--accent); border-radius:4px; padding:1px 6px; margin-left:6px;
+    vertical-align:1px;
+  }
+  .notebox{
+    background:#fbfbf9; border:1px dashed var(--line); border-radius:8px;
+    padding:11px 13px; font-size:.88rem; color:var(--muted); margin:10px 0;
+  }
+  footer{
+    margin-top:40px; padding-top:16px; border-top:1px solid var(--line);
+    font-size:.8rem; color:var(--muted);
+  }
+  @media (max-width:560px){
+    .grid{grid-template-columns:1fr;}
+    h1{font-size:1.4rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Daily Briefing</h1>
+  <div class="sub">Wednesday, May 20, 2026 &middot; 06:00 edition (morning run)<br>
+  Generated 2026-05-20 06:52 PT by the Cowork briefing job.</div>
+</header>
+
+<!-- ===================== MARKET SNAPSHOT ===================== -->
+<section>
+<h2>Market Snapshot</h2>
+<div class="notebox">
+  U.S. equities are in the regular session (opened 6:30 a.m. PT). Index figures below are
+  <strong>early intraday</strong> moves for May 20; commodity figures are intraday front-month/spot.
+  Intraday index <em>levels</em> are approximate — derived from the verified prior close plus the
+  reported intraday change.
+</div>
+
+<h3>Oil &mdash; Front-month futures</h3>
+<div class="grid">
+  <div class="tile">
+    <div class="label">WTI Crude (CL=F)</div>
+    <div class="val">~$102 / bbl</div>
+    <div class="chg down">&#9660; about &minus;2%</div>
+    <div class="note">Intraday, May 20 a.m. (~$103 prior session)</div>
+  </div>
+  <div class="tile">
+    <div class="label">Brent Crude (BZ=F)</div>
+    <div class="val">~$108 / bbl</div>
+    <div class="chg down">&#9660; about &minus;2%</div>
+    <div class="note">Intraday, May 20 a.m.</div>
+  </div>
+  <div class="tile">
+    <div class="label">Driver</div>
+    <div class="val" style="font-size:.98rem;font-weight:600;">Iran de-escalation</div>
+    <div class="note">Oil eased after Trump said a planned strike on Iran was called off.</div>
+  </div>
+</div>
+
+<h3>Gold</h3>
+<div class="grid">
+  <div class="tile">
+    <div class="label">Spot Gold (XAU/USD)</div>
+    <div class="val">~$4,504 / oz</div>
+    <div class="chg up">&#9650; about +0.34%</div>
+    <div class="note">As of May 20 (a second source quoted ~$4,481).</div>
+  </div>
+</div>
+
+<h3>Major U.S. Indices</h3>
+<div class="grid">
+  <div class="tile">
+    <div class="label">S&amp;P 500 (^GSPC)</div>
+    <div class="val">&asymp; 7,376 <span class="tag">Intraday</span></div>
+    <div class="chg up">&#9650; about +0.3%</div>
+    <div class="note">Prior close 7,353.61 (&minus;0.67%, May 19)</div>
+  </div>
+  <div class="tile">
+    <div class="label">Dow Jones (^DJI)</div>
+    <div class="val">&asymp; 49,462 <span class="tag">Intraday</span></div>
+    <div class="chg up">&#9650; ~+98 pts (about +0.2%)</div>
+    <div class="note">Prior close 49,363.88 (&minus;0.65%, May 19)</div>
+  </div>
+  <div class="tile">
+    <div class="label">Nasdaq Composite (^IXIC)</div>
+    <div class="val">&asymp; 26,000 <span class="tag">Intraday</span></div>
+    <div class="chg up">&#9650; about +0.5%</div>
+    <div class="note">Prior close 25,870.71 (&minus;0.84%, May 19)</div>
+  </div>
+</div>
+<div class="srcline">
+  Sources:
+  <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics &mdash; Crude Oil</a> &middot;
+  <a href="https://tradingeconomics.com/commodity/gold">Trading Economics &mdash; Gold</a> &middot;
+  <a href="https://www.cnbc.com/2026/05/19/stock-market-today-live-updates.html">CNBC &mdash; Markets</a> &middot;
+  <a href="https://www.thestreet.com/stock-market-today/https-www-thestreet-com-stock-market-today-stock-market-today-nasdaq-dow-jones-sp-500-updates-may-20-2026">TheStreet &mdash; Stock Market Today (May 20)</a>.
+  Index levels marked &ldquo;&asymp;&rdquo; are approximate intraday estimates.
+</div>
+</section>
+
+<!-- ===================== TOP HEADLINES ===================== -->
+<section>
+<h2>Top Global Headlines</h2>
+<ol class="news">
+  <li class="hl">
+    <a href="https://www.cnbc.com/2026/05/19/stock-market-today-live-updates.html">U.S. stocks open higher as oil slides, with Nvidia earnings in focus</a>
+    <div class="meta">CNBC <span class="time">&middot; 2026-05-20, time unknown</span></div>
+    <div class="summary">Wall Street edged up Wednesday morning as crude fell and Treasury yields cooled. Investors are positioned ahead of Nvidia's quarterly results due after the close.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.cbsnews.com/live-updates/iran-war-trump-warning-oil-stock-prices-futures-ceasefire-diplomacy/">Trump says a planned strike on Iran was called off amid &ldquo;serious negotiations&rdquo;</a>
+    <div class="meta">CBS News <span class="time">&middot; 2026-05-19, time unknown</span></div>
+    <div class="summary">A strike reportedly planned for Tuesday was halted after appeals from Gulf allies, raising hopes that talks toward a peace deal could resume.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.nbcnews.com/world/china/putin-visits-china-trump-xi-summit-ukraine-war-russia-protests-rcna345632">Putin arrives in China for a state visit, welcomed warmly by Xi Jinping</a>
+    <div class="meta">NBC News <span class="time">&middot; 2026-05-19, time unknown</span></div>
+    <div class="summary">The Russian leader's trip follows recent high-level diplomacy and comes as Beijing balances ties with both Moscow and Washington.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-may-2026">Nvidia set to report quarterly earnings after the bell</a>
+    <div class="meta">Kiplinger <span class="time">&middot; 2026-05-20, time unknown</span></div>
+    <div class="summary">Analysts expect roughly $78 billion in revenue, driven by AI data-center demand. The report is viewed as a key read on the broader AI trade.</div>
+  </li>
+</ol>
+</section>
+
+<!-- ===================== TOPIC SPOTLIGHTS ===================== -->
+<section>
+<h2>Topic Spotlights</h2>
+
+<h3>Tesla</h3>
+<ol class="news">
+  <li class="hl">
+    <a href="https://www.teslarati.com/tesla-making-sweeping-improvements-robotaxi/">Tesla pushes sweeping Robotaxi app update; unsupervised fleet grows</a>
+    <div class="meta">Teslarati <span class="time">&middot; time unknown</span></div>
+    <div class="summary">A new Robotaxi app build adds code focused on remote operations and safety. Reports put the unsupervised robotaxi fleet at about 39 vehicles, up sharply from earlier this spring.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.notateslaapp.com/news/4165/tesla-releases-unredacted-robotaxi-crash-reports">Tesla releases unredacted Robotaxi crash reports</a>
+    <div class="meta">Not a Tesla App <span class="time">&middot; time unknown</span></div>
+    <div class="summary">Tesla published fuller autonomous-driving incident data, addressing a long-running point of friction with safety researchers and public-safety advocates.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.notateslaapp.com/news/4157/tesla-rolls-out-fsd-v1433-update-20261466-with-new-fsd-features-and-spring-update">Tesla rolls out software 2026.14.6.6 with FSD V14.3.3</a>
+    <div class="meta">Not a Tesla App <span class="time">&middot; time unknown</span></div>
+    <div class="summary">The release bundles updated Full Self-Driving capabilities with the Spring 2026 feature set for the broader fleet.</div>
+  </li>
+</ol>
+
+<h3>US&ndash;Iran</h3>
+<ol class="news">
+  <li class="hl">
+    <a href="https://www.nbcnews.com/world/iran/trump-iran-clock-ticking-deal-drone-attacks-uae-saudi-hormuz-war-rcna345629">Iran strike planned for Tuesday called off, Trump says</a>
+    <div class="meta">NBC News <span class="time">&middot; 2026-05-19, time unknown</span></div>
+    <div class="summary">Trump said Saudi Arabia, Qatar and the UAE asked him to hold off, and that serious talks are now underway &mdash; though Tehran has not confirmed.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.aljazeera.com/news/2026/5/18/iran-sends-response-to-us-proposal-to-end-war-via-mediator-pakistan-2">Iran sends response to U.S. peace proposal via mediator Pakistan</a>
+    <div class="meta">Al Jazeera <span class="time">&middot; 2026-05-18, time unknown</span></div>
+    <div class="summary">Tehran routed its reply to the latest U.S. proposal through Pakistan as a fragile truce comes under growing strain.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.cbsnews.com/live-updates/iran-war-trump-strait-of-hormuz-trust-americans-control/">Ceasefire described as on &ldquo;life support&rdquo; as Strait of Hormuz stays shut</a>
+    <div class="meta">CBS News <span class="time">&middot; time unknown</span></div>
+    <div class="summary">Iran's military says it is ready for any new U.S. assault. The key oil chokepoint has been effectively closed since the conflict began, keeping crude elevated.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.nbcnews.com/world/iran/trump-iran-clock-ticking-deal-drone-attacks-uae-saudi-hormuz-war-rcna345629">Trump and Xi discuss ending the Iran war and reopening Hormuz</a>
+    <div class="meta">NBC News <span class="time">&middot; 2026-05-19, time unknown</span></div>
+    <div class="summary">Both leaders reportedly want the Strait of Hormuz reopened and Iran kept from a nuclear weapon, per accounts of their talks.</div>
+  </li>
+</ol>
+
+<h3>Economy</h3>
+<ol class="news">
+  <li class="hl">
+    <a href="https://www.cnbc.com/2026/05/19/stock-market-today-live-updates.html">Stocks higher Wednesday morning as bond yields cool</a>
+    <div class="meta">CNBC <span class="time">&middot; 2026-05-20, time unknown</span></div>
+    <div class="summary">The S&amp;P 500 rose about 0.3%, the Nasdaq about 0.5% and the Dow roughly 98 points, helped by softer Treasury yields and falling oil.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.cnbc.com/2026/05/18/stock-market-today-live-updates.html">30-year Treasury yield hit a near-19-year high before easing</a>
+    <div class="meta">CNBC <span class="time">&middot; 2026-05-19, time unknown</span></div>
+    <div class="summary">The 30-year yield briefly topped 5.19% Tuesday, pressuring equities, before yields ticked lower Wednesday.</div>
+  </li>
+  <li class="hl">
+    <a href="https://oilprice.com/">Oil prices fall about 2% as Iran tensions ease</a>
+    <div class="meta">CNBC / OilPrice.com <span class="time">&middot; 2026-05-20, time unknown</span></div>
+    <div class="summary">WTI slipped toward $102 and Brent toward $108 after the reported pause in U.S.&ndash;Iran military escalation.</div>
+  </li>
+  <li class="hl">
+    <a href="https://intellectia.ai/blog/nvidia-earnings-preview-may-20-2026">Nvidia earnings after the close seen as a market catalyst</a>
+    <div class="meta">Intellectia / The Motley Fool <span class="time">&middot; 2026-05-20, time unknown</span></div>
+    <div class="summary">With roughly $78B in revenue expected, the report is widely viewed as a barometer for AI-chip demand and the market's next move.</div>
+  </li>
+</ol>
+
+<h3>China</h3>
+<ol class="news">
+  <li class="hl">
+    <a href="https://www.nbcnews.com/world/china/putin-visits-china-trump-xi-summit-ukraine-war-russia-protests-rcna345632">Putin lands in China, welcomed by &ldquo;dear friend&rdquo; Xi Jinping</a>
+    <div class="meta">NBC News <span class="time">&middot; 2026-05-19, time unknown</span></div>
+    <div class="summary">The visit marks another high-profile bilateral engagement, closely watched amid the Ukraine war and shifting U.S.&ndash;China dynamics.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.profarmer.com/news/first-thing-today/first-thing-today-grains-pop-overnight-bullish-u-s-china-ag-trade-details">U.S. and China add detail to agricultural purchase plans</a>
+    <div class="meta">Pro Farmer <span class="time">&middot; time unknown</span></div>
+    <div class="summary">Following last week's summit, more specifics emerged on China's intent to buy U.S. farm goods, lifting grain futures.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.scmp.com/news/china">AMD chief calls China home to the world's most vibrant AI ecosystem</a>
+    <div class="meta">South China Morning Post <span class="time">&middot; time unknown</span></div>
+    <div class="summary">The remarks underscore China's continued AI momentum, even as U.S. export curbs constrain advanced-chip sales there.</div>
+  </li>
+  <li class="hl">
+    <a href="https://www.nbcnews.com/news/china">Taiwan vows to keep the &ldquo;status quo&rdquo; after the Trump&ndash;Xi summit</a>
+    <div class="meta">NBC News <span class="time">&middot; time unknown</span></div>
+    <div class="summary">Taipei said it will maintain the status quo and deepen ties with Washington following the leaders' meeting.</div>
+  </li>
+</ol>
+</section>
+
+<!-- ===================== ELON MUSK ON X ===================== -->
+<section>
+<h2>Elon Musk on X &mdash; Last 12 Hours</h2>
+<div class="notebox">
+  Captured from x.com/elonmusk around 06:52 PT. Timestamps are X's post times converted to PT.
+  For <strong>reposts</strong>, the time shown is the <em>original</em> post's timestamp and the link
+  points to the original post; Elon's repost appeared as timeline activity within the past ~12 hours.
+  One item is paraphrased where noted.
+</div>
+
+<div class="card">
+  <div class="who">Elon Musk <span class="tag">Post</span></div>
+  <div class="when">2026-05-20 06:57 PT</div>
+  <div class="body">Quote-posted a post by @brivael (Brivael Le Pogam, translated from French) with the one-word comment: &ldquo;True&rdquo;.</div>
+  <div class="link"><a href="https://x.com/elonmusk/status/2057098340081471844">x.com/elonmusk/status/2057098340081471844</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Reposted &mdash; @yunta_tsai (Yun-Ta Tsai) <span class="tag">Repost</span></div>
+  <div class="when">Original: 2026-05-19 23:27 PT</div>
+  <div class="body">On editing video with Grok Build &mdash; you can annotate a video frame and instruct Grok to make a change, e.g. &ldquo;lower the text box in the red circle&rdquo;. &ldquo;Neat.&rdquo;</div>
+  <div class="link"><a href="https://x.com/yunta_tsai/status/2056985071677268320">x.com/yunta_tsai/status/2056985071677268320</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Reposted &mdash; @ArthurMacwaters (Arthur MacWaters) <span class="tag">Repost</span></div>
+  <div class="when">Original: 2026-05-19 23:23 PT</div>
+  <div class="body">&ldquo;Starship aesthetic is unparalleled&rdquo; &mdash; posted with imagery of the SpaceX vehicle.</div>
+  <div class="link"><a href="https://x.com/ArthurMacwaters/status/2056984193817784518">x.com/ArthurMacwaters/status/2056984193817784518</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Elon Musk <span class="tag">Post</span></div>
+  <div class="when">2026-05-19 22:09 PT</div>
+  <div class="body">&ldquo;Just tap the Grok logo&rdquo; &mdash; a brief note on accessing Grok.</div>
+  <div class="link"><a href="https://x.com/elonmusk/status/2056965533363540118">x.com/elonmusk/status/2056965533363540118</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Elon Musk <span class="tag">Post</span></div>
+  <div class="when">2026-05-19 20:58 PT</div>
+  <div class="body">&ldquo;Release notes for Grok Build will be published daily&rdquo;.</div>
+  <div class="link"><a href="https://x.com/elonmusk/status/2056947567548862739">x.com/elonmusk/status/2056947567548862739</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Reposted &mdash; @WSJ (The Wall Street Journal) <span class="tag">Repost</span></div>
+  <div class="when">Original: 2026-05-19 20:29 PT</div>
+  <div class="body">Shared a WSJ column (by Tim Higgins) framing the OpenAI case: a jury sided with Sam Altman and OpenAI in court, but Musk &ldquo;won in the court of public opinion&rdquo;.</div>
+  <div class="link"><a href="https://x.com/WSJ/status/2056940451802816529">x.com/WSJ/status/2056940451802816529</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Reposted &mdash; @Tesla_Asia <span class="tag">Repost</span></div>
+  <div class="when">Original: 2026-05-19 18:45 PT</div>
+  <div class="body">&ldquo;A beautiful day for a Tesla group wedding in Shanghai&rdquo;.</div>
+  <div class="link"><a href="https://x.com/Tesla_Asia/status/2056914200640032967">x.com/Tesla_Asia/status/2056914200640032967</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Reposted &mdash; @cb_doge (DogeDesigner) <span class="tag">Repost</span></div>
+  <div class="when">Original: 2026-05-19 08:10 PT &middot; reposted within the past ~12h</div>
+  <div class="body">A post on Elon Musk's view of the legacy of Tesla, Edison and Ford, praising figures including Franklin, Shakespeare, Newton and Henry Ford.</div>
+  <div class="link"><a href="https://x.com/cb_doge/status/2056754375264276582">x.com/cb_doge/status/2056754375264276582</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Reposted &mdash; @AlecStapp (Alec Stapp) <span class="tag">Repost</span></div>
+  <div class="when">Original: 2026-05-19 04:33 PT &middot; reposted within the past ~12h</div>
+  <div class="body">A thread on why the &ldquo;replacement level&rdquo; fertility rate is about 2.1 children per woman, walking through the underlying demographic arithmetic.</div>
+  <div class="link"><a href="https://x.com/AlecStapp/status/2056699677886611646">x.com/AlecStapp/status/2056699677886611646</a></div>
+</div>
+
+<div class="card">
+  <div class="who">Reposted &mdash; @nicksortor <span class="tag">Repost</span></div>
+  <div class="when">Original: 2026-05-19 11:54 PT &middot; reposted within the past ~12h</div>
+  <div class="body"><em>(Paraphrased.)</em> A post stating that JD Vance voiced support for Tommy Robinson's &ldquo;Unite the Kingdom&rdquo; rally and criticizing high-immigration policy.</div>
+  <div class="link"><a href="https://x.com/nicksortor/status/2056810859582939628">x.com/nicksortor/status/2056810859582939628</a></div>
+</div>
+
+</section>
+
+<footer>
+  Generated by Cowork briefing job &mdash; run 2026-05-20 06:00 (06:52 PT).<br>
+  Market values and publication times are best-effort from public sources; intraday index levels
+  marked &ldquo;&asymp;&rdquo; are approximate. Items without a confirmed publication time are labeled
+  &ldquo;time unknown&rdquo;.
+</footer>
+
+</div>
+</body>
+</html>
