@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Briefing — 2026-05-21 00:00</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #fafafa;
+            --text: #222;
+            --muted: #666;
+            --border: #e5e5e5;
+            --green: #1abc9c;
+            --red: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 2rem;
+        }
+        
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+        
+        .timestamp {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .market-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .market-item {
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.25rem;
+            background: #fafafa;
+        }
+        
+        .market-item h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .change {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .change.positive {
+            color: var(--green);
+        }
+        
+        .change.negative {
+            color: var(--red);
+        }
+        
+        .meta {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+        
+        .sources {
+            font-size: 0.8rem;
+            color: var(--muted);
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            margin-top: 1.5rem;
+        }
+        
+        .sources a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        
+        .sources a:hover {
+            text-decoration: underline;
+        }
+        
+        ol {
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .headline {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .headline a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        
+        .headline a:hover {
+            text-decoration: underline;
+        }
+        
+        .source-meta {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin: 0.5rem 0;
+        }
+        
+        .summary {
+            color: var(--text);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .subsection {
+            margin-bottom: 1.5rem;
+        }
+        
+        .subsection h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        footer {
+            border-top: 2px solid var(--border);
+            padding-top: 1.5rem;
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        
+        .time-label {
+            color: #999;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-left: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Briefing — 2026-05-21 00:00</h1>
+            <div class="timestamp">Generated 2026-05-21 00:21 PDT</div>
+        </header>
+        
+        <section id="market-snapshot">
+            <h2>Market Snapshot</h2>
+            <p style="color: var(--muted); margin-bottom: 1rem; font-size: 0.9rem;"><strong>Pre-Market (as of May 20 close)</strong> — Regular session opens at 6:30 AM Pacific</p>
+            
+            <div class="market-grid">
+                <div class="market-item">
+                    <h3>S&P 500</h3>
+                    <div class="price">7,432.97</div>
+                    <div class="change positive">↑ +1.08%</div>
+                    <div class="meta">Prior close (May 20)</div>
+                </div>
+                
+                <div class="market-item">
+                    <h3>Dow Jones</h3>
+                    <div class="price">50,009.35</div>
+                    <div class="change positive">↑ +1.31%</div>
+                    <div class="meta">Prior close (May 20)</div>
+                </div>
+                
+                <div class="market-item">
+                    <h3>Nasdaq Composite</h3>
+                    <div class="price">26,270.36</div>
+                    <div class="change positive">↑ +1.54%</div>
+                    <div class="meta">Prior close (May 20)</div>
+                </div>
+                
+                <div class="market-item">
+                    <h3>Gold (XAU/USD)</h3>
+                    <div class="price">$4,703.22</div>
+                    <div class="change positive">↑ +0.34%</div>
+                    <div class="meta">Spot price (May 20)</div>
+                </div>
+                
+                <div class="market-item">
+                    <h3>WTI Crude Oil</h3>
+                    <div class="price">$101.27</div>
+                    <div class="change negative">↓ -0.29%</div>
+                    <div class="meta">Close (May 20)</div>
+                </div>
+                
+                <div class="market-item">
+                    <h3>Brent Crude Oil</h3>
+                    <div class="price">$105.54</div>
+                    <div class="change negative">↓ -5.16%</div>
+                    <div class="meta">Close (May 20)</div>
+                </div>
+                
+                <div class="market-item">
+                    <h3>10-Year Treasury Yield</h3>
+                    <div class="price">4.67%</div>
+                    <div class="meta">As of May 19, 2026</div>
+                </div>
+                
+                <div class="market-item">
+                    <h3>2Y/10Y Spread</h3>
+                    <div class="price">0.53%</div>
+                    <div class="meta">As of May 20, 2026</div>
+                </div>
+            </div>
+            
+            <div class="sources">
+                <strong>Sources:</strong> 
+                <a href="https://www.cnbc.com/2026/05/20/stock-market-today-live-updates.html">CNBC Market Updates</a> • 
+                <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics Oil</a> • 
+                <a href="https://tradingeconomics.com/commodity/gold">Trading Economics Gold</a> • 
+                <a href="https://fred.stlouisfed.org/series/DGS10">Federal Reserve FRED</a>
+            </div>
+        </section>
+        
+        <section id="headlines">
+            <h2>Top Global Headlines</h2>
+            <ol>
+                <li>
+                    <div class="headline"><a href="https://www.cbsnews.com/live-updates/iran-war-trump-warning-oil-stock-prices-futures-ceasefire-diplomacy/">Trump calls off scheduled attack on Iran amid "serious negotiations" toward peace deal</a></div>
+                    <div class="source-meta">CBS News <span class="time-label">2026-05-20 ~20:30 PT</span></div>
+                    <div class="summary">President Trump said he was within an hour of ordering new strikes on Iran but called off the action. Peace negotiations through mediator Pakistan are ongoing amid growing tensions over Middle East conflict.</div>
+                </li>
+                
+                <li>
+                    <div class="headline"><a href="https://www.cnn.com/2026/05/20/china/chinas-xi-gives-putin-a-red-carpet-welcome-and-makes-a-veiled-jab-at-the-us">China's Xi gives Putin a red-carpet welcome – and makes a veiled jab at the US</a></div>
+                    <div class="source-meta">CNN <span class="time-label">2026-05-20 ~12:00 PT</span></div>
+                    <div class="summary">Chinese leader Xi Jinping hailed ties with Russia as a force for "calm amid chaos" during Putin's visit to Beijing. The two countries signed 20 cooperation agreements spanning trade, nuclear energy, and infrastructure.</div>
+                </li>
+                
+                <li>
+                    <div class="headline"><a href="https://www.cnbc.com/2026/05/20/stock-market-today-live-updates.html">Stock market today: Dow, S&P 500, Nasdaq close higher on oil prices and yield declines</a></div>
+                    <div class="source-meta">CNBC <span class="time-label">2026-05-20 16:00 PT</span></div>
+                    <div class="summary">U.S. equities surged Wednesday as oil prices and Treasury yields declined, driven by optimism that Middle East conflict could soon be resolved. S&P 500 rose 1.08%, Dow advanced 1.31%, Nasdaq added 1.54%.</div>
+                </li>
+                
+                <li>
+                    <div class="headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/20/iran-war-live-tehran-warns-of-many-more-surprises-if-conflict-resumes">Iran threatens war 'beyond the region' if U.S. attacks</a></div>
+                    <div class="source-meta">Al Jazeera <span class="time-label">2026-05-20 ~18:00 PT</span></div>
+                    <div class="summary">Iran's Islamic Revolutionary Guard Corps threatened to spread conflict beyond the Middle East if the U.S. or Israel resume attacks, promising "crushing blows … in places you cannot even imagine."</div>
+                </li>
+                
+                <li>
+                    <div class="headline"><a href="https://www.nbcnews.com/politics/trump-administration/live-blog/trump-xi-jinping-summit-china-live-updates-rcna344530">Trump returns to Washington after Beijing summit with few clear wins</a></div>
+                    <div class="source-meta">NBC News <span class="time-label">2026-05-15 ~09:00 PT</span></div>
+                    <div class="summary">The Trump-Xi summit concluded without major agreements on Taiwan and Middle East issues. While the president hailed "fantastic" trade deals, no significant breakthroughs were formally announced.</div>
+                </li>
+            </ol>
+        </section>
+        
+        <section id="spotlights">
+            <h2>Topic Spotlights</h2>
+            
+            <div class="subsection">
+                <h3>Tesla (TSLA)</h3>
+                <ol>
+                    <li>
+                        <div class="headline"><a href="https://www.businessinsider.com/elon-musk-moonshot-spacex-pay-package-requires-mars-city-development-2026-5">Elon Musk's new 'Marshot' pay package could be worth billions — if he helps colonize Mars</a></div>
+                        <div class="source-meta">Business Insider <span class="time-label">2026-05-20 22:00 PT</span></div>
+                        <div class="summary">Elon Musk's compensation package includes significant incentives tied to SpaceX's Mars colonization goals. The deal could be worth billions contingent on achieving milestones in Mars city development.</div>
+                    </li>
+                    
+                    <li>
+                        <div class="headline"><a href="https://www.wsj.com/business/autos/tesla-announces-rollout-of-fully-self-driving-tech-in-china-2711fdb2">Tesla Announces Rollout of Fully Self-Driving Tech in China</a></div>
+                        <div class="source-meta">Wall Street Journal <span class="time-label">2026-05-20 22:00 PT</span></div>
+                        <div class="summary">Tesla is expanding its Full Self-Driving capability into China, marking a major milestone in the company's autonomous vehicle strategy. The rollout continues Tesla's global expansion of advanced driving features.</div>
+                    </li>
+                    
+                    <li>
+                        <div class="headline"><a href="https://techcrunch.com/2026/05/20/teslas-full-self-driving-software-is-creeping-into-europe/">Tesla's Full Self-Driving software is creeping into Europe</a></div>
+                        <div class="source-meta">TechCrunch <span class="time-label">2026-05-20 ~12:00 PT</span></div>
+                        <div class="summary">Tesla is gradually expanding Full Self-Driving capabilities across European markets, following successful rollouts in other regions. The expansion reflects Tesla's confidence in autonomous vehicle technology readiness.</div>
+                    </li>
+                    
+                    <li>
+                        <div class="headline"><a href="https://www.theguardian.com/technology/2026/may/20/tesla-cybertruck-texas-lake-wade-mode">Tesla Cybertruck pulled from Texas lake after attempting 'wade mode'</a></div>
+                        <div class="source-meta">The Guardian <span class="time-label">2026-05-20 ~12:00 PT</span></div>
+                        <div class="summary">A Tesla Cybertruck had to be rescued from a Texas lake after a failed attempt to use the vehicle's "wade mode" feature in water. The incident highlights the experimental nature of some Tesla vehicle capabilities.</div>
+                    </li>
+                    
+                    <li>
+                        <div class="headline"><a href="https://www.marketbeat.com/originals/tesla-ends-model-s-and-x-era-bets-everything-on-whats-next/">Tesla Ends Model S and X Era, Bets Everything on What's Next</a></div>
+                        <div class="source-meta">MarketBeat <span class="time-label">2026-05-20 ~12:00 PT</span></div>
+                        <div class="summary">Tesla is discontinuing the Model S and Model X lines to focus resources on new vehicle platforms and technologies. This strategic shift represents a major pivot in the company's product portfolio.</div>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="subsection">
+                <h3>US–Iran</h3>
+                <ol>
+                    <li>
+                        <div class="headline"><a href="https://www.nbcnews.com/world/iran/iran-threatens-war-region-us-attacks-rcna346069">Iran threatens war 'beyond the region' if U.S. attacks</a></div>
+                        <div class="source-meta">NBC News <span class="time-label">2026-05-20 ~18:00 PT</span></div>
+                        <div class="summary">Iran's Islamic Revolutionary Guard Corps threatened military action extending beyond the Middle East if the U.S. or Israel resume attacks, escalating tensions after Trump's warning of imminent strikes.</div>
+                    </li>
+                    
+                    <li>
+                        <div class="headline"><a href="https://www.aljazeera.com/news/2026/5/18/iran-sends-response-to-us-proposal-to-end-war-via-mediator-pakistan-2">Iran sends response to US proposal to end war via mediator Pakistan</a></div>
+                        <div class="source-meta">Al Jazeera <span class="time-label">2026-05-18 ~10:00 PT</span></div>
+                        <div class="summary">Iran submitted a formal response to the U.S. proposal channeled through Pakistan to end the ongoing conflict. The response signals continued diplomatic engagement despite mounting military tensions.</div>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="subsection">
+                <h3>Economy</h3>
+                <ol>
+                    <li>
+                        <div class="headline"><a href="https://www.cnbc.com/2026/05/20/stock-market-today-live-updates.html">S&P 500 rises 1.08%, Dow climbs 1.31% as oil prices and Treasury yields decline</a></div>
+                        <div class="source-meta">CNBC <span class="time-label">2026-05-20 16:00 PT</span></div>
+                        <div class="summary">U.S. markets rallied on Wednesday amid declining oil and Treasury yields, fueled by optimism over potential Middle East peace. Strong earnings season and positive market sentiment drove broad gains across major indices.</div>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="subsection">
+                <h3>China</h3>
+                <ol>
+                    <li>
+                        <div class="headline"><a href="https://www.cnn.com/2026/05/20/china/chinas-xi-gives-putin-a-red-carpet-welcome-and-makes-a-veiled-jab-at-the-us">China's Xi gives Putin a red-carpet welcome – and makes a veiled jab at the US</a></div>
+                        <div class="source-meta">CNN <span class="time-label">2026-05-20 ~12:00 PT</span></div>
+                        <div class="summary">President Xi hosted Russian President Putin with significant ceremonial honors in Beijing, signing 20 bilateral agreements. The summit underscores Russia-China alignment and marks another chapter in their deepening strategic partnership.</div>
+                    </li>
+                    
+                    <li>
+                        <div class="headline"><a href="https://www.aljazeera.com/where/china/">China Taiwan Update: Research vessels increase surveillance operations</a></div>
+                        <div class="source-meta">Al Jazeera <span class="time-label">2026-05-11 ~10:00 PT</span></div>
+                        <div class="summary">China is intensifying research vessel activities surrounding Taiwan to study regional waters. The Coast Guard Administration spotted and issued warnings to the research vessel Tongji multiple times near Taiwan's restricted waters.</div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Generated by Cowork briefing job — 2026-05-21 00:21 PDT</p>
+        </footer>
+    </div>
+</body>
+</html>
