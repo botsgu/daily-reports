@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing — 2026-05-22 10:00</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .timestamp {
+            color: #666;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 28px;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .market-item {
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            border-radius: 4px;
+            background: #fafafa;
+        }
+
+        .market-item-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .market-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .market-change {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .change-positive {
+            color: #28a745;
+        }
+
+        .change-negative {
+            color: #dc3545;
+        }
+
+        .market-timestamp {
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 8px;
+            margin-top: 8px;
+        }
+
+        .news-item {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .news-headline {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+
+        .news-headline a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .news-headline a:hover {
+            text-decoration: underline;
+        }
+
+        .news-meta {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .news-time {
+            color: #999;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .news-summary {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .sources {
+            background: #f5f5f5;
+            padding: 16px;
+            border-radius: 4px;
+            margin-top: 24px;
+            font-size: 13px;
+        }
+
+        .sources h4 {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .sources a {
+            color: #0066cc;
+            text-decoration: none;
+            display: block;
+            margin: 4px 0;
+        }
+
+        .sources a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Briefing — 2026-05-22 10:00</h1>
+            <p class="timestamp">Generated 2026-05-22 10:55 PT</p>
+        </header>
+
+        <section>
+            <h2>Market Snapshot</h2>
+
+            <div class="market-grid">
+                <div class="market-item">
+                    <div class="market-item-title">WTI Crude Oil</div>
+                    <div class="market-price">$97.29</div>
+                    <div class="market-change change-negative">↓ $0.97 (-1.0%)</div>
+                    <div class="market-timestamp">Intraday • as of 10:55 AM PT</div>
+                </div>
+
+                <div class="market-item">
+                    <div class="market-item-title">Brent Crude Oil</div>
+                    <div class="market-price">$104.52</div>
+                    <div class="market-change change-positive">↑ 1.89%</div>
+                    <div class="market-timestamp">Intraday • as of 10:55 AM PT</div>
+                </div>
+
+                <div class="market-item">
+                    <div class="market-item-title">Gold (XAU/USD)</div>
+                    <div class="market-price">$4,524</div>
+                    <div class="market-change change-negative">↓ 0.42%</div>
+                    <div class="market-timestamp">Intraday • as of 10:55 AM PT</div>
+                </div>
+
+                <div class="market-item">
+                    <div class="market-item-title">S&P 500 (GSPC)</div>
+                    <div class="market-price">7,469.70</div>
+                    <div class="market-change change-positive">↑ 0.32%</div>
+                    <div class="market-timestamp">Intraday • as of 10:55 AM PT</div>
+                </div>
+
+                <div class="market-item">
+                    <div class="market-item-title">Dow Jones (DJI)</div>
+                    <div class="market-price">50,564.64</div>
+                    <div class="market-change change-positive">↑ 0.55%</div>
+                    <div class="market-timestamp">Intraday • as of 10:55 AM PT</div>
+                </div>
+
+                <div class="market-item">
+                    <div class="market-item-title">Nasdaq Composite (IXIC)</div>
+                    <div class="market-price">26,339.66</div>
+                    <div class="market-change change-positive">↑ 0.18%</div>
+                    <div class="market-timestamp">Intraday • as of 10:55 AM PT</div>
+                </div>
+
+                <div class="market-item">
+                    <div class="market-item-title">US 2-Year Yield</div>
+                    <div class="market-price">4.04%</div>
+                    <div class="market-timestamp">May 20 close</div>
+                </div>
+
+                <div class="market-item">
+                    <div class="market-item-title">US 10-Year Yield</div>
+                    <div class="market-price">4.57%</div>
+                    <div class="market-timestamp">May 20 close</div>
+                </div>
+            </div>
+
+            <div class="sources">
+                <h4>Market Data Sources</h4>
+                <a href="https://www.investing.com/commodities/crude-oil" target="_blank">Investing.com — Crude Oil</a>
+                <a href="https://www.investing.com/commodities/brent-oil" target="_blank">Investing.com — Brent Oil</a>
+                <a href="https://www.investing.com/currencies/xau-usd" target="_blank">Investing.com — Gold (XAU/USD)</a>
+                <a href="https://finance.yahoo.com/quote/%5EGSPC/" target="_blank">Yahoo Finance — S&P 500</a>
+                <a href="https://finance.yahoo.com/quote/%5EDJI/" target="_blank">Yahoo Finance — Dow Jones</a>
+                <a href="https://finance.yahoo.com/quote/%5EIXIC/" target="_blank">Yahoo Finance — Nasdaq</a>
+                <a href="https://fred.stlouisfed.org/series/DGS2" target="_blank">FRED — 2-Year Treasury</a>
+                <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank">FRED — 10-Year Treasury</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Top Global Headlines</h2>
+
+            <div class="news-item">
+                <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/22/iran-war-live-signs-of-progress-amid-efforts-to-reach-us-iran-peace-deal" target="_blank">Iran War Live: Signs of Progress Amid Efforts to Reach US-Iran Peace Deal</a></div>
+                <div class="news-meta">Al Jazeera • <span class="news-time">2026-05-22 08:30 PT</span></div>
+                <div class="news-summary">Pakistan's army chief General Asim Munir arrived in Tehran on Thursday as part of ongoing mediation efforts. The US reports "slight progress" in negotiations, with the latest American proposal having "narrowed the gaps to some extent."</div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-headline"><a href="https://www.cnbc.com/2026/05/22/iran-war-strait-of-hormuz-tolls-trump.html" target="_blank">U.S., Iran Signal Peace Progress — But Remain at Odds Over Enriched Uranium, Strait of Hormuz Tolls</a></div>
+                <div class="news-meta">CNBC • <span class="news-time">2026-05-22 07:45 PT</span></div>
+                <div class="news-summary">Peace negotiations show signs of progress as both sides engage in active diplomacy. Key sticking points remain the disposition of Iran's enriched uranium stockpile and tolls for strait passage. President Trump says he will wait "a couple of days" for Iran's response.</div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-headline"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-21-2026" target="_blank">Quantum Computing Stocks Soar on $2 Billion Government Grant Initiative</a></div>
+                <div class="news-meta">TheStreet • <span class="news-time">2026-05-21 14:20 PT</span></div>
+                <div class="news-summary">Shares of quantum computing companies surged following reports that the government plans to award $2 billion in grants to nine firms. Rigetti Computing jumped more than 30%, D-Wave Quantum surged 22%, and Quantum Computing rallied 13%.</div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-headline"><a href="https://www.nbcnews.com/politics/trump-administration/live-blog/trump-xi-jinping-summit-china-live-updates-rcna344530" target="_blank">Trump Returns to Washington After Leaving Beijing Summit With Few Clear Wins</a></div>
+                <div class="news-meta">NBC News • <span class="news-time">2026-05-22 09:00 PT</span></div>
+                <div class="news-summary">President Trump concluded his state visit to Beijing with limited progress on key economic issues. Chinese President Xi Jinping has now welcomed Russian President Vladimir Putin to the capital, signaling continued strategic coordination.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Topic Spotlights</h2>
+
+            <h3>Tesla (TSLA)</h3>
+            <div class="news-item">
+                <div class="news-headline">Tesla Rolls Out FSD in China After Years of Regulatory Wait</div>
+                <div class="news-meta">Yahoo Finance • <span class="news-time">2026-05-22 time unknown</span></div>
+                <div class="news-summary">Tesla has finally secured regulatory approval to deploy its Full Self-Driving technology in China. The FSD expansion into the world's second-largest market aims to boost software revenue streams.</div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-headline">Tesla Recalls 14,575 Model Y SUVs Over Missing Certification Labels</div>
+                <div class="news-meta">Yahoo Finance • <span class="news-time">2026-05-22 time unknown</span></div>
+                <div class="news-summary">Tesla issued a recall for Model Y vehicles lacking proper weight certification labels. The recall underscores ongoing quality control scrutiny in an otherwise strong production environment.</div>
+            </div>
+
+            <h3>US-Iran Conflict</h3>
+            <div class="news-item">
+                <div class="news-headline">Pakistan Leads Mediation as US and Iran Narrow Diplomatic Gaps</div>
+                <div class="news-meta">Al Jazeera • <span class="news-time">2026-05-22 08:30 PT</span></div>
+                <div class="news-summary">General Asim Munir's visit to Tehran signals intensified multilateral mediation efforts. Both Washington and Tehran report progress, though significant obstacles remain on uranium stockpiles and regional tolls.</div>
+            </div>
+
+            <h3>Economy</h3>
+            <div class="news-item">
+                <div class="news-headline">Walmart Slips 2% on Weaker-Than-Expected Full-Year Earnings Guidance</div>
+                <div class="news-meta">CNBC • <span class="news-time">2026-05-21 14:45 PT</span></div>
+                <div class="news-summary">Walmart issued downward guidance for full-year adjusted EPS between $2.75–$2.85, below analyst expectations of $2.91. The guidance reflects cautious consumer spending outlook.</div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-headline">Federal Reserve Swears In Kevin Warsh as New Chair</div>
+                <div class="news-meta">CNBC • <span class="news-time">2026-05-21 16:00 PT</span></div>
+                <div class="news-summary">President Donald Trump presided over a ceremony installing Kevin Warsh as the new chair of the Federal Reserve. The appointment marks a significant leadership transition at the central bank.</div>
+            </div>
+
+            <h3>China</h3>
+            <div class="news-item">
+                <div class="news-headline">Xi Welcomes Putin to Beijing in Strategic Show of Unity</div>
+                <div class="news-meta">NBC News • <span class="news-time">2026-05-22 09:00 PT</span></div>
+                <div class="news-summary">Russian President Vladimir Putin arrived in Beijing for high-level talks just one day after Trump's departure. Xi emphasized China-Russia strategic coordination to drive joint development.</div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-headline">Wang Yi Holds Talks With Liberian Foreign Minister</div>
+                <div class="news-meta">China Daily • <span class="news-time">2026-05-22 time unknown</span></div>
+                <div class="news-summary">China's State Councilor Wang Yi met with Liberian Foreign Minister Sara Beysolow Nyanti, continuing Beijing's diplomatic outreach in West Africa.</div>
+            </div>
+        </section>
+
+        <footer>
+            Generated by Cowork briefing job • 2026-05-22 10:55 PT
+        </footer>
+    </div>
+</body>
+</html>
