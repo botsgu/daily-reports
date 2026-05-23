@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Briefing — 2026-05-22 20:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+      padding: 24px 16px 48px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e5;
+    }
+    header h1 { font-size: 1.7rem; font-weight: 700; color: #1d1d1f; }
+    header .subtitle { color: #6e6e73; font-size: 0.9rem; margin-top: 4px; }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 28px;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e5;
+    }
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1d1d1f;
+      border-bottom: 1px solid #e0e0e5;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+    section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #3a3a3c;
+      margin: 18px 0 10px;
+    }
+    /* Market grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .market-card {
+      background: #f9f9fb;
+      border: 1px solid #e0e0e5;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .market-card .label { font-size: 0.78rem; color: #6e6e73; text-transform: uppercase; letter-spacing: 0.04em; }
+    .market-card .value { font-size: 1.25rem; font-weight: 700; margin: 4px 0 2px; }
+    .market-card .change { font-size: 0.88rem; font-weight: 600; }
+    .market-card .asof { font-size: 0.75rem; color: #6e6e73; margin-top: 4px; }
+    .market-card .state-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: #e8e8ed;
+      color: #3a3a3c;
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin-bottom: 4px;
+    }
+    .up { color: #1a7f37; }
+    .down { color: #cf222e; }
+    .neutral { color: #6e6e73; }
+    .sources-line { font-size: 0.78rem; color: #6e6e73; margin-top: 8px; }
+    .sources-line a { color: #0066cc; text-decoration: none; }
+    .sources-line a:hover { text-decoration: underline; }
+    /* News items */
+    ol.news-list { list-style: none; counter-reset: news-counter; }
+    ol.news-list li {
+      counter-increment: news-counter;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f2;
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+    }
+    ol.news-list li:last-child { border-bottom: none; }
+    ol.news-list li::before {
+      content: counter(news-counter);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #6e6e73;
+      padding-top: 1px;
+    }
+    .news-headline a { font-weight: 600; color: #0066cc; text-decoration: none; font-size: 0.97rem; }
+    .news-headline a:hover { text-decoration: underline; }
+    .news-meta { font-size: 0.82rem; color: #6e6e73; margin: 3px 0 5px; }
+    .news-meta .source { font-weight: 600; color: #3a3a3c; }
+    .news-summary { font-size: 0.88rem; color: #3a3a3c; line-height: 1.5; }
+    /* Spotlight items (ul, no counter) */
+    ul.spotlight-list { list-style: none; }
+    ul.spotlight-list li {
+      padding: 13px 0;
+      border-bottom: 1px solid #f0f0f2;
+    }
+    ul.spotlight-list li:last-child { border-bottom: none; }
+    footer {
+      text-align: center;
+      color: #6e6e73;
+      font-size: 0.8rem;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📰 Daily Briefing — 2026-05-22 20:00</h1>
+    <div class="subtitle">Generated at 2026-05-22 20:44 PDT &nbsp;·&nbsp; Evening run</div>
+  </header>
+
+  <!-- ══════════ MARKET SNAPSHOT ══════════ -->
+  <section>
+    <h2>📊 Market Snapshot</h2>
+    <p style="font-size:0.82rem;color:#6e6e73;margin-bottom:14px;">
+      U.S. markets are <strong>closed</strong> (after-hours, 20:44 PDT). Values reflect today's closing prices.
+    </p>
+
+    <h3>Energy</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="state-badge">Close</div>
+        <div class="value">$97.29</div>
+        <div class="change up">▲ ~+1.5% on day</div>
+        <div class="asof">As of close · May 22, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="state-badge">Close</div>
+        <div class="value">$104.68</div>
+        <div class="change up">▲ ~+1.2% on day</div>
+        <div class="asof">As of close · May 22, 2026</div>
+      </div>
+    </div>
+
+    <h3>Gold</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">Gold Spot (XAU/USD)</div>
+        <div class="state-badge">Close</div>
+        <div class="value">$4,510.60</div>
+        <div class="change down">▼ Fell toward $4,500 on day</div>
+        <div class="asof">As of close · May 22, 2026</div>
+      </div>
+    </div>
+
+    <h3>U.S. Stock Indices</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500 (^GSPC)</div>
+        <div class="state-badge">Close</div>
+        <div class="value">7,473.47</div>
+        <div class="change up">▲ +0.37%</div>
+        <div class="asof">Close · May 22, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones (^DJI)</div>
+        <div class="state-badge">Close · Record High</div>
+        <div class="value">50,579.70</div>
+        <div class="change up">▲ +0.58% (+294 pts)</div>
+        <div class="asof">Close · May 22, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq (^IXIC)</div>
+        <div class="state-badge">Close</div>
+        <div class="value">26,343.97</div>
+        <div class="change up">▲ +0.19%</div>
+        <div class="asof">Close · May 22, 2026</div>
+      </div>
+    </div>
+
+    <h3>U.S. Treasury Yields</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">2-Year Treasury</div>
+        <div class="state-badge">Close</div>
+        <div class="value">4.13%</div>
+        <div class="asof">As of May 22, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">10-Year Treasury</div>
+        <div class="state-badge">Close</div>
+        <div class="value">4.56%</div>
+        <div class="asof">As of May 22, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">20-Year Treasury</div>
+        <div class="state-badge">Close</div>
+        <div class="value">N/A</div>
+        <div class="asof">Data unavailable for this run</div>
+      </div>
+    </div>
+
+    <div class="sources-line">
+      Sources:
+      <a href="https://oilprice.com/" target="_blank">OilPrice.com</a> ·
+      <a href="https://fortune.com/article/current-price-of-gold-05-22-2026/" target="_blank">Fortune (Gold)</a> ·
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-22-2026" target="_blank">TheStreet</a> ·
+      <a href="https://www.advisorperspectives.com/dshort/updates/2026/05/22/treasury-yields-snapshot-may-22-2026" target="_blank">Advisor Perspectives</a> ·
+      <a href="https://tradingeconomics.com/united-states/2-year-note-yield" target="_blank">Trading Economics</a>
+    </div>
+  </section>
+
+  <!-- ══════════ TOP GLOBAL HEADLINES ══════════ -->
+  <section>
+    <h2>🌐 Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div></div>
+        <div>
+          <div class="news-headline">
+            <a href="https://www.cnbc.com/2026/05/22/iran-war-strait-of-hormuz-tolls-trump.html" target="_blank">U.S., Iran Signal Peace Progress — But Remain at Odds Over Enriched Uranium &amp; Strait of Hormuz</a>
+          </div>
+          <div class="news-meta">
+            <span class="source">CNBC</span> &nbsp;·&nbsp;
+            <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+          </div>
+          <div class="news-summary">Secretary of State Rubio said there are "good signs" a deal is in sight, but warned it would be "unfeasible" if Iran seeks permanent control of Strait of Hormuz shipping. Iran's Supreme Leader Khamenei ordered the country's enriched uranium to remain inside Iran, complicating talks.</div>
+        </div>
+      </li>
+
+      <li>
+        <div></div>
+        <div>
+          <div class="news-headline">
+            <a href="https://www.aljazeera.com/news/liveblog/2026/5/22/iran-war-live-signs-of-progress-amid-efforts-to-reach-us-iran-peace-deal" target="_blank">Qatar Assumes Mediator Role in US-Iran War as IRGC Warns Conflict May Resume</a>
+          </div>
+          <div class="news-meta">
+            <span class="source">Al Jazeera</span> &nbsp;·&nbsp;
+            <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+          </div>
+          <div class="news-summary">Qatar stepped in as mediator despite suffering Iranian attacks including one on its LNG facility in Ras Laffan, which cut the country's LNG export capacity by nearly 17%. The IRGC warned it remains "fully prepared" to resume hostilities.</div>
+        </div>
+      </li>
+
+      <li>
+        <div></div>
+        <div>
+          <div class="news-headline">
+            <a href="https://www.cnbc.com/2026/05/22/us-china-ai-apec-asia.html" target="_blank">U.S. Pushes AI in China and Asia After Trump-Xi Summit</a>
+          </div>
+          <div class="news-meta">
+            <span class="source">CNBC</span> &nbsp;·&nbsp;
+            <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+          </div>
+          <div class="news-summary">"We're very active in promoting U.S. AI options and solutions," a senior State Department official said at APEC trade ministers meeting in Suzhou. U.S. tech companies plan workshops in Chengdu in July as part of the AI push across Asia.</div>
+        </div>
+      </li>
+
+      <li>
+        <div></div>
+        <div>
+          <div class="news-headline">
+            <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-22-2026" target="_blank">Dow Rises 294 Points to Set New Record High; Kevin Warsh Sworn in as Fed Chair</a>
+          </div>
+          <div class="news-meta">
+            <span class="source">TheStreet</span> &nbsp;·&nbsp;
+            <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+          </div>
+          <div class="news-summary">The Dow closed at a record 50,579.70 as markets responded to Iran peace talk progress and a strong earnings season. President Trump led the ceremony swearing in Kevin Warsh as the new Federal Reserve Chair.</div>
+        </div>
+      </li>
+
+      <li>
+        <div></div>
+        <div>
+          <div class="news-headline">
+            <a href="https://www.cnbc.com/2026/05/21/china-russia-putin-xi-jinping-ties-deals-energy-siberia-pipeline-trump-visits-.html" target="_blank">Putin Leaves Beijing Without Pipeline Breakthrough; China-Russia Ties on Display</a>
+          </div>
+          <div class="news-meta">
+            <span class="source">CNBC</span> &nbsp;·&nbsp;
+            <span style="color:#666;font-size:0.9em">2026-05-21 (time unknown)</span>
+          </div>
+          <div class="news-summary">Russian President Putin departed Beijing with declarations of friendship and bilateral agreements but failed to secure a breakthrough on the Power of Siberia 2 gas pipeline that Moscow had been eyeing as a replacement for lost European export capacity.</div>
+        </div>
+      </li>
+
+      <li>
+        <div></div>
+        <div>
+          <div class="news-headline">
+            <a href="https://www.npr.org/2026/05/22/g-s1-123647/comparing-u-s-and-china-announcements" target="_blank">Aftermath of Trump-Xi Summit: U.S. and China Offer Differing Accounts of Agreements</a>
+          </div>
+          <div class="news-meta">
+            <span class="source">NPR</span> &nbsp;·&nbsp;
+            <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+          </div>
+          <div class="news-summary">A week after Trump's Beijing visit, the two sides are sticking to their own interpretations of what was agreed. China confirmed it will buy 200 Boeing aircraft and work to reduce tariffs, but broader ambiguities remain over the scope of the deal.</div>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ══════════ TOPIC SPOTLIGHTS ══════════ -->
+  <section>
+    <h2>🔎 Topic Spotlights</h2>
+
+    <!-- TESLA -->
+    <h3>⚡ Tesla (TSLA)</h3>
+    <ul class="spotlight-list">
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.foreignpolicyjournal.com/2026/05/22/tesla-nasdaq-tsla-stock-price-trades-at-418-as-spacex-solar-factory-plans-emerge/" target="_blank">SpaceX Files for IPO at $1.75T Valuation — Analysts Warn It May Weigh on Tesla Stock</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Foreign Policy Journal</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">SpaceX published its long-awaited IPO filing targeting a June 2026 NASDAQ listing under ticker SPCX at ~$1.75 trillion valuation. Analysts warn Musk supporters may sell TSLA shares to fund SpaceX positions; TSLA was trading around $418 on Friday.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.fool.com/investing/2026/05/22/should-you-wait-to-buy-tesla-stock-after-june-12/" target="_blank">Prediction: Tesla Stock Could Go Parabolic After June 12 SpaceX IPO Date</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">The Motley Fool</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">Motley Fool analysts argue that once SpaceX's IPO is priced and done, overhang on Tesla will lift and the stock could surge as its own robotaxi and AI narrative takes center stage. The SpaceX IPO is targeting a June 12 date.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://invezz.com/news/2026/05/18/tesla-expands-robotaxi-ambitions-as-elon-musk-predicts-ai-led-driving-future/" target="_blank">Tesla Expands Robotaxi to 39 Vehicles; FSD Rolls Out in China</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Invezz</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-18 (time unknown)</span>
+        </div>
+        <div class="news-summary">Tesla now operates 39 unsupervised robotaxis in Dallas and Houston, up from 9 at the start of April. The company also rolled out Full Self-Driving in China after years of regulatory waiting, and plans expansion to Phoenix, Miami, Orlando, Tampa, and Las Vegas in H1 2026.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://finance.yahoo.com/quote/TSLA/news/" target="_blank">Tesla Recalls 14,575 Model Y SUVs Over Missing Certification Label</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Yahoo Finance / NHTSA</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">Tesla issued a recall for 14,575 Model Y SUVs in the U.S. due to a missing certification label related to vehicle weight — a compliance issue rather than a safety-critical defect.</div>
+      </li>
+
+    </ul>
+
+    <!-- US–IRAN -->
+    <h3>🔥 US–Iran War</h3>
+    <ul class="spotlight-list">
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.cnbc.com/2026/05/22/iran-war-strait-of-hormuz-tolls-trump.html" target="_blank">Rubio: Iran Deal Is in Sight But Hormone Strait Tolls Are a Non-Starter</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">CNBC</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">Secretary Rubio described "good signs" for a negotiated end to the conflict but said any deal requiring the U.S. to accept Iranian tolls on Strait of Hormuz shipping would be a dealbreaker. Geopolitical progress pushed oil prices back below $100/barrel later in the week.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.aljazeera.com/news/liveblog/2026/5/22/iran-war-live-signs-of-progress-amid-efforts-to-reach-us-iran-peace-deal" target="_blank">Khamenei Directs Iran's Enriched Uranium Must Stay in the Country</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Al Jazeera</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">Iran's Supreme Leader Ayatollah Mojtaba Khamenei issued a directive that the country's near-weapons-grade enriched uranium must not be sent abroad, a position Tehran says the U.S. demand for uranium handover would kill the deal. Gold and oil prices jumped on the news.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.aljazeera.com/news/liveblog/2026/5/22/iran-war-live-signs-of-progress-amid-efforts-to-reach-us-iran-peace-deal" target="_blank">USS Abraham Lincoln Strike Group Maintains Readiness, Enforces Iranian Port Blockade</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">CENTCOM / Al Jazeera</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">U.S. CENTCOM announced via social media that the USS Abraham Lincoln carrier strike group is "maintaining peak readiness" in the Arabian Sea while enforcing the blockade of Iranian ports, signaling the U.S. has not relaxed military pressure despite diplomatic progress.</div>
+      </li>
+
+    </ul>
+
+    <!-- ECONOMY -->
+    <h3>💼 Economy</h3>
+    <ul class="spotlight-list">
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-22-2026" target="_blank">Kevin Warsh Sworn in as Federal Reserve Chair at White House Ceremony</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">TheStreet</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">President Trump led the swearing-in ceremony for Kevin Warsh as the new Federal Reserve Chair on Friday, marking a significant leadership transition at the U.S. central bank.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.zacks.com/stock/news/2925340/stock-market-news-for-may-22-2026" target="_blank">Philadelphia Fed Manufacturing Survey Plunges to -0.4 in May from 26.7 in April</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Zacks / Philadelphia Fed</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">The Philadelphia Fed's Manufacturing Business Outlook Survey fell sharply to -0.4 in May from 26.7 in April, signaling a broad and rapid weakening in regional manufacturing activity — likely reflecting tariff uncertainty.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-22-2026" target="_blank">Estée Lauder Surges 11.9%, Workday +5.2%, SoftBank Extends AI Rally with +11% Gain</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">TheStreet</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">Estée Lauder rose 11.9% after ending merger talks with Spanish perfumery Puig; Workday jumped 5.2% on strong Q1 earnings. SoftBank extended its AI-driven rally for a second day, gaining 11%+ on the back of Nvidia's blockbuster results.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.finsyn.com/weekly-market-recap-may-22-2026/" target="_blank">S&amp;P 500 Extends Winning Streak to Eight Consecutive Weeks — Longest Since Dec 2023</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Financial Synergies</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">The S&P 500 gained 0.4% Friday and extended its winning streak to eight consecutive weeks, the longest such run since December 2023. The Nasdaq logged its seventh weekly advance in eight weeks, driven by strong earnings and Iran peace-talk optimism.</div>
+      </li>
+
+    </ul>
+
+    <!-- CHINA -->
+    <h3>🇨🇳 China</h3>
+    <ul class="spotlight-list">
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.cnbc.com/2026/05/22/us-china-ai-apec-asia.html" target="_blank">U.S. Promotes AI Solutions Across Asia at APEC Summit in Suzhou</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">CNBC</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">Senior State Department officials told APEC trade ministers in Suzhou that the U.S. is actively promoting American AI solutions in Asia. U.S. tech companies plan workshops in Chengdu in July as part of a broader AI diplomacy push following the Trump-Xi summit.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.npr.org/2026/05/22/g-s1-123647/comparing-u-s-and-china-announcements" target="_blank">Trump-Xi Summit: Two Sides Diverge on What Exactly Was Agreed in Beijing</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">NPR</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-22 (time unknown)</span>
+        </div>
+        <div class="news-summary">As details continue to emerge from Trump's Beijing visit, the U.S. and China are offering competing interpretations of the agreements made. China confirmed 200 Boeing aircraft purchases and tariff reduction commitments, but broader deal scope remains disputed.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.cnbc.com/2026/05/21/china-russia-putin-xi-jinping-ties-deals-energy-siberia-pipeline-trump-visits-.html" target="_blank">Putin-Xi Summit: No Pipeline Deal, But Declarations of Enduring China-Russia Friendship</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">CNBC</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-21 (time unknown)</span>
+        </div>
+        <div class="news-summary">Putin left Beijing with a stack of bilateral deals but without the Power of Siberia 2 pipeline agreement Russia had sought. The failure came despite Russia's desperate need for new gas export routes after European markets shrank following its Ukraine invasion.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.cnn.com/2026/05/20/china/china-confirms-boeing-purchases-deals-intl-hnk" target="_blank">China Officially Confirms 200 Boeing Aircraft Purchases and Trade Terms from Trump Visit</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">CNN</span> &nbsp;·&nbsp;
+          <span style="color:#666;font-size:0.9em">2026-05-20 (time unknown)</span>
+        </div>
+        <div class="news-summary">Beijing confirmed it will purchase 200 Boeing aircraft and work with the U.S. to reduce tariffs, validating some of the outcomes reported from President Trump's state visit to China. The announcement bolstered Boeing's stock and broader market sentiment.</div>
+      </li>
+
+    </ul>
+  </section>
+
+  <footer>
+    Generated by Cowork briefing job &nbsp;·&nbsp; 2026-05-22 20:44 PDT
+  </footer>
+
+</div>
+</body>
+</html>
