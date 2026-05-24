@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefing — 2026-05-24 06:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f6f8;
+      color: #1a1a2e;
+      line-height: 1.6;
+      padding: 16px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      padding: 28px 32px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    header h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.5px; }
+    header .sub { color: #aab4c8; font-size: 0.9rem; margin-top: 6px; }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e6ef;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e8ecf4;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #3a4a6b;
+      margin: 18px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    /* Market snapshot grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .mkt-item {
+      background: #f7f9fc;
+      border: 1px solid #e2e6ef;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .mkt-item .label { font-size: 0.78rem; color: #6b7a9a; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+    .mkt-item .value { font-size: 1.15rem; font-weight: 700; color: #1a1a2e; margin: 4px 0 2px; }
+    .mkt-item .change { font-size: 0.85rem; font-weight: 600; }
+    .mkt-item .note { font-size: 0.73rem; color: #8896b3; margin-top: 3px; }
+    .up { color: #16a34a; }
+    .down { color: #dc2626; }
+    .neutral { color: #6b7a9a; }
+    .source-row { font-size: 0.78rem; color: #8896b3; margin-top: 10px; }
+    .source-row a { color: #4a6cf7; text-decoration: none; }
+    .source-row a:hover { text-decoration: underline; }
+    .state-badge {
+      display: inline-block;
+      background: #fff3cd;
+      color: #856404;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      border: 1px solid #f0c060;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    /* News items */
+    .news-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f2f8;
+    }
+    .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-item .headline { font-weight: 600; font-size: 0.97rem; }
+    .news-item .headline a { color: #1a1a2e; text-decoration: none; }
+    .news-item .headline a:hover { color: #4a6cf7; text-decoration: underline; }
+    .news-item .meta { font-size: 0.82rem; color: #6b7a9a; margin: 4px 0 6px; }
+    .news-item .meta .time { color: #8896b3; font-size: 0.8rem; }
+    .news-item .summary { font-size: 0.9rem; color: #3d4a63; line-height: 1.55; }
+    .num { color: #4a6cf7; font-weight: 700; margin-right: 6px; }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #8896b3;
+      padding: 20px 0 10px;
+    }
+    @media (max-width: 600px) {
+      .market-grid { grid-template-columns: repeat(2, 1fr); }
+      header { padding: 20px; }
+      .card { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📰 Briefing — 2026-05-24 06:00</h1>
+    <div class="sub">Generated at 2026-05-24 06:51 PT &nbsp;·&nbsp; Sunday morning edition</div>
+  </header>
+
+  <!-- MARKET SNAPSHOT -->
+  <div class="card">
+    <h2>📊 Market Snapshot</h2>
+    <div class="state-badge">⚠ Weekend — Markets Closed · Showing Friday May 22, 2026 Close</div>
+
+    <h3>U.S. Equity Indices — Friday Close</h3>
+    <div class="market-grid">
+      <div class="mkt-item">
+        <div class="label">S&amp;P 500 (^GSPC)</div>
+        <div class="value">7,473.47</div>
+        <div class="change up">▲ +0.37%</div>
+        <div class="note">Fri Close · 8th straight winning week</div>
+      </div>
+      <div class="mkt-item">
+        <div class="label">Dow Jones (^DJI)</div>
+        <div class="value">50,579.70</div>
+        <div class="change up">▲ +294 pts &nbsp;(+0.58%)</div>
+        <div class="note">Fri Close · New record high</div>
+      </div>
+      <div class="mkt-item">
+        <div class="label">Nasdaq (^IXIC)</div>
+        <div class="value">26,343.97</div>
+        <div class="change up">▲ +0.19%</div>
+        <div class="note">Fri Close</div>
+      </div>
+    </div>
+
+    <h3>Commodities — As of Sunday Morning</h3>
+    <div class="market-grid">
+      <div class="mkt-item">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="value">$96.60</div>
+        <div class="change neutral">Near-term futures</div>
+        <div class="note">Prior session high ~$98 · Geopolitical premium elevated</div>
+      </div>
+      <div class="mkt-item">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="value">$103.54</div>
+        <div class="change neutral">Near-term futures</div>
+        <div class="note">Prior session high ~$105 · Strait of Hormuz uncertainty</div>
+      </div>
+      <div class="mkt-item">
+        <div class="label">Gold (XAU/USD)</div>
+        <div class="value">$4,509.38</div>
+        <div class="change down">▼ −$33.91 vs prior close</div>
+        <div class="note">Prior close $4,543.29 · 2nd weekly decline</div>
+      </div>
+    </div>
+
+    <h3>U.S. Treasury Yields — Friday Close</h3>
+    <div class="market-grid">
+      <div class="mkt-item">
+        <div class="label">2-Year Yield</div>
+        <div class="value">N/A</div>
+        <div class="change neutral">Data unavailable</div>
+        <div class="note">Check treasury.gov for latest</div>
+      </div>
+      <div class="mkt-item">
+        <div class="label">10-Year Yield</div>
+        <div class="value">4.57%</div>
+        <div class="change neutral">Steadied Fri after Thu spike</div>
+        <div class="note">Thu high: 4.62%</div>
+      </div>
+      <div class="mkt-item">
+        <div class="label">20-Year Yield</div>
+        <div class="value">N/A</div>
+        <div class="change neutral">Data unavailable</div>
+        <div class="note">Check treasury.gov for latest</div>
+      </div>
+    </div>
+
+    <div class="source-row">
+      Sources: <a href="https://www.cnbc.com/2026/05/21/stock-market-today-live-updates.html" target="_blank">CNBC Markets</a> ·
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-22-2026" target="_blank">TheStreet</a> ·
+      <a href="https://oilprice.com/" target="_blank">OilPrice.com</a> ·
+      <a href="https://www.investing.com/currencies/xau-usd" target="_blank">Investing.com (Gold)</a> ·
+      <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics (Yields)</a>
+    </div>
+  </div>
+
+  <!-- TOP GLOBAL HEADLINES -->
+  <div class="card">
+    <h2>🌍 Top Global Headlines</h2>
+
+    <div class="news-item">
+      <div class="headline"><span class="num">1.</span><a href="https://www.cnn.com/2026/05/24/world/live-news/iran-war-news" target="_blank">US touts 'significant progress' in Iran peace deal; Strait of Hormuz remains sticking point</a></div>
+      <div class="meta">CNN &nbsp;<span class="time">· 2026-05-24 (ongoing live blog) PT</span></div>
+      <div class="summary">Secretary of State Rubio cited "significant progress" in reaching a deal with Iran, as both sides continue to negotiate. A two-phase agreement is under discussion: Phase 1 would reopen the Strait of Hormuz; Phase 2 would address nuclear issues — but Iran disputes Trump's framing that terms are finalized.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><span class="num">2.</span><a href="https://www.npr.org/2026/05/23/g-s1-124145/trump-iran-deal-strait-of-hormuz" target="_blank">Trump says Iran deal is 'largely negotiated,' will be announced soon</a></div>
+      <div class="meta">NPR &nbsp;<span class="time">· 2026-05-23 PT</span></div>
+      <div class="summary">President Trump said Saturday the Iran peace deal is "largely negotiated" and includes the reopening of the Strait of Hormuz. Iranian state media quickly disputed his characterization, signaling Tehran intends to maintain control over the waterway and has not agreed to all U.S. terms.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><span class="num">3.</span><a href="https://www.npr.org/2026/05/23/nx-s1-5832405/coal-mine-gas-explosion-china" target="_blank">Deadliest coal mine explosion in China in years kills at least 82 people in Shanxi</a></div>
+      <div class="meta">NPR &nbsp;<span class="time">· 2026-05-23 PT</span></div>
+      <div class="summary">A gas explosion at a coal mine in China's northern Shanxi province killed at least 82 people — the country's deadliest mining accident in recent years. President Xi Jinping called for all-out rescue efforts and a thorough investigation with accountability.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><span class="num">4.</span><a href="https://news.cgtn.com/news/2026-05-23/China-to-launch-Shenzhou-23-crewed-spaceship-on-May-24-1Nn49DFWuuA/p.html" target="_blank">China launches Shenzhou-23 crewed mission to space station</a></div>
+      <div class="meta">CGTN &nbsp;<span class="time">· 2026-05-23/24 PT</span></div>
+      <div class="summary">China launched the Shenzhou-23 crewed spacecraft on May 24, marking the country's 40th crewed spaceflight and the seventh during the station's application phase. The mission includes crew rotation, extravehicular activities, science experiments, and debris-protection installations.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><span class="num">5.</span><a href="https://ts2.tech/en/stock-market-today-24-05-2026/" target="_blank">S&P 500 notches eighth consecutive winning week amid Iran peace optimism</a></div>
+      <div class="meta">ts2.tech / market recap &nbsp;<span class="time">· 2026-05-24 PT</span></div>
+      <div class="summary">U.S. stocks posted an eighth straight weekly gain through Friday, with the Dow closing at a new record of 50,579.70. Markets remained closed Monday (Memorial Day). The UN trimmed its global GDP forecast to 2.5%, and investors watch for consumer confidence, PCE, and multiple earnings reports next week.</div>
+    </div>
+
+  </div>
+
+  <!-- TOPIC SPOTLIGHTS -->
+  <div class="card">
+    <h2>🔍 Topic Spotlights</h2>
+
+    <!-- TESLA -->
+    <h3>🚗 Tesla (TSLA)</h3>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://fortune.com/2026/05/21/spacex-ipo-hurt-tesla-retail-investors/" target="_blank">SpaceX IPO in June could divert Musk's focus from Tesla, investors warn</a></div>
+      <div class="meta">Fortune &nbsp;<span class="time">· 2026-05-21 PT</span></div>
+      <div class="summary">SpaceX's pending IPO — slated for June — would double Musk's publicly traded companies. Investors and analysts warn that Musk's attention appears already focused on SpaceX "at the expense of Tesla," raising red flags for TSLA shareholders.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://www.gurufocus.com/news/8865784/tesla-cfo-vaibhav-taneja-sells-3000-shares-tsla" target="_blank">Tesla CFO Vaibhav Taneja sells 3,000 shares worth $1.35M</a></div>
+      <div class="meta">GuruFocus &nbsp;<span class="time">· 2026-05-18 PT</span></div>
+      <div class="summary">Tesla Chief Financial Officer Vaibhav Taneja sold 3,000 shares for approximately $1.35 million on May 18, 2026, a routine insider transaction that investors are monitoring amid ongoing stock volatility.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://www.cnbc.com/quotes/TSLA" target="_blank">Tesla Robotaxi now live in Austin, Dallas, Houston; targeting a dozen US states by year-end</a></div>
+      <div class="meta">CNBC &nbsp;<span class="time">· time unknown</span></div>
+      <div class="summary">Tesla's Robotaxi service has expanded to three major Texas cities, with management guiding toward deployment across a dozen U.S. states by end of 2026. Meanwhile, Full Self-Driving has moved to subscription-only in Europe, and TSLA is trading near $426 with a market cap of ~$1.6T.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://finance.yahoo.com/quote/TSLA/news/" target="_blank">Tesla recalls 14,575 Model Y SUVs over missing weight certification labels</a></div>
+      <div class="meta">Yahoo Finance / NHTSA &nbsp;<span class="time">· time unknown</span></div>
+      <div class="summary">Tesla issued a recall affecting 14,575 Model Y vehicles in the U.S. due to missing certification labels that list vehicle weight limits, which could increase crash risk if owners are unaware of proper loading limits.</div>
+    </div>
+
+    <!-- US–IRAN -->
+    <h3>⚔️ US–Iran</h3>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://www.cbsnews.com/live-updates/iran-war-trump-us-peace-talks-strait-of-hormuz-control/" target="_blank">Peace deal 'largely negotiated' — Iran to reopen Strait of Hormuz in Phase 1</a></div>
+      <div class="meta">CBS News &nbsp;<span class="time">· 2026-05-23/24 (live updates) PT</span></div>
+      <div class="summary">A two-phase framework is being discussed: Phase 1 reopens the Strait and includes assurances against nuclear weapons pursuit; Phase 2 (30–60 days) addresses detailed nuclear dismantlement. Iran's Foreign Ministry disputes U.S. characterization, saying the Strait is not a U.S. matter and is being negotiated with Oman.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/21/iran-war-live-tehran-says-no-surrender-to-us-diplomacy-wiser-than-war" target="_blank">Rubio: 'Some good signs' a peace deal can be reached; Iran insists on sovereignty over Hormuz</a></div>
+      <div class="meta">Al Jazeera &nbsp;<span class="time">· 2026-05-21 PT</span></div>
+      <div class="summary">Secretary Rubio expressed cautious optimism about peace talks, saying there are "some good signs." Iran has maintained it will not surrender control of the Strait of Hormuz and insists diplomatic engagement is preferable to continued conflict, while demanding nuclear talks be held separately from a ceasefire.</div>
+    </div>
+
+    <!-- ECONOMY -->
+    <h3>💹 Economy</h3>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://ts2.tech/en/stock-market-today-24-05-2026/" target="_blank">UN cuts 2026 global GDP forecast to 2.5% amid energy price pressures</a></div>
+      <div class="meta">Market recap / ts2.tech &nbsp;<span class="time">· 2026-05-24 PT</span></div>
+      <div class="summary">The United Nations trimmed its global GDP growth forecast to 2.5% for 2026, citing ongoing disruptions to energy supply tied to the US-Iran conflict and Strait of Hormuz tensions. Elevated crude oil prices are fueling inflation concerns globally.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Kevin Warsh set to take oath as Fed Chair; US markets closed Monday for Memorial Day</a></div>
+      <div class="meta">Charles Schwab &nbsp;<span class="time">· time unknown</span></div>
+      <div class="summary">Kevin Warsh is scheduled to take the oath of office as the new Federal Reserve Chair. U.S. equity markets will be closed Monday, May 25 for Memorial Day. The next major data releases include consumer confidence (May 26), new home sales (May 27), and the Q1 GDP second estimate and PCE prices (May 28).</div>
+    </div>
+
+    <!-- CHINA -->
+    <h3>🇨🇳 China</h3>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://www.npr.org/2026/05/23/nx-s1-5832405/coal-mine-gas-explosion-china" target="_blank">Gas explosion at Shanxi coal mine kills 82 in China's deadliest mining accident in years</a></div>
+      <div class="meta">NPR &nbsp;<span class="time">· 2026-05-23 PT</span></div>
+      <div class="summary">A gas explosion tore through a coal mine in Shanxi province, killing at least 82 workers. President Xi Jinping called for an all-out rescue effort and promised a thorough investigation with legal accountability. The disaster highlights ongoing safety challenges in China's coal sector.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://news.cgtn.com/news/2026-05-23/China-to-launch-Shenzhou-23-crewed-spaceship-on-May-24-1Nn49DFWuuA/p.html" target="_blank">Shenzhou-23 launches May 24 — China's 40th crewed spaceflight</a></div>
+      <div class="meta">CGTN &nbsp;<span class="time">· 2026-05-23/24 PT</span></div>
+      <div class="summary">Shenzhou-23 lifts off carrying three astronauts to China's Tiangong space station for crew rotation. The mission marks a milestone in China's mature crewed spaceflight program and includes science experiments, extravehicular activities, and space-debris protection work.</div>
+    </div>
+
+    <div class="news-item">
+      <div class="headline"><a href="https://www.cgtn.com/" target="_blank">Serbian President Vucic arrives in China for five-day state visit</a></div>
+      <div class="meta">CGTN &nbsp;<span class="time">· 2026-05-24 PT</span></div>
+      <div class="summary">Serbian President Aleksandar Vucic arrived in Beijing on May 24 for a state visit at the invitation of President Xi Jinping, running through May 28. The visit is expected to deepen bilateral ties and affirm Serbia's partnership with China amid ongoing European geopolitical shifts.</div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated by Cowork briefing job &nbsp;·&nbsp; 2026-05-24 06:51 PT
+  </footer>
+
+</div>
+</body>
+</html>
