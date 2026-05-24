@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefing — 2026-05-23 20:00</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f6f8;
+      color: #1a1a2e;
+      line-height: 1.6;
+      padding: 20px 16px 60px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+    }
+    header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; }
+    header .subtitle { font-size: 0.88rem; color: #a0aec0; margin-top: 6px; }
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #4a5568;
+      border-bottom: 2px solid #edf2f7;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+    .section h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin: 18px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    /* Market grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .market-card {
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .market-card .label {
+      font-size: 0.78rem;
+      color: #718096;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .market-card .price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .market-card .change {
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .market-card .as-of {
+      font-size: 0.72rem;
+      color: #a0aec0;
+      margin-top: 4px;
+    }
+    .market-card .status-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 3px;
+      font-weight: 600;
+      background: #edf2f7;
+      color: #4a5568;
+    }
+    .up { color: #38a169; }
+    .down { color: #e53e3e; }
+    .neutral { color: #718096; }
+    .sources-row {
+      font-size: 0.78rem;
+      color: #a0aec0;
+      margin-top: 10px;
+    }
+    .sources-row a { color: #667eea; text-decoration: none; }
+    .sources-row a:hover { text-decoration: underline; }
+    /* Treasury table */
+    .yield-table { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+    .yield-table th {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #718096;
+      text-align: left;
+      padding: 6px 10px;
+      border-bottom: 2px solid #edf2f7;
+    }
+    .yield-table td {
+      padding: 8px 10px;
+      font-size: 0.92rem;
+      border-bottom: 1px solid #f0f4f8;
+    }
+    .yield-table tr:last-child td { border-bottom: none; }
+    /* News items */
+    .news-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f4f8;
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-item .num {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #667eea;
+      margin-right: 8px;
+    }
+    .news-item .headline {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: #2d3748;
+    }
+    .news-item .headline a { color: #2d3748; text-decoration: none; }
+    .news-item .headline a:hover { color: #667eea; }
+    .news-item .meta {
+      font-size: 0.82rem;
+      color: #718096;
+      margin-top: 3px;
+    }
+    .news-item .summary {
+      font-size: 0.88rem;
+      color: #4a5568;
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+    .ts { color: #a0aec0; font-size: 0.82em; }
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #a0aec0;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      .market-grid { grid-template-columns: repeat(2, 1fr); }
+      .section { padding: 18px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📰 Daily Briefing — 2026-05-23 20:00</h1>
+    <div class="subtitle">Generated at 2026-05-23 20:50 PDT · Saturday evening run</div>
+  </header>
+
+  <!-- ===== MARKET SNAPSHOT ===== -->
+  <div class="section">
+    <h2>📊 Market Snapshot</h2>
+    <p style="font-size:0.82rem;color:#718096;margin-bottom:16px;">Markets closed (weekend). Showing <strong>Friday May 22, 2026 close</strong> values.</p>
+
+    <h3>🛢 Oil</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="price">$98.00</div>
+        <div class="change up">↑ above $98/bbl</div>
+        <div class="as-of">As of Fri May 22 close · <span class="status-badge">Close</span></div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="price">$105.00</div>
+        <div class="change up">↑ above $105/bbl</div>
+        <div class="as-of">Open: $104.62 · As of Fri May 22 close · <span class="status-badge">Close</span></div>
+      </div>
+    </div>
+
+    <h3>🥇 Gold</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">Gold Spot (XAU/USD)</div>
+        <div class="price">$4,521.16</div>
+        <div class="change neutral">— May 22 mid-session</div>
+        <div class="as-of">As of Fri May 22 (Sat is non-trading) · <span class="status-badge">Prior Close</span></div>
+      </div>
+    </div>
+
+    <h3>📈 U.S. Equity Indices</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500 (^GSPC)</div>
+        <div class="price">7,473.47</div>
+        <div class="change up">↑ +27.75 (+0.37%)</div>
+        <div class="as-of">Fri May 22 close · <span class="status-badge">Close</span></div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones (^DJI)</div>
+        <div class="price">50,579.70</div>
+        <div class="change up">↑ +294.04 (+0.58%)</div>
+        <div class="as-of">Fri May 22 close · <span class="status-badge">Close</span></div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq (^IXIC)</div>
+        <div class="price">26,343.97</div>
+        <div class="change up">↑ +50.87 (+0.19%)</div>
+        <div class="as-of">Fri May 22 close · <span class="status-badge">Close</span></div>
+      </div>
+    </div>
+
+    <h3>🏦 U.S. Treasury Yields</h3>
+    <table class="yield-table">
+      <thead>
+        <tr>
+          <th>Maturity</th>
+          <th>Yield</th>
+          <th>As of</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2-Year</td>
+          <td><strong>4.13%</strong></td>
+          <td><span class="ts">Fri May 22, 2026 close</span></td>
+        </tr>
+        <tr>
+          <td>10-Year</td>
+          <td><strong>4.56%</strong></td>
+          <td><span class="ts">Fri May 22, 2026 close</span></td>
+        </tr>
+        <tr>
+          <td>20-Year</td>
+          <td><strong>5.09%</strong></td>
+          <td><span class="ts">Fri May 22, 2026 close</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sources-row">
+      Sources:
+      <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">TradingEconomics (WTI)</a> ·
+      <a href="https://www.investing.com/commodities/brent-oil" target="_blank">Investing.com (Brent)</a> ·
+      <a href="https://tradingeconomics.com/commodity/gold" target="_blank">TradingEconomics (Gold)</a> ·
+      <a href="https://finance.yahoo.com/quote/%5EGSPC/" target="_blank">Yahoo Finance (S&amp;P)</a> ·
+      <a href="https://www.advisorperspectives.com/dshort/updates/2026/05/22/treasury-yields-snapshot-may-22-2026" target="_blank">Advisor Perspectives (Yields)</a>
+    </div>
+  </div>
+
+  <!-- ===== TOP GLOBAL HEADLINES ===== -->
+  <div class="section">
+    <h2>🌍 Top Global Headlines</h2>
+
+    <div class="news-item">
+      <span class="num">1</span>
+      <span class="headline"><a href="https://www.washingtonpost.com/world/2026/05/23/iran-united-states-war-ceasefire-negotiations-hormuz/" target="_blank">Trump Says Iran Deal Including Strait of Hormuz Opening Is 'Largely Negotiated'</a></span>
+      <div class="meta">Washington Post · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">President Trump posted on Truth Social that an agreement with Iran has been "largely negotiated," covering the end of hostilities and gradual reopening of the Strait of Hormuz, though he put odds of signing at only 50/50.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="num">2</span>
+      <span class="headline"><a href="https://www.jpost.com/middle-east/iran-news/article-897053" target="_blank">US, Iran Close to Agreeing on 60-Day Ceasefire Extension</a></span>
+      <div class="meta">Jerusalem Post · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">Iran and the U.S. are reportedly on the verge of a 60-day ceasefire extension memorandum, during which nuclear programme negotiations and sanctions relief discussions would continue.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="num">3</span>
+      <span class="headline"><a href="https://www.timesofisrael.com/liveblog-may-23-2026/" target="_blank">Iran Contradicts Trump: Strait of Hormuz Will Remain Under Iran's Management</a></span>
+      <div class="meta">Times of Israel · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">Iranian state media pushed back on Trump's claims, with Tehran asserting that control of the Strait of Hormuz would remain under Iranian management regardless of any deal framework.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="num">4</span>
+      <span class="headline"><a href="https://www.aljazeera.com/news/2026/5/23/gas-explosion-at-chinese-coal-mine-kills-at-least-90" target="_blank">Gas Explosion at Chinese Coal Mine Kills 82 People</a></span>
+      <div class="meta">Al Jazeera · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">A blast at the Liushenyu mine in Shanxi province struck while 247 workers were underground, killing 82 and injuring 128. Xi Jinping has urged intensified safety efforts nationally following the country's deadliest mining disaster in recent years.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="num">5</span>
+      <span class="headline"><a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Kevin Warsh Sworn In as Federal Reserve Chair as Markets Rise</a></span>
+      <div class="meta">Charles Schwab / CNBC · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">Trump led the swearing-in ceremony for Kevin Warsh as new Fed chair. The S&amp;P 500 extended its win streak to eight consecutive weeks, while core inflation came in at 1.4%, below the 1.7% consensus estimate.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="num">6</span>
+      <span class="headline"><a href="https://news.cgtn.com/news/2026-05-23/China-to-launch-Shenzhou-23-crewed-spaceship-on-May-24-1Nn49DFWuuA/p.html" target="_blank">China to Launch Shenzhou-23 Crewed Mission to Space Station on May 24</a></span>
+      <div class="meta">CGTN · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">China's Shenzhou-23 spacecraft is set to launch Sunday night from Jiuquan, marking the 40th flight of China's crewed space program and the seventh crewed spaceflight in the space station's application phase.</div>
+    </div>
+
+  </div>
+
+  <!-- ===== TOPIC SPOTLIGHTS ===== -->
+  <div class="section">
+    <h2>🔎 Topic Spotlights</h2>
+
+    <!-- Tesla -->
+    <h3>⚡ Tesla (TSLA)</h3>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://finance.yahoo.com/quote/TSLA/news/" target="_blank">Tesla Full Self-Driving Goes Subscription-Only in Europe</a></span>
+      <div class="meta">Yahoo Finance / CNBC · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">Tesla has shifted to a subscription-only model for FSD in Europe, broadening international monetisation of its autonomous driving software. TSLA closed Friday around $423.67 (range $417.46–$431.08).</div>
+    </div>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.ibtimes.com.au/tesla-q1-2026-financials-fsd-expansion-1869355" target="_blank">Tesla Robotaxi Expands to Dallas and Houston; 39 Unsupervised Units Now Operating</a></span>
+      <div class="meta">IBTimes AU · <span class="ts">time unknown</span></div>
+      <div class="summary">Tesla's unsupervised robotaxi fleet has grown to 39 vehicles after rapid expansion this month. Q1 2026 EPS came in at $0.41 (vs. $0.36 consensus), with automotive gross margin climbing to 21.1% from 16.2%.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.fool.com/investing/2026/05/22/should-you-wait-to-buy-tesla-stock-after-june-12/" target="_blank">Should You Wait to Buy Tesla Stock After June 12?</a></span>
+      <div class="meta">Motley Fool · <span class="ts">2026-05-22 time unknown</span></div>
+      <div class="summary">Analysts weigh whether an upcoming June 12 catalyst — likely a product or FSD expansion announcement — warrants holding off on TSLA purchases. Street mean target is $412, slightly below current trading levels.</div>
+    </div>
+
+    <!-- US–Iran -->
+    <h3>🪖 US–Iran</h3>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.nbcnews.com/politics/politics-news/us-iran-officials-signal-progress-negotiations-fragile-ceasefire-war-rcna346636" target="_blank">Agreement on Iran War 'Largely Negotiated,' Trump Says Amid Fragile Ceasefire</a></span>
+      <div class="meta">NBC News · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">Both US and Iranian officials signaled tangible progress; the proposed deal includes Iran surrendering its highly enriched uranium stockpile and Washington providing sanctions relief and easing port restrictions.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.theweek.in/news/middle-east/2026/05/23/us-iran-ceasefire-extension-nuclear-talks-hormuz-pakistan-deal-mediation.html" target="_blank">US-Iran Ceasefire Likely Extended 60 Days; Pakistan Playing Mediating Role</a></span>
+      <div class="meta">The Week India · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">Pakistan, whose PM visits Beijing this week, is reportedly playing a back-channel mediating role. The two-month extension would allow time to finalize nuclear programme discussions and sanctions terms.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.bloomberg.com/news/articles/2026-05-23/iran-peace-deal-push-intensifies-as-fragile-ceasefire-holds" target="_blank">Iran, US Signal Progress in Peace Talks as Key Issues Remain Unresolved</a></span>
+      <div class="meta">Bloomberg · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">Iran's Foreign Ministry said positions have "become closer, but not to the point of an agreement." Trump is expected to make a decision by Sunday on whether to sign or resume the war.</div>
+    </div>
+
+    <!-- Economy -->
+    <h3>💹 Economy</h3>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Core Inflation Surprises to the Downside at 1.4% vs. 1.7% Expected</a></span>
+      <div class="meta">Charles Schwab · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">Core inflation came in well below the 1.7% Reuters consensus and the prior 1.8% reading, boosting risk assets. The S&amp;P 500 logged its eighth straight weekly gain — the longest streak since December 2023.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://ts2.tech/en/stock-market-today-23-05-2026/" target="_blank">SoftBank Surges 11% for Second Straight Day; Merck, Salesforce Lead US Gains</a></span>
+      <div class="meta">TS2 Space · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">SoftBank extended its rally to a second consecutive session of +11%, while US gainers were led by Merck (+5.64%), Salesforce (+2.23%), and Cisco (+2.01%). Nvidia (-1.86%) and Walmart (-0.82%) lagged.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.heygotrade.com/en/news/wall-street-closes-mixed-nasdaq-sp-500-slip-oil-yields/" target="_blank">Wall Street Closes Mixed — Nasdaq, S&amp;P Slip on Oil and Rising Yields</a></span>
+      <div class="meta">HeyGoTrade · <span class="ts">2026-05-22 time unknown</span></div>
+      <div class="summary">Despite Friday's gains, earlier in the week markets were pressured by elevated oil prices linked to Strait of Hormuz uncertainty and yield movements. WTI above $98 remained a headwind for rate-sensitive sectors.</div>
+    </div>
+
+    <!-- China -->
+    <h3>🇨🇳 China</h3>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.aljazeera.com/news/2026/5/23/gas-explosion-at-chinese-coal-mine-kills-at-least-90" target="_blank">Gas Explosion at Shanxi Coal Mine Kills 82, Xi Urges Nationwide Safety Push</a></span>
+      <div class="meta">Al Jazeera · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">The Liushenyu mine blast in Qinyuan county, Shanxi, is China's deadliest mining accident in recent years. Two people remain missing; 128 are hospitalized. President Xi ordered all regions to tighten safety enforcement.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://news.cgtn.com/news/2026-05-23/China-to-launch-Shenzhou-23-crewed-spaceship-on-May-24-1Nn49DFWuuA/p.html" target="_blank">China to Launch Shenzhou-23 Crewed Mission Sunday Night</a></span>
+      <div class="meta">CGTN · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">The Shenzhou-23 craft launches at 11:08 p.m. Sunday from Jiuquan. The mission is the 40th flight of China's crewed space program and seventh crewed spaceflight during the station's application phase.</div>
+    </div>
+
+    <div class="news-item">
+      <span class="headline"><a href="https://www.cnbc.com/2026/05/21/china-russia-putin-xi-jinping-ties-deals-energy-siberia-pipeline-trump-visits-.html" target="_blank">Pakistan PM Shehbaz Sharif Visits Beijing May 23–26 Amid Active Diplomacy</a></span>
+      <div class="meta">CNBC / CGTN · <span class="ts">2026-05-23 time unknown</span></div>
+      <div class="summary">China continues a busy diplomatic calendar following visits by Trump and Putin. Pakistan's PM arrives Saturday; analysts note China-Pakistan ties are being reinforced as Beijing expands its regional influence amid US-Iran tensions.</div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated by Cowork briefing job · 2026-05-23 20:50 PDT
+  </footer>
+
+</div>
+</body>
+</html>
