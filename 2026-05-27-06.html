@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing — 2026-05-27 06:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+      padding: 16px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 28px 32px 20px;
+    }
+    .header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .header .subtitle {
+      color: #aab4c8;
+      font-size: 0.88rem;
+      margin-top: 4px;
+    }
+    .section {
+      padding: 24px 32px;
+      border-bottom: 1px solid #eee;
+    }
+    .section:last-child { border-bottom: none; }
+    .section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #1a1a2e;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e8e8f0;
+    }
+    .section h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #333;
+      margin: 18px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Market Snapshot Grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .market-card {
+      background: #f8f9fc;
+      border: 1px solid #e4e6f0;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .market-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #666;
+      margin-bottom: 4px;
+    }
+    .market-card .value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .market-card .change {
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .market-card .as-of {
+      font-size: 0.72rem;
+      color: #999;
+      margin-top: 4px;
+    }
+    .market-card .market-state {
+      font-size: 0.72rem;
+      color: #888;
+      font-style: italic;
+      margin-top: 2px;
+    }
+    .up { color: #16a34a; }
+    .down { color: #dc2626; }
+    .neutral { color: #666; }
+
+    /* Sources */
+    .sources {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 10px;
+    }
+    .sources a { color: #4a6cf7; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    /* News Items */
+    ol.news-list {
+      padding-left: 20px;
+    }
+    ol.news-list li {
+      margin-bottom: 16px;
+    }
+    .news-headline a {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      text-decoration: none;
+    }
+    .news-headline a:hover { text-decoration: underline; color: #4a6cf7; }
+    .news-meta {
+      font-size: 0.82rem;
+      color: #555;
+      margin: 2px 0 4px;
+    }
+    .news-meta .source { font-weight: 600; }
+    .news-meta .pub-time { color: #888; font-size: 0.8rem; }
+    .news-summary {
+      font-size: 0.88rem;
+      color: #444;
+    }
+
+    /* Spotlight items (no numbering) */
+    .story-item {
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .story-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .tsla-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .tsla-table th {
+      text-align: left;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+      padding: 6px 8px;
+      border-bottom: 2px solid #e8e8f0;
+    }
+    .tsla-table td {
+      padding: 8px 8px;
+      border-bottom: 1px solid #f3f3f3;
+      vertical-align: top;
+    }
+    .tsla-table tr:last-child td { border-bottom: none; }
+    .tsla-table td a {
+      color: #1a1a2e;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .tsla-table td a:hover { color: #4a6cf7; text-decoration: underline; }
+    .tsla-table .ts-meta { color: #888; font-size: 0.77rem; }
+
+    .footer {
+      background: #f8f9fc;
+      padding: 16px 32px;
+      font-size: 0.8rem;
+      color: #888;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 18px 16px; }
+      .header { padding: 20px 16px; }
+      .market-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>📰 Morning Briefing — 2026-05-27 06:00</h1>
+    <div class="subtitle">Generated at 2026-05-27 06:50 PT &nbsp;·&nbsp; Wednesday, May 27, 2026</div>
+  </div>
+
+  <!-- SECTION 1: Market Snapshot -->
+  <div class="section">
+    <h2>📊 Market Snapshot</h2>
+    <p style="font-size:0.82rem;color:#888;margin-bottom:14px;">
+      Market state: <strong>Open / Early Intraday</strong> — Regular session opened at 06:30 PT (09:30 ET).
+      Index values below reflect pre-market futures captured at ~06:50 PT; intraday prices may differ.
+    </p>
+
+    <!-- Oil -->
+    <h3>Crude Oil</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="value">~$92–$95</div>
+        <div class="change neutral">Range: $90.37 – $94.68</div>
+        <div class="as-of">As of 2026-05-27 morning</div>
+        <div class="market-state">Front-month futures</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="value">$99.18</div>
+        <div class="change down">▼ 0.41% day</div>
+        <div class="as-of">As of 2026-05-27 morning</div>
+        <div class="market-state">Front-month futures</div>
+      </div>
+    </div>
+
+    <!-- Gold -->
+    <h3>Gold</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">Gold Spot (XAU/USD)</div>
+        <div class="value">~$4,444</div>
+        <div class="change down">▼ from prev close ~$4,508</div>
+        <div class="as-of">Range today: $4,433 – $4,527</div>
+        <div class="market-state">Spot price</div>
+      </div>
+    </div>
+
+    <!-- US Indices -->
+    <h3>US Equity Indices (Futures — Early Session)</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500 (ES=F)</div>
+        <div class="value">7,564.75</div>
+        <div class="change up">▲ +27.75 (+0.37%)</div>
+        <div class="as-of">As of ~06:50 PT</div>
+        <div class="market-state">Futures / Early Intraday</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones (YM=F)</div>
+        <div class="value">50,765</div>
+        <div class="change up">▲ +218.00 (+0.43%)</div>
+        <div class="as-of">As of ~06:50 PT</div>
+        <div class="market-state">Futures / Early Intraday</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq (NQ=F)</div>
+        <div class="value">30,256</div>
+        <div class="change up">▲ +182.50 (+0.61%)</div>
+        <div class="as-of">As of ~06:50 PT</div>
+        <div class="market-state">Futures / Early Intraday</div>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:#666;margin-bottom:12px;">
+      Prior session (Tue May 26): S&amp;P 500 +0.61% | Nasdaq +1.19% | Dow −0.23%.
+      Chip stocks led — Micron surged 19.3%, crossing $1T market cap.
+    </p>
+
+    <!-- Treasury Yields -->
+    <h3>US Treasury Yields</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">2-Year (US2Y)</div>
+        <div class="value">4.066%</div>
+        <div class="change down">▼ −0.061% from prior close</div>
+        <div class="as-of">As of 2026-05-27</div>
+      </div>
+      <div class="market-card">
+        <div class="label">10-Year (US10Y)</div>
+        <div class="value">~4.48%</div>
+        <div class="change down">▼ Near 2-week low</div>
+        <div class="as-of">As of 2026-05-27</div>
+      </div>
+      <div class="market-card">
+        <div class="label">20-Year (US20Y)</div>
+        <div class="value">5.032%</div>
+        <div class="change down">▼ −0.061% from prior close</div>
+        <div class="as-of">As of 2026-05-27</div>
+      </div>
+    </div>
+
+    <div class="sources">
+      Sources:
+      <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics – WTI</a> ·
+      <a href="https://www.investing.com/commodities/brent-oil">Investing.com – Brent</a> ·
+      <a href="https://www.investing.com/currencies/xau-usd">Investing.com – Gold</a> ·
+      <a href="https://www.cnbc.com/2026/05/25/stock-futures-today-live-updates.html">CNBC – Futures</a> ·
+      <a href="https://www.cnbc.com/quotes/US2Y">CNBC – US2Y</a> ·
+      <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026">US Treasury</a>
+    </div>
+  </div>
+
+  <!-- SECTION 2: Top Global Headlines -->
+  <div class="section">
+    <h2>🌍 Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.cnn.com/2026/05/27/world/live-news/iran-war-us-news" target="_blank">Draft memo outlines end of US blockade and reopening of Strait of Hormuz, Iranian media claims</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">CNN</span> &nbsp;·&nbsp;
+          <span class="pub-time">2026-05-27 (time unknown)</span>
+        </div>
+        <div class="news-summary">A memorandum of understanding being negotiated between Iran and the US would call for US forces to withdraw from Iran's vicinity and lift port blockades in return for the Strait of Hormuz reopening to pre-war levels. President Trump is hosting a Cabinet meeting today amid pressure to resolve the war.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.thestreet.com/latest-news/stock-market-today-may-27-2026-nasdaq-sp-500-open-higher-as-unprecedented-chip-sector-continues-rally" target="_blank">Nasdaq, S&amp;P 500 open higher as unprecedented chip sector rally continues</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">TheStreet</span> &nbsp;·&nbsp;
+          <span class="pub-time">2026-05-27 (time unknown)</span>
+        </div>
+        <div class="news-summary">US stocks open higher Wednesday as chip stocks continue to propel markets to record territory. Today's focus is on earnings reports from Marvell Technology, Salesforce, and Snowflake, which may offer further insight into the state of the AI boom.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.aljazeera.com/news/liveblog/2026/5/27/iran-war-live-israel-kills-31-in-lebanon-tehran-blasts-us-truce-violation" target="_blank">Iran war live: New US attack 'unlikely' but 'graveyard' awaits, warns IRGC</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Al Jazeera</span> &nbsp;·&nbsp;
+          <span class="pub-time">2026-05-27 (time unknown)</span>
+        </div>
+        <div class="news-summary">Iran's Revolutionary Guard says a renewed US attack is "unlikely" due to the "enemy's weakness" but vows to make Iran's southern territory a "graveyard for aggressors." Shipping through the Strait of Hormuz remains very restricted as negotiations continue.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://newstodaynet.com/2026/05/27/against-formation-of-exclusive-groupings-china-on-quad-meet/" target="_blank">China reiterates opposition to Quad, warns against exclusive groupings</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">News Today</span> &nbsp;·&nbsp;
+          <span class="pub-time">2026-05-27 (time unknown)</span>
+        </div>
+        <div class="news-summary">China's Foreign Ministry reiterated Tuesday its opposition to the Quad grouping, saying it was against "exclusive groupings" and bloc confrontation. This came after the Quad announced new measures to boost maritime surveillance in the Indo-Pacific region.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://npr.org/2026/05/26/nx-s1-5834840/iran-lebanon-updates" target="_blank">Prospects fade for imminent end to Iran war as attacks restart</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">NPR</span> &nbsp;·&nbsp;
+          <span class="pub-time">2026-05-26 (time unknown)</span>
+        </div>
+        <div class="news-summary">Despite ongoing US-Iran negotiations, hopes for a quick resolution have dimmed as attacks resumed. The Pentagon is also under financial strain, with the Navy's top officer telling Congress that the 2026 budget "didn't bake in" Operation Epic Fury.</div>
+      </li>
+
+    </ol>
+  </div>
+
+  <!-- SECTION 3: Topic Spotlights -->
+  <div class="section">
+    <h2>🔍 Topic Spotlights</h2>
+
+    <!-- Tesla -->
+    <h3>🚗 Tesla (TSLA)</h3>
+    <table class="tsla-table">
+      <thead>
+        <tr>
+          <th style="width:55%">Headline</th>
+          <th style="width:20%">Source</th>
+          <th style="width:25%">Timestamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://www.wsj.com/business/autos/tesla-announces-rollout-of-fully-self-driving-tech-in-china-2711fdb2" target="_blank">Tesla Announces Rollout of Fully Self-Driving Tech in China</a></td>
+          <td class="ts-meta">WSJ</td>
+          <td class="ts-meta">2h ago — 2026-05-27 04:50 PT</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.businessinsider.com/elon-musk-moonshot-spacex-pay-package-requires-mars-city-development-2026-5" target="_blank">Elon Musk's new 'Marshot' pay package could be worth billions — if he helps colonize Mars</a></td>
+          <td class="ts-meta">Business Insider</td>
+          <td class="ts-meta">2h ago — 2026-05-27 04:50 PT</td>
+        </tr>
+        <tr>
+          <td><a href="https://247wallst.com/investing/2026/05/20/tesla-owns-nearly-19-million-shares-of-spacex-what-tsla-investors-need-to-know-before-the-ipo/" target="_blank">Tesla Owns Nearly 19 Million Shares of SpaceX: What TSLA Investors Need to Know Before the IPO</a></td>
+          <td class="ts-meta">24/7 Wall Street</td>
+          <td class="ts-meta">time unknown</td>
+        </tr>
+        <tr>
+          <td><a href="https://techcrunch.com/2026/05/20/teslas-full-self-driving-software-is-creeping-into-europe/" target="_blank">Tesla's Full Self-Driving software is creeping into Europe</a></td>
+          <td class="ts-meta">TechCrunch</td>
+          <td class="ts-meta">time unknown</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.reuters.com/world/europe/tesla-launches-full-self-driving-lithuania-2026-05-20/" target="_blank">Tesla launches Full Self-Driving in Lithuania</a></td>
+          <td class="ts-meta">Reuters</td>
+          <td class="ts-meta">time unknown</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.marketbeat.com/originals/tesla-ends-model-s-and-x-era-bets-everything-on-whats-next/" target="_blank">Tesla Ends Model S and X Era, Bets Everything on What's Next</a></td>
+          <td class="ts-meta">MarketBeat</td>
+          <td class="ts-meta">time unknown</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.barrons.com/articles/tesla-stock-price-model-s-mercedes-1aaca4b4" target="_blank">Tesla Has Abandoned the Model S and Mercedes Wants to Fill the High-End EV Void</a></td>
+          <td class="ts-meta">Barron's</td>
+          <td class="ts-meta">time unknown</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.theguardian.com/technology/2026/may/20/tesla-cybertruck-texas-lake-wade-mode" target="_blank">Tesla Cybertruck pulled from Texas lake after attempting 'wade mode'</a></td>
+          <td class="ts-meta">The Guardian</td>
+          <td class="ts-meta">time unknown</td>
+        </tr>
+        <tr>
+          <td><a href="https://invezz.com/news/2026/05/19/tesla-stock-slumps-over-3-to-sink-below-400-what-happened/" target="_blank">Tesla stock slumps over 3% to sink below $400: what happened?</a></td>
+          <td class="ts-meta">Invezz</td>
+          <td class="ts-meta">2026-05-26 (time unknown)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- US-Iran -->
+    <h3>⚔️ US–Iran</h3>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://www.cnn.com/2026/05/27/world/live-news/iran-war-us-news" target="_blank">Live: Draft memo outlines US blockade end and Strait of Hormuz reopening — Iranian media</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">CNN</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-27 (time unknown)</span>
+      </div>
+      <div class="news-summary">Iran's state television reports a draft MOU would require US forces to withdraw and lift blockade; Strait of Hormuz remains very restricted while deal is negotiated. President Trump hosted a Cabinet meeting under pressure to end the conflict.</div>
+    </div>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://www.aljazeera.com/news/liveblog/2026/5/27/iran-war-live-israel-kills-31-in-lebanon-tehran-blasts-us-truce-violation" target="_blank">IRGC warns Iran's south will be a "graveyard" if US attacks again</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Al Jazeera</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-27 (time unknown)</span>
+      </div>
+      <div class="news-summary">Iran's Revolutionary Guard called a new US attack "unlikely" given the "enemy's weakness," but threatened consequences for any aggressor. South Korea has summoned the Iranian ambassador over a suspected Iranian missile strike on a South Korean-linked vessel in the Strait of Hormuz.</div>
+    </div>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://npr.org/2026/05/26/nx-s1-5834840/iran-lebanon-updates" target="_blank">Prospects fade for imminent end to Iran war as attacks restart</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">NPR</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-26 (time unknown)</span>
+      </div>
+      <div class="news-summary">Hopes for a quick end to the Iran conflict faded as fresh fighting broke out despite ongoing talks. The Pentagon is under financial pressure, with ongoing operations straining routine training and maintenance budgets.</div>
+    </div>
+
+    <!-- Economy -->
+    <h3>📈 Economy</h3>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Stocks Rise Early on Hopes for End to Iran War</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Charles Schwab</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-27 (time unknown)</span>
+      </div>
+      <div class="news-summary">US equities opened higher Wednesday on optimism around Iran war negotiations and continued momentum from the chip sector. Upcoming earnings from Marvell Technology, Salesforce, and Snowflake are in focus.</div>
+    </div>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://www.cnbc.com/2026/05/25/stock-futures-today-live-updates.html" target="_blank">S&amp;P 500, Nasdaq hit fresh record highs Tuesday; Micron tops $1 trillion market cap</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">CNBC</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-26 (time unknown)</span>
+      </div>
+      <div class="news-summary">The S&amp;P 500 advanced 0.61% and the Nasdaq surged 1.19% on Tuesday to new record closes, led by technology. Micron surged 19.3% after UBS raised its price target, lifting its market cap above $1 trillion for the first time.</div>
+    </div>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">US consumer confidence slips to 93.1 in May amid Iran-driven inflation concerns</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Conference Board / Trading Economics</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-26 (time unknown)</span>
+      </div>
+      <div class="news-summary">The Conference Board's consumer confidence index dropped 0.7 to 93.1 in May, from an upwardly revised 93.8 in April. The survey cited escalating inflationary impacts due to the Middle East conflict as a primary drag.</div>
+    </div>
+
+    <!-- China -->
+    <h3>🇨🇳 China</h3>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://newstodaynet.com/2026/05/27/against-formation-of-exclusive-groupings-china-on-quad-meet/" target="_blank">China warns against Quad "exclusive groupings" following new Indo-Pacific maritime measures</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">News Today</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-27 (time unknown)</span>
+      </div>
+      <div class="news-summary">China's Foreign Ministry reiterated its opposition to the Quad after the grouping announced new maritime surveillance measures in the Indo-Pacific. Beijing called on members to avoid "bloc confrontation."</div>
+    </div>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://www.aljazeera.com/where/china/" target="_blank">China's Defense Ministry warns Taiwan's Lai Ching-te over "reckless provocations"</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Al Jazeera</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-27 (time unknown)</span>
+      </div>
+      <div class="news-summary">China's Defense Ministry warned Wednesday that the PLA will "resolutely thwart" any "reckless provocations" toward Taiwan independence by authorities led by Lai Ching-te.</div>
+    </div>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://www.scmp.com/news/china" target="_blank">China's PLA has 500+ ISR satellites, has practiced targeting US ports and airfields</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">South China Morning Post</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-27 (time unknown)</span>
+      </div>
+      <div class="news-summary">An analyst revealed China's PLA now operates more than 500 intelligence, surveillance, and reconnaissance (ISR) satellites and has practiced targeting US ports, ships, and airfields using space-linked "kill chains."</div>
+    </div>
+
+    <div class="story-item">
+      <div class="news-headline">
+        <a href="https://www.aljazeera.com/where/china/" target="_blank">Chinese FM Wang Yi calls for advancement of US-Iran negotiations</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Al Jazeera / CGTN</span> &nbsp;·&nbsp;
+        <span class="pub-time">2026-05-26 (time unknown)</span>
+      </div>
+      <div class="news-summary">Chinese Foreign Minister Wang Yi on Tuesday called for the advancement of negotiations between the United States and Iran, urging both parties to resolve the conflict through diplomacy.</div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Generated by Cowork briefing job &nbsp;·&nbsp; Run timestamp: 2026-05-27 06:50 PT
+  </div>
+
+</div>
+</body>
+</html>
