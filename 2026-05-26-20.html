@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefing — 2026-05-26 20:00</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      padding: 24px 16px 48px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e5;
+    }
+    header h1 { font-size: 1.6rem; font-weight: 700; color: #1d1d1f; }
+    header .meta { font-size: 0.85rem; color: #888; margin-top: 4px; }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 28px;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e5;
+    }
+    section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f2;
+    }
+    section h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #444;
+      margin: 18px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    /* Market grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .market-card {
+      background: #fafafa;
+      border: 1px solid #e8e8ec;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .market-card .label { font-size: 0.78rem; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .market-card .price { font-size: 1.25rem; font-weight: 700; margin: 4px 0 2px; }
+    .market-card .change { font-size: 0.85rem; font-weight: 600; }
+    .market-card .session-label { font-size: 0.73rem; color: #aaa; margin-top: 4px; }
+    .up { color: #1a8a1a; }
+    .down { color: #c0392b; }
+    .neutral { color: #555; }
+    .sources-note { font-size: 0.78rem; color: #999; margin-top: 10px; }
+    .sources-note a { color: #0071e3; text-decoration: none; }
+    .sources-note a:hover { text-decoration: underline; }
+    /* Treasury yields */
+    .yield-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+    .yield-item { background: #fafafa; border: 1px solid #e8e8ec; border-radius: 8px; padding: 10px 14px; }
+    .yield-item .y-label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.04em; }
+    .yield-item .y-value { font-size: 1.05rem; font-weight: 700; margin-top: 2px; }
+    /* News items */
+    ol.news-list { padding-left: 0; list-style: none; counter-reset: news; }
+    ol.news-list li { counter-increment: news; padding: 14px 0; border-bottom: 1px solid #f0f0f2; }
+    ol.news-list li:last-child { border-bottom: none; }
+    ol.news-list li::before {
+      content: counter(news) ".";
+      font-weight: 700;
+      color: #888;
+      margin-right: 8px;
+    }
+    .news-headline { font-weight: 600; font-size: 0.97rem; }
+    .news-headline a { color: #0071e3; text-decoration: none; }
+    .news-headline a:hover { text-decoration: underline; }
+    .news-meta { font-size: 0.82rem; color: #888; margin: 3px 0 6px; }
+    .news-summary { font-size: 0.9rem; color: #444; }
+    /* Spotlight items (non-numbered) */
+    .story-item { padding: 13px 0; border-bottom: 1px solid #f0f0f2; }
+    .story-item:last-child { border-bottom: none; }
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #aaa;
+      margin-top: 8px;
+      padding-top: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <h1>📋 Daily Briefing — 2026-05-26 20:00</h1>
+    <div class="meta">Generated at 2026-05-26 20:50 PDT &nbsp;·&nbsp; Markets: <strong>Closed</strong> (showing today's closing prices + after-hours futures)</div>
+  </header>
+
+  <!-- SECTION 1: Market Snapshot -->
+  <section>
+    <h2>📈 Market Snapshot</h2>
+
+    <h3>U.S. Equity Indices — Today's Close</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500</div>
+        <div class="price">7,519.12</div>
+        <div class="change up">▲ +0.61% &nbsp;Record Close</div>
+        <div class="session-label">Close · May 26, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq Composite</div>
+        <div class="price">26,656.18</div>
+        <div class="change up">▲ +1.19% &nbsp;Record Close</div>
+        <div class="session-label">Close · May 26, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones (DJIA)</div>
+        <div class="price">50,461.68</div>
+        <div class="change down">▼ −118.02 pts (−0.23%)</div>
+        <div class="session-label">Close · May 26, 2026</div>
+      </div>
+    </div>
+    <div class="sources-note">After-hours S&amp;P 500 futures (ES=F) little changed post-close per <a href="https://www.cnbc.com/2026/05/26/stock-market-today-live-updates.html" target="_blank">CNBC</a>.</div>
+
+    <h3>Commodities</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="price">$92.60</div>
+        <div class="change down">▼ −4.0% on the day</div>
+        <div class="session-label">Close · May 26, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="price">$99.00</div>
+        <div class="change up">▲ +3.0% on the day</div>
+        <div class="session-label">Close · May 26, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Gold (XAU/USD)</div>
+        <div class="price">$4,522.59</div>
+        <div class="change down">▼ vs. prior day ~$4,569</div>
+        <div class="session-label">Close · May 26, 2026</div>
+      </div>
+    </div>
+    <div class="sources-note">
+      Oil divergence driven by U.S.–Iran conflict: WTI fell on diplomatic headlines; Brent surged on Hormuz supply risk.
+      Sources: <a href="https://www.cnbc.com/2026/05/26/oil-prices-today-brent-wti-iran-trump-hormuz.html" target="_blank">CNBC Oil</a> · <a href="https://oilprice.com/Energy/Oil-Prices/Why-Brent-and-WTI-Crude-Price-Movements-Are-Diverging-Today.html" target="_blank">OilPrice.com</a> · <a href="https://fortune.com/article/current-price-of-gold-05-26-2026/" target="_blank">Fortune (Gold)</a>
+    </div>
+
+    <h3>U.S. Treasury Yields</h3>
+    <div class="yield-row">
+      <div class="yield-item">
+        <div class="y-label">2-Year</div>
+        <div class="y-value neutral">4.07%</div>
+      </div>
+      <div class="yield-item">
+        <div class="y-label">10-Year</div>
+        <div class="y-value neutral">4.51%</div>
+      </div>
+      <div class="yield-item">
+        <div class="y-label">20-Year</div>
+        <div class="y-value neutral">unavailable</div>
+      </div>
+    </div>
+    <div class="sources-note">Sources: <a href="https://fred.stlouisfed.org/series/DGS2" target="_blank">FRED/St. Louis Fed (2yr)</a> · <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank">FRED/St. Louis Fed (10yr)</a></div>
+  </section>
+
+  <!-- SECTION 2: Top Global Headlines -->
+  <section>
+    <h2>🌐 Top Global Headlines</h2>
+    <ol class="news-list">
+      <li>
+        <div class="news-headline"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-26-2026" target="_blank">S&amp;P 500 and Nasdaq Hit Record Closes; Micron Surges 16% to $1T Market Cap</a></div>
+        <div class="news-meta">TheStreet · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+        <div class="news-summary">Technology stocks led gains, with Micron's rally pushing its market cap to $1 trillion for the first time after UBS nearly tripled its price target. The S&amp;P 500 and Nasdaq both closed at record highs as investors tracked progress on U.S.–Iran peace talks.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://www.washingtonpost.com/world/2026/05/26/us-renews-strikes-iran-citing-threats-posed-american-troops/" target="_blank">U.S. Renews Strikes on Iran, Iran Threatens Retaliation</a></div>
+        <div class="news-meta">Washington Post · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+        <div class="news-summary">U.S. military struck Iranian boats and missile launch sites, while Iran vowed retaliation. Secretary of State Marco Rubio said a deal to end the war could "take a few days," but complications emerged over Trump's new demand that Gulf Arab countries sign the Abraham Accords.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://www.cnbc.com/2026/05/26/oil-prices-today-brent-wti-iran-trump-hormuz.html" target="_blank">Brent Oil Jumps More Than 3% After Iran Vows to Retaliate for U.S. Strikes</a></div>
+        <div class="news-meta">CNBC · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+        <div class="news-summary">Brent crude surged over 3% to ~$99/bbl on Strait of Hormuz supply fears after Iran's retaliation threat, while WTI fell 4% to $92.60 on diplomatic optimism for a U.S.–Iran deal that could reopen energy trade through the strait.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://www.npr.org/2026/05/26/nx-s1-5834840/iran-lebanon-updates" target="_blank">Prospects Fade for Imminent End to Iran War as Attacks Restart</a></div>
+        <div class="news-meta">NPR · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+        <div class="news-summary">Peace deal prospects dimmed as Israel intensified attacks in Lebanon against Iran-backed Hezbollah and the U.S. resumed strikes. Iranian officials cited serious remaining disagreements, including Iran's demand to lift sanctions and unfreeze assets in return for reopening Hormuz.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://www.scmp.com/economy/china-economy/article/3354260/china-us-trade-talks-saw-washington-commit-tariff-ceiling-beijing-says" target="_blank">US–China Trade Talks: Washington Commits to Tariff Ceiling, Beijing Says</a></div>
+        <div class="news-meta">South China Morning Post · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+        <div class="news-summary">Washington pledged not to raise future tariffs on Chinese goods above levels set in the late-2025 trade truce. Analysts say the move signals a shift from unilateral trade shocks to "managed competition," though the average tariff on Chinese goods still stands at 47.5%.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://ca.finance.yahoo.com/news/stock-market-news-may-26-132700252.html" target="_blank">U.S. Consumer Confidence Dips in May on Inflationary Pressures</a></div>
+        <div class="news-meta">Yahoo Finance · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+        <div class="news-summary">The U.S. consumer confidence index fell 0.7 points to 93.1 in May from an upwardly revised 93.8 in April, as escalating inflationary impacts from the Middle East conflict weighed on sentiment.</div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- SECTION 3: Topic Spotlights -->
+  <section>
+    <h2>🔍 Topic Spotlights</h2>
+
+    <!-- Tesla -->
+    <h3>🚗 Tesla (TSLA)</h3>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://stockanalysis.com/stocks/tsla/" target="_blank">TSLA Closes at ~$432; Stock Up ~1.5% on Day</a></div>
+      <div class="news-meta">StockAnalysis / Yahoo Finance · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+      <div class="news-summary">Tesla stock traded between $426.12 and $433.67 on May 26, closing at approximately $432.33 (+1.5% off intraday low). Market cap stands at ~$1.62 trillion. 47 analysts carry a consensus "Buy" rating with a 12-month target of $411.89.</div>
+    </div>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://finance.yahoo.com/markets/stocks/articles/heres-teslas-robotaxi-rollout-really-122500332.html" target="_blank">Tesla Robotaxi Rollout Expands Slowly in Texas, Musk Eyes Dozen States by Year-End</a></div>
+      <div class="news-meta">Yahoo Finance / Reuters · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+      <div class="news-summary">Tesla's unsupervised robotaxi fleet in Texas grew to 39 vehicles (up from 26 at the start of May), with plans to expand to Arizona, Florida, and Nevada. Elon Musk said he expects the service in "a dozen or so states" by year-end, though robotaxi revenue won't be material until 2027.</div>
+    </div>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.investing.com/news/stock-market-news/tesla-revenue-misses-estimates-as-demand-weakens-4630488" target="_blank">Tesla Lifts 2026 Capex Plan by 25% to Over $25B for AI and Robotics</a></div>
+      <div class="news-meta">Reuters via Investing.com · <span style="color:#666;font-size:0.9em">2026-04-22 (Q1 earnings)</span></div>
+      <div class="news-summary">Following Q1 2026 earnings, Tesla guided to over $25 billion in 2026 capex—roughly $5 billion above prior guidance and ~3× its 2025 spend—as Musk doubles down on AI infrastructure and the Optimus humanoid robot program despite weaker-than-expected EV demand.</div>
+    </div>
+
+    <!-- US–Iran -->
+    <h3>⚔️ U.S.–Iran</h3>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/26/iran-war-live-israel-pounds-lebanon-iranian-officials-in-qatar-for-talks" target="_blank">Iran War Updates: Israel Moves Deeper into Lebanon; Iranian Officials in Qatar for Talks</a></div>
+      <div class="news-meta">Al Jazeera · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+      <div class="news-summary">Israel intensified strikes in Lebanon targeting Hezbollah while Iranian officials held talks in Qatar. The diplomatic track continued even as the military front escalated, highlighting the parallel tracks of conflict and negotiation.</div>
+    </div>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.washingtonpost.com/world/2026/05/26/us-renews-strikes-iran-citing-threats-posed-american-troops/" target="_blank">U.S. Strikes Iranian Military Targets; Iran Vows Retaliation</a></div>
+      <div class="news-meta">Washington Post · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+      <div class="news-summary">The U.S. military renewed strikes on Iranian boats and missile launch sites, citing threats to American troops. Iran threatened to retaliate, sending Brent crude surging. Peace negotiations remain active but complicated by new U.S. demands around the Abraham Accords.</div>
+    </div>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.npr.org/2026/05/26/nx-s1-5834840/iran-lebanon-updates" target="_blank">Prospects Fade for Imminent Iran Deal as Key Sticking Points Remain</a></div>
+      <div class="news-meta">NPR · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+      <div class="news-summary">Secretary Rubio said a deal could come in "a few days," but Iranian officials cited major unresolved issues including sanctions relief, asset unfreezing, and Hormuz reopening terms. Trump's new demand that Gulf Arab nations join the Abraham Accords further complicated negotiations.</div>
+    </div>
+
+    <!-- Economy -->
+    <h3>💹 Economy</h3>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.fool.com/coverage/stock-market-today/2026/05/26/stock-market-today-may-26-soaring-tech-stocks-push-s-and-p-500-and-nasdaq-to-new-highs/" target="_blank">Soaring Tech Stocks Push S&amp;P 500 and Nasdaq to New Highs</a></div>
+      <div class="news-meta">The Motley Fool · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+      <div class="news-summary">Technology stocks led broad equity gains as Micron's 16% surge to a $1 trillion market cap drove semiconductor momentum. The S&amp;P 500 and Nasdaq both closed at record highs despite Dow softness, reflecting bifurcated market dynamics between tech and traditional sectors.</div>
+    </div>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Stocks Up Early on Iran Talks, Warsh to Take Fed Oath</a></div>
+      <div class="news-meta">Charles Schwab · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+      <div class="news-summary">Stocks opened higher on optimism about Iran peace talks that could lower energy costs and ease inflationary pressure. Kevin Warsh was also set to take the oath as Federal Reserve Chair, marking a leadership transition at the central bank.</div>
+    </div>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.cnbc.com/2026/05/25/cnbcs-the-china-connection-newsletter-tariffs-eased-trust-didnt.html" target="_blank">Tariffs Eased. Trust Didn't. — CNBC China Connection Newsletter</a></div>
+      <div class="news-meta">CNBC · <span style="color:#666;font-size:0.9em">2026-05-25 (prior day)</span></div>
+      <div class="news-summary">Despite tariff de-escalation following U.S.–China trade talks, deep structural distrust between Washington and Beijing persists. U.S. tariffs on Chinese goods remain at an average 47.5%, still the highest of any country, and analysts warn of continued fragility in the relationship.</div>
+    </div>
+
+    <!-- China -->
+    <h3>🇨🇳 China</h3>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.scmp.com/economy/china-economy/article/3354260/china-us-trade-talks-saw-washington-commit-tariff-ceiling-beijing-says" target="_blank">China Says U.S. Committed to Tariff Ceiling in South Korea Trade Talks</a></div>
+      <div class="news-meta">South China Morning Post · <span style="color:#666;font-size:0.9em">2026-05-26 (time unknown)</span></div>
+      <div class="news-summary">Beijing said Washington pledged at South Korea summit talks not to raise tariffs on Chinese goods above current truce levels. The move is seen as signaling a shift from unilateral shocks toward "managed competition," with effective tariff rates near 30% on many goods.</div>
+    </div>
+    <div class="story-item">
+      <div class="news-headline"><a href="https://www.aljazeera.com/economy/2026/5/15/after-trumps-pledge-to-open-up-china-low-expectations-for-summit-deal" target="_blank">Low Expectations for Trump-Xi Trade Deal Despite 'Open Up China' Pledge</a></div>
+      <div class="news-meta">Al Jazeera · <span style="color:#666;font-size:0.9em">2026-05-15 (prior period)</span></div>
+      <div class="news-summary">After Trump pledged to "open up" China, analysts expressed low expectations for a comprehensive trade deal. China no longer buys U.S. exports at pre-tariff volumes, and structural disagreements over technology, market access, and IP enforcement remain formidable barriers.</div>
+    </div>
+  </section>
+
+  <footer>
+    Generated by Cowork briefing job &nbsp;·&nbsp; 2026-05-26 20:50 PDT
+  </footer>
+</div>
+</body>
+</html>
