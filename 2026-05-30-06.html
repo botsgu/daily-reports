@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing — 2026-05-30 06:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f6f8;
+      color: #1a1a2e;
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    header h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.5px; }
+    header .sub { font-size: 0.88rem; color: #aab; margin-top: 6px; }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e4e6ea;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      border-bottom: 2px solid #e4e6ea;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    section h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #444;
+      margin: 18px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    /* Market Grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .market-card {
+      background: #f8f9fb;
+      border: 1px solid #e4e6ea;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .market-card .label { font-size: 0.75rem; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+    .market-card .value { font-size: 1.3rem; font-weight: 700; margin: 4px 0; }
+    .market-card .change { font-size: 0.82rem; font-weight: 600; }
+    .market-card .asof { font-size: 0.72rem; color: #aaa; margin-top: 4px; }
+    .up { color: #16a34a; }
+    .down { color: #dc2626; }
+    .flat { color: #888; }
+    .market-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: #e8f0ff;
+      color: #3355cc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-weight: 600;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+    /* Yield row */
+    .yield-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .yield-card {
+      flex: 1;
+      min-width: 160px;
+      background: #f8f9fb;
+      border: 1px solid #e4e6ea;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    /* News items */
+    ol.news-list { list-style: none; counter-reset: news-counter; padding: 0; }
+    ol.news-list li {
+      counter-increment: news-counter;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f1f3;
+    }
+    ol.news-list li:last-child { border-bottom: none; }
+    ol.news-list li::before {
+      content: counter(news-counter) ".";
+      font-weight: 700;
+      color: #3355cc;
+      margin-right: 8px;
+    }
+    .news-headline { font-size: 0.97rem; font-weight: 600; }
+    .news-headline a { color: #1a1a2e; text-decoration: none; }
+    .news-headline a:hover { text-decoration: underline; color: #3355cc; }
+    .news-meta { font-size: 0.83rem; color: #555; margin: 3px 0 6px; }
+    .news-meta .source-name { font-weight: 600; }
+    .news-meta .pub-time { color: #888; font-size: 0.82em; }
+    .news-summary { font-size: 0.88rem; color: #444; line-height: 1.5; }
+    /* Topic spotlight */
+    .spotlight-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f1f3;
+    }
+    .spotlight-item:last-child { border-bottom: none; }
+    .spotlight-headline { font-size: 0.92rem; font-weight: 600; }
+    .spotlight-headline a { color: #1a1a2e; text-decoration: none; }
+    .spotlight-headline a:hover { text-decoration: underline; color: #3355cc; }
+    .spotlight-meta { font-size: 0.8rem; color: #888; margin: 2px 0 4px; }
+    .spotlight-meta .source-name { font-weight: 600; color: #555; }
+    .sources-note { font-size: 0.78rem; color: #aaa; margin-top: 12px; }
+    .sources-note a { color: #3355cc; }
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #aaa;
+      margin-top: 12px;
+      padding: 16px;
+    }
+    @media (max-width: 600px) {
+      header { padding: 20px; }
+      section { padding: 18px; }
+      .market-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📰 Morning Briefing — 2026-05-30 06:00</h1>
+    <div class="sub">Generated at 2026-05-30 06:52 PDT &nbsp;·&nbsp; Saturday morning run</div>
+  </header>
+
+  <!-- ===== SECTION 1: MARKET SNAPSHOT ===== -->
+  <section>
+    <h2>📊 Market Snapshot</h2>
+    <p style="font-size:0.82rem;color:#888;margin-bottom:14px;">Markets closed (weekend). Showing <strong>Friday May 29, 2026 close</strong>. Next regular session: Monday, June 1, 2026.</p>
+
+    <h3>U.S. Equity Indices <span style="font-size:0.8rem;font-weight:400;color:#888;">(Close — Fri May 29)</span></h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500 <span class="market-badge">CLOSE</span></div>
+        <div class="value">7,580.06</div>
+        <div class="change up">▲ +0.22%</div>
+        <div class="asof">9th consecutive weekly gain · Yahoo Finance</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones <span class="market-badge">CLOSE</span></div>
+        <div class="value">51,032.46</div>
+        <div class="change up">▲ +363.49 (+0.72%)</div>
+        <div class="asof">First close above 51,000 · Yahoo Finance</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq <span class="market-badge">CLOSE</span></div>
+        <div class="value">26,972.62</div>
+        <div class="change up">▲ +0.26%</div>
+        <div class="asof">Record high · Yahoo Finance</div>
+      </div>
+    </div>
+
+    <h3>Commodities <span style="font-size:0.8rem;font-weight:400;color:#888;">(as of Fri May 29)</span></h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="value">$87.20</div>
+        <div class="change down">▼ ~−2.0%</div>
+        <div class="asof">per barrel · Trading Economics</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="value">$91.37</div>
+        <div class="change down">▼ −1.43%</div>
+        <div class="asof">per barrel · Trading Economics</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Gold Spot (XAU/USD)</div>
+        <div class="value">$4,543.25</div>
+        <div class="change up">▲ +$40.01 (+0.89%)</div>
+        <div class="asof">per oz · Investing.com</div>
+      </div>
+    </div>
+
+    <h3>U.S. Treasury Yields <span style="font-size:0.8rem;font-weight:400;color:#888;">(approx. May 28 close — latest available)</span></h3>
+    <div class="yield-row">
+      <div class="yield-card">
+        <div class="label" style="font-size:0.75rem;color:#888;font-weight:600;text-transform:uppercase;">2-Year</div>
+        <div class="value" style="font-size:1.3rem;font-weight:700;margin:4px 0;">3.99%</div>
+        <div class="asof" style="font-size:0.72rem;color:#aaa;">May 28 · Fed H.15 / FRED</div>
+      </div>
+      <div class="yield-card">
+        <div class="label" style="font-size:0.75rem;color:#888;font-weight:600;text-transform:uppercase;">10-Year</div>
+        <div class="value" style="font-size:1.3rem;font-weight:700;margin:4px 0;">4.45%</div>
+        <div class="asof" style="font-size:0.72rem;color:#aaa;">May 28–29 · Fed H.15 / FRED</div>
+      </div>
+      <div class="yield-card">
+        <div class="label" style="font-size:0.75rem;color:#888;font-weight:600;text-transform:uppercase;">20-Year</div>
+        <div class="value" style="font-size:1.3rem;font-weight:700;margin:4px 0;">~5.06%</div>
+        <div class="asof" style="font-size:0.72rem;color:#aaa;">May 22 (latest official) · Fed H.15</div>
+      </div>
+    </div>
+
+    <div class="sources-note">
+      Sources:
+      <a href="https://finance.yahoo.com/markets/live/dow-nasdaq-sp-gain-stock-market-today-friday-may-29-222720284.html">Yahoo Finance</a> ·
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-29-2026">TheStreet</a> ·
+      <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics (WTI)</a> ·
+      <a href="https://tradingeconomics.com/commodity/brent-crude-oil">Trading Economics (Brent)</a> ·
+      <a href="https://www.investing.com/currencies/xau-usd">Investing.com (Gold)</a> ·
+      <a href="https://www.federalreserve.gov/releases/h15/">Federal Reserve H.15</a> ·
+      <a href="https://fred.stlouisfed.org/series/DGS10">FRED (10-Year)</a>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: TOP GLOBAL HEADLINES ===== -->
+  <section>
+    <h2>🌍 Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/30/iran-war-live-trump-due-to-make-final-determination-on-deal-with-tehran">Iran War Live: Trump Due to Make Final Determination on Deal with Tehran</a></div>
+        <div class="news-meta"><span class="source-name">Al Jazeera</span> · <span class="pub-time">2026-05-30 (ongoing) PT</span></div>
+        <div class="news-summary">Trump is expected to make his "final determination" on the emerging U.S.-Iran peace deal. Negotiations center on reopening the Strait of Hormuz and releasing frozen Iranian assets (~$12 billion), but nuclear commitments remain unresolved.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.cnbc.com/amp/2026/05/28/stock-market-today-live-updates.html">S&amp;P 500, Dow, Nasdaq Hit Fresh Records as AI Rally and Iran Peace Hopes Drive Gains</a></div>
+        <div class="news-meta"><span class="source-name">CNBC / Yahoo Finance</span> · <span class="pub-time">2026-05-29 PT</span></div>
+        <div class="news-summary">All three major U.S. indices closed at record highs on Friday, May 29, with the S&amp;P 500 notching its ninth consecutive weekly gain — its longest such streak since 2023. Dell Technologies surged ~33% on a blowout Q1 earnings report.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.cnbc.com/2026/05/29/stock-market-today-live-updates.html">Trump Concludes Situation Room Meeting on Iran Without Announcing Decision</a></div>
+        <div class="news-meta"><span class="source-name">CNN</span> · <span class="pub-time">2026-05-29 PT</span></div>
+        <div class="news-summary">After a roughly two-hour Situation Room session, President Trump did not announce whether he would sign off on the tentative Iran deal. VP Vance called the situation "still TBD," while both sides attempt to extend an existing ceasefire.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.axios.com/2026/05/28/iran-peace-deal-trump-approval">Scoop: U.S. and Iran Reach Deal — but Need Trump's Final Approval</a></div>
+        <div class="news-meta"><span class="source-name">Axios</span> · <span class="pub-time">2026-05-28 PT</span></div>
+        <div class="news-summary">U.S. and Iranian officials have reached a tentative agreement, according to officials, but it will not take effect until Trump signs off. Key sticking points include highly enriched uranium disposition and the extent of sanctions relief.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.scmp.com/news/china">Xi Calls for China-Russia Strategic Coordination to Drive Development</a></div>
+        <div class="news-meta"><span class="source-name">South China Morning Post</span> · <span class="pub-time">2026-05-30 PT</span></div>
+        <div class="news-summary">President Xi Jinping called for deepened China-Russia strategic coordination following Putin's visit. Analysts noted most signed agreements are largely symbolic, but they underscore the continued strengthening of the bilateral relationship.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.scmp.com/news/china">U.S. Approves $11 Billion Arms Package for Taiwan Including 420 ATACMS Missiles</a></div>
+        <div class="news-meta"><span class="source-name">South China Morning Post</span> · <span class="pub-time">2026-05-30 PT</span></div>
+        <div class="news-summary">The Biden-era $11 billion arms package for Taiwan — including 420 Army Tactical Missile Systems — has received formal approval. The sale is expected to draw sharp protests from Beijing, which views Taiwan as part of its territory.</div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ===== SECTION 3: TOPIC SPOTLIGHTS ===== -->
+  <section>
+    <h2>🔎 Topic Spotlights</h2>
+
+    <!-- TESLA -->
+    <h3>⚡ Tesla (TSLA)</h3>
+    <p style="font-size:0.8rem;color:#888;margin-bottom:10px;">Source: <a href="https://public.com/stocks/tsla/news" style="color:#3355cc;">public.com/stocks/tsla/news</a>. Timestamps as shown on page at run time.</p>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.businessinsider.com/elon-musk-moonshot-spacex-pay-package-requires-mars-city-development-2026-5">Elon Musk's New 'Marshot' Pay Package Could Be Worth Billions — If He Helps Colonize Mars</a></div>
+      <div class="spotlight-meta"><span class="source-name">Business Insider</span> · <span class="pub-time">2026-05-30 ~04:52 PT (2h ago)</span></div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.wsj.com/business/autos/tesla-announces-rollout-of-fully-self-driving-tech-in-china-2711fdb2">Tesla Announces Rollout of Fully Self-Driving Tech in China</a></div>
+      <div class="spotlight-meta"><span class="source-name">WSJ</span> · <span class="pub-time">2026-05-30 ~04:52 PT (2h ago)</span></div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://247wallst.com/investing/2026/05/20/tesla-owns-nearly-19-million-shares-of-spacex-what-tsla-investors-need-to-know-before-the-ipo/">Tesla Owns Nearly 19 Million Shares of SpaceX: What TSLA Investors Need to Know Before the IPO</a></div>
+      <div class="spotlight-meta"><span class="source-name">24/7 Wall Street</span> · <span class="pub-time">Wednesday (2026-05-27)</span></div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://techcrunch.com/2026/05/20/teslas-full-self-driving-software-is-creeping-into-europe/">Tesla's Full Self-Driving Software Is Creeping into Europe</a></div>
+      <div class="spotlight-meta"><span class="source-name">TechCrunch</span> · <span class="pub-time">Wednesday (2026-05-27)</span></div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.marketbeat.com/originals/tesla-ends-model-s-and-x-era-bets-everything-on-whats-next/">Tesla Ends Model S and X Era, Bets Everything on What's Next</a></div>
+      <div class="spotlight-meta"><span class="source-name">MarketBeat</span> · <span class="pub-time">Wednesday (2026-05-27)</span></div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.reuters.com/world/europe/tesla-launches-full-self-driving-lithuania-2026-05-20/">Tesla Launches Full Self-Driving in Lithuania</a></div>
+      <div class="spotlight-meta"><span class="source-name">Reuters</span> · <span class="pub-time">Wednesday (2026-05-27)</span></div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.barrons.com/articles/tesla-stock-price-model-s-mercedes-1aaca4b4">Tesla Has Abandoned the Model S and Mercedes Wants to Fill the High-End EV Void</a></div>
+      <div class="spotlight-meta"><span class="source-name">Barron's</span> · <span class="pub-time">Wednesday (2026-05-27)</span></div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.nytimes.com/2026/05/19/business/energy-environment/teslas-semi-truck.html">Tesla's Semi Truck Could Jolt the Trucking Industry</a></div>
+      <div class="spotlight-meta"><span class="source-name">NY Times</span> · <span class="pub-time">Tuesday (2026-05-26)</span></div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.proactiveinvestors.com/companies/news/1092557">Tesla Drops as Mounting Headwinds Test Lofty Valuation</a></div>
+      <div class="spotlight-meta"><span class="source-name">Proactive Investors</span> · <span class="pub-time">Tuesday (2026-05-26)</span></div>
+    </div>
+
+    <!-- US-IRAN -->
+    <h3>🇺🇸🇮🇷 US–Iran</h3>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/5/30/iran-war-live-trump-due-to-make-final-determination-on-deal-with-tehran">Iran War Live: Supreme Leader's Adviser Blames U.S. Blockade for Stalled Deal</a></div>
+      <div class="spotlight-meta"><span class="source-name">Al Jazeera</span> · <span class="pub-time">2026-05-30 (live) PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">Iran's Supreme Leader's adviser says U.S. insistence on blocking the Strait of Hormuz talks is the primary obstacle, as Trump weighs his "final determination" on the peace framework.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.cnbc.com/2026/05/29/stock-market-today-live-updates.html">Trump Concludes Situation Room Meeting on Iran Without Decision</a></div>
+      <div class="spotlight-meta"><span class="source-name">CNN</span> · <span class="pub-time">2026-05-29 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">After a two-hour Situation Room meeting, Trump left without publicly announcing a decision on the tentative Iran deal. Vance said the U.S. and Iran are "very close" but "not there yet."</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.axios.com/2026/05/28/iran-peace-deal-trump-approval">U.S. and Iran Reach Deal but Need Trump's Final Approval</a></div>
+      <div class="spotlight-meta"><span class="source-name">Axios</span> · <span class="pub-time">2026-05-28 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">Officials say a tentative framework has been agreed upon, covering Strait of Hormuz access and partial asset releases. Nuclear commitments — including highly enriched uranium — remain the main sticking point awaiting Trump's sign-off.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.cnn.com/2026/05/25/world/live-news/iran-war-us-peace-deal">U.S. Strikes on Iranian Missile Sites; Iran Threatens to Retaliate</a></div>
+      <div class="spotlight-meta"><span class="source-name">CNN</span> · <span class="pub-time">2026-05-25 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">The U.S. carried out "self-defense strikes" targeting Iranian missile launch sites and boats on May 25–26. Iran's IRGC declared a "legitimate" right to respond to any ceasefire violations.</div>
+    </div>
+
+    <!-- ECONOMY -->
+    <h3>📈 Economy &amp; Markets</h3>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://finance.yahoo.com/markets/live/dow-nasdaq-sp-gain-stock-market-today-friday-may-29-222720284.html">U.S. Equities Cap Record Month with AI-Fueled Rally and Iran Peace Optimism</a></div>
+      <div class="spotlight-meta"><span class="source-name">Yahoo Finance</span> · <span class="pub-time">2026-05-29 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">The S&amp;P 500 logged its ninth straight weekly gain — longest since 2023 — while the Dow topped 51,000 for the first time ever. Tech led the way, with Apple setting a new intraday all-time high in 16 of May's 20 trading days.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-29-2026">Dell Surges 33% on Record-Breaking Q1 Earnings Beat</a></div>
+      <div class="spotlight-meta"><span class="source-name">TheStreet</span> · <span class="pub-time">2026-05-29 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">Dell Technologies posted its best single-day stock gain on record after beating Q1 estimates on both revenue and earnings and raising full-year guidance, boosting sentiment across the AI infrastructure trade.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.cnbc.com/amp/2026/05/28/stock-market-today-live-updates.html">April PCE Inflation Lands In Line with Expectations: Core at 3.3% YoY</a></div>
+      <div class="spotlight-meta"><span class="source-name">CNBC</span> · <span class="pub-time">2026-05-29 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">The April Personal Consumption Expenditures price index came in broadly as expected: headline PCE +3.8% YoY, core PCE +3.3% YoY (+0.2% MoM). The in-line print eased some inflation fears and helped stabilize bond yields.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.schwab.com/learn/story/stock-market-update-open">Oil Pulls Back Sharply from May Highs as Iran Ceasefire Hopes Unwind Geopolitical Premium</a></div>
+      <div class="spotlight-meta"><span class="source-name">Charles Schwab</span> · <span class="pub-time">2026-05-29 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">WTI fell to ~$87/bbl Friday as traders unwound the geopolitical risk premium built into crude during the U.S.-Iran escalation. Reports of a tentative ceasefire extension and possible Strait of Hormuz reopening were the primary drivers of the decline.</div>
+    </div>
+
+    <!-- CHINA -->
+    <h3>🇨🇳 China</h3>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.scmp.com/news/china">Xi and Putin Sign Deals at Moscow Summit; Analysts Call Most Pacts Symbolic</a></div>
+      <div class="spotlight-meta"><span class="source-name">South China Morning Post</span> · <span class="pub-time">2026-05-30 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">Chinese President Xi Jinping and Russian President Putin signed a series of cooperation agreements, with Xi calling for deeper strategic coordination. Analysts say the deals are largely symbolic but underscore a continued deepening of the bilateral relationship.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline"><a href="https://www.scmp.com/news/china">U.S. Formally Approves $11 Billion Taiwan Arms Package Including ATACMS Missiles</a></div>
+      <div class="spotlight-meta"><span class="source-name">South China Morning Post</span> · <span class="pub-time">2026-05-30 PT</span></div>
+      <div class="news-summary" style="font-size:0.87rem;color:#444;margin-top:4px;">The U.S. approved the sale of 420 Army Tactical Missile Systems as part of an $11 billion Taiwan arms package. Beijing is expected to lodge strong protests; Taiwan's defense ministry welcomed the move as a security enhancement.</div>
+    </div>
+
+  </section>
+
+  <footer>
+    Generated by Cowork briefing job &nbsp;·&nbsp; Run timestamp: 2026-05-30 06:52 PDT
+  </footer>
+
+</div>
+</body>
+</html>
