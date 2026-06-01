@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing — 2026-06-01 11:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f6f8;
+      color: #1a1a2e;
+      line-height: 1.6;
+      padding: 16px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.3px; }
+    header .sub { font-size: 0.85rem; opacity: 0.7; margin-top: 4px; }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      border: 1px solid #e4e6ea;
+    }
+    section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e4e6ea;
+    }
+    section h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #444;
+      margin: 14px 0 8px;
+    }
+    /* Market grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .market-card {
+      background: #f8f9fc;
+      border: 1px solid #e4e6ea;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .market-card .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+    .market-card .value { font-size: 1.15rem; font-weight: 700; margin: 2px 0; }
+    .market-card .change { font-size: 0.8rem; font-weight: 500; }
+    .market-card .note { font-size: 0.7rem; color: #999; margin-top: 2px; }
+    .up { color: #16a34a; }
+    .down { color: #dc2626; }
+    .neutral { color: #555; }
+    .sources-line { font-size: 0.75rem; color: #888; margin-top: 8px; }
+    .sources-line a { color: #4a6cf7; text-decoration: none; }
+    .sources-line a:hover { text-decoration: underline; }
+    /* News list */
+    ol.news-list { list-style: none; padding: 0; }
+    ol.news-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f1f4;
+    }
+    ol.news-list li:last-child { border-bottom: none; }
+    ol.news-list li .num { font-size: 0.75rem; font-weight: 700; color: #aaa; margin-bottom: 3px; }
+    ol.news-list li a.headline {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      text-decoration: none;
+    }
+    ol.news-list li a.headline:hover { color: #4a6cf7; text-decoration: underline; }
+    .meta { font-size: 0.78rem; color: #888; margin: 2px 0 5px; }
+    .meta .source { font-weight: 600; color: #555; }
+    .summary { font-size: 0.85rem; color: #555; }
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #aaa;
+      padding: 16px 0 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📰 Morning Briefing — 2026-06-01 11:00</h1>
+    <div class="sub">Generated at 2026-06-01 11:22 PT &nbsp;·&nbsp; Market state: Regular session (intraday)</div>
+  </header>
+
+  <!-- SECTION 1: MARKET SNAPSHOT -->
+  <section>
+    <h2>📊 Market Snapshot</h2>
+    <p style="font-size:0.78rem;color:#888;margin-bottom:12px;">Regular session open · as of ~11:22 AM PT (intraday levels)</p>
+
+    <h3>Commodities</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="value">$94.00</div>
+        <div class="change up">▲ ~+8% intraday</div>
+        <div class="note">Intraday · Iran talks suspended</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="value">~$91.99</div>
+        <div class="change down">▼ prior session close</div>
+        <div class="note">As of May 30 close; today likely higher</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Gold Spot (XAU/USD)</div>
+        <div class="value">$4,499</div>
+        <div class="change down">▼ from $4,539 prev close</div>
+        <div class="note">Intraday range: $4,489–$4,546</div>
+      </div>
+    </div>
+
+    <h3>U.S. Equity Indices (Intraday)</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500 (^GSPC)</div>
+        <div class="value">7,584</div>
+        <div class="change up">▲ +0.05% · Open: 7,582</div>
+        <div class="note">Record high intraday</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones (^DJI)</div>
+        <div class="value">50,860</div>
+        <div class="change down">▼ −0.34% (−133 pts)</div>
+        <div class="note">Intraday</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq (^IXIC)</div>
+        <div class="value">27,030</div>
+        <div class="change up">▲ +0.21%</div>
+        <div class="note">Record high intraday</div>
+      </div>
+    </div>
+
+    <h3>U.S. Treasury Yields</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">2-Year Yield</div>
+        <div class="value neutral">N/A</div>
+        <div class="note">Not available for June 1</div>
+      </div>
+      <div class="market-card">
+        <div class="label">10-Year Yield</div>
+        <div class="value">~4.44%</div>
+        <div class="change neutral">As of May 30 close</div>
+        <div class="note">Near 2-week low</div>
+      </div>
+      <div class="market-card">
+        <div class="label">20-Year Yield</div>
+        <div class="value neutral">N/A</div>
+        <div class="note">Not available for June 1</div>
+      </div>
+    </div>
+
+    <div class="sources-line">
+      Sources:
+      <a href="https://finance.yahoo.com/markets/stocks/live/stock-market-today-monday-june-1-flat-225422503.html" target="_blank">Yahoo Finance</a> ·
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-01-2026" target="_blank">TheStreet</a> ·
+      <a href="https://www.cnbc.com/2026/05/31/stock-market-today-live-updates.html" target="_blank">CNBC</a> ·
+      <a href="https://www.investing.com/currencies/xau-usd" target="_blank">Investing.com (Gold)</a> ·
+      <a href="https://oilprice.com/" target="_blank">OilPrice.com</a> ·
+      <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">TradingEconomics (10yr)</a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: TOP GLOBAL HEADLINES -->
+  <section>
+    <h2>🌐 Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div class="num">1</div>
+        <a class="headline" href="https://www.aljazeera.com/news/liveblog/2026/6/1/iran-war-live-israels-expanding-invasion-of-lebanon-draws-global-alarm" target="_blank">Iran Halts US Peace Talks as Israel Expands Lebanon Offensive</a>
+        <div class="meta"><span class="source">Al Jazeera</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">Iran's state media announced it was halting peace negotiations with the US after declaring that Israel's expanding military offensive into Lebanon constitutes a ceasefire violation. Air defenses in Kuwait intercepted missile and drone attacks on Monday.</div>
+      </li>
+
+      <li>
+        <div class="num">2</div>
+        <a class="headline" href="https://www.aljazeera.com/news/2026/6/1/us-iran-trade-new-attacks-amid-talks-heres-what-we-know" target="_blank">US and Iran Trade New Attacks as Ceasefire Frays</a>
+        <div class="meta"><span class="source">Al Jazeera</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">CENTCOM struck Iranian radar and drone sites over the weekend; Iran countered with drone and missile launches. Despite a ceasefire nominally in place since April 8, both sides accuse the other of violations as diplomatic efforts collapse.</div>
+      </li>
+
+      <li>
+        <div class="num">3</div>
+        <a class="headline" href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-june-1-170209169.html" target="_blank">Markets Flat as Oil Spike Offsets Nvidia Chip Surge</a>
+        <div class="meta"><span class="source">Yahoo Finance / Motley Fool</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">WTI crude surged 8% to ~$94/bbl after Iran suspended US talks, weighing on the broader market. Nvidia jumped ~5% on a new PC AI chip announcement, lifting S&amp;P 500 and Nasdaq to record highs while the Dow dropped ~133 points.</div>
+      </li>
+
+      <li>
+        <div class="num">4</div>
+        <a class="headline" href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Nvidia's New Chip Boosts Tech as War Flares</a>
+        <div class="meta"><span class="source">Charles Schwab</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">Nvidia unveiled a new processor for PCs, sending shares up ~5%. Dell and HP each rose over 8%, while Intel fell more than 3%. ISM manufacturing gauge hit 54, the highest since May 2022, signaling robust factory activity.</div>
+      </li>
+
+      <li>
+        <div class="num">5</div>
+        <a class="headline" href="https://www.cbsnews.com/live-updates/iran-war-us-trump-vance-ceasefire-strait-of-hormuz-deal-close/" target="_blank">Trump Edits US-Iran Draft Deal, Including Uranium and Hormuz Terms</a>
+        <div class="meta"><span class="source">CBS News</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-05-31 (prior day)</span></div>
+        <div class="summary">President Trump made significant changes to the proposed US-Iran agreement, toughening terms related to uranium enrichment and the Strait of Hormuz reopening. Negotiations were already fragile heading into Monday's escalation.</div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- SECTION 3: TOPIC SPOTLIGHTS -->
+  <section>
+    <h2>🔍 Topic Spotlights</h2>
+
+    <!-- Tesla -->
+    <h3>🚗 Tesla (TSLA)</h3>
+    <ol class="news-list">
+      <li>
+        <div class="num">1</div>
+        <a class="headline" href="https://www.wsj.com/business/autos/tesla-announces-rollout-of-fully-self-driving-tech-in-china-2711fdb2" target="_blank">Tesla Announces Rollout of Fully Self-Driving Tech in China</a>
+        <div class="meta"><span class="source">WSJ</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~09:22 PT (2h ago)</span></div>
+        <div class="summary">Tesla announced it will roll out its Full Self-Driving technology in China, expanding the autonomous driving feature to one of its largest markets.</div>
+      </li>
+      <li>
+        <div class="num">2</div>
+        <a class="headline" href="https://www.businessinsider.com/elon-musk-moonshot-spacex-pay-package-requires-mars-city-development-2026-5" target="_blank">Elon Musk's New 'Marshot' Pay Package Could Be Worth Billions</a>
+        <div class="meta"><span class="source">Business Insider</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~09:22 PT (2h ago)</span></div>
+        <div class="summary">Musk's new proposed compensation plan, tied to SpaceX's Mars colonization progress, could be worth billions — drawing attention to the nexus between his Tesla and SpaceX roles.</div>
+      </li>
+      <li>
+        <div class="num">3</div>
+        <a class="headline" href="https://www.gurufocus.com/news/8894127/tesla-tsla-sees-morning-dip-amid-robotics-hiring-news" target="_blank">Tesla Sees Morning Dip Amid OpenAI Robotics Competition</a>
+        <div class="meta"><span class="source">GuruFocus</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">TSLA shares fell ~3.78% after OpenAI's CEO announced an expansion of its robotics division, raising competitive concerns for Tesla's Optimus robot program.</div>
+      </li>
+    </ol>
+
+    <!-- US–Iran -->
+    <h3>⚔️ US–Iran</h3>
+    <ol class="news-list">
+      <li>
+        <div class="num">1</div>
+        <a class="headline" href="https://www.aljazeera.com/news/liveblog/2026/6/1/iran-war-live-israels-expanding-invasion-of-lebanon-draws-global-alarm" target="_blank">Iran Suspends US Talks; Lebanon Offensive Triggers Alarm</a>
+        <div class="meta"><span class="source">Al Jazeera</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">Iran declared a halt to peace talks with the US, citing Israel's invasion of Lebanon as a ceasefire violation. The UN called on all sides to de-escalate as negotiations collapsed.</div>
+      </li>
+      <li>
+        <div class="num">2</div>
+        <a class="headline" href="https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-us-trade-strikes-truce-violations-rcna347298" target="_blank">US and Iran Trade Strikes, Accuse Each Other of Violations</a>
+        <div class="meta"><span class="source">NBC News</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">CENTCOM struck radar and drone sites in Goruk and Qeshm island after Iran shot down a US MQ-1 drone over international waters. Iran retaliated with strikes on a US base region in Kuwait, all intercepted.</div>
+      </li>
+      <li>
+        <div class="num">3</div>
+        <a class="headline" href="https://www.cbsnews.com/live-updates/iran-war-us-trump-strikes-ceasefire-lebanon-israel/" target="_blank">Iran State Media: Talks Halted; New Waterway Attacks Coming</a>
+        <div class="meta"><span class="source">CBS News</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">Iranian state media warned of imminent attacks on another key waterway after talks with the US were suspended. Oil prices surged on the news.</div>
+      </li>
+    </ol>
+
+    <!-- Economy -->
+    <h3>💹 Economy</h3>
+    <ol class="news-list">
+      <li>
+        <div class="num">1</div>
+        <a class="headline" href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-01-2026" target="_blank">S&amp;P 500 and Nasdaq Hit Record Highs; Dow Lags as Oil Surges</a>
+        <div class="meta"><span class="source">TheStreet</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">Tech stocks led the S&amp;P 500 and Nasdaq to record intraday highs on June 1, while the Dow fell on oil price shock. About 85% of S&amp;P 500 companies beat Q1 earnings estimates, with an aggregate 16.7% beat rate.</div>
+      </li>
+      <li>
+        <div class="num">2</div>
+        <a class="headline" href="https://www.zacks.com/stock/news/2929811/stock-market-news-for-jun-1-2026" target="_blank">ISM Manufacturing Index Hits Highest Level Since May 2022</a>
+        <div class="meta"><span class="source">Zacks</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 ~morning PT</span></div>
+        <div class="summary">The ISM manufacturing gauge rose to 54 in May, its best reading in four years, suggesting factory activity is robustly expanding despite geopolitical headwinds.</div>
+      </li>
+    </ol>
+
+    <!-- China -->
+    <h3>🇨🇳 China</h3>
+    <ol class="news-list">
+      <li>
+        <div class="num">1</div>
+        <a class="headline" href="https://www.scmp.com/news/china" target="_blank">UK Foreign Secretary Visits China; Heads to Shenzhen</a>
+        <div class="meta"><span class="source">South China Morning Post</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 — time unknown</span></div>
+        <div class="summary">British Foreign Secretary Yvette Cooper began a Monday-to-Wednesday visit to China including Shenzhen, then traveling onward to India, in a bid to strengthen diplomatic ties.</div>
+      </li>
+      <li>
+        <div class="num">2</div>
+        <a class="headline" href="https://www.cgtn.com/" target="_blank">China Condemns Czech Senate President's Taiwan Visit</a>
+        <div class="meta"><span class="source">CGTN</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 — time unknown</span></div>
+        <div class="summary">A Chinese Embassy spokesperson issued a strong condemnation of the Czech Senate President's visit to Taiwan, calling it interference in China's internal affairs.</div>
+      </li>
+      <li>
+        <div class="num">3</div>
+        <a class="headline" href="https://www.globaltimes.cn/" target="_blank">China Opens Reporting Channels for Shanxi Coal Mine Explosion Probe</a>
+        <div class="meta"><span class="source">Global Times</span> &nbsp;<span style="color:#666;font-size:0.9em">2026-06-01 — time unknown</span></div>
+        <div class="summary">A State Council investigation team launched public reporting channels for the inquiry into a deadly gas explosion at the Liushenyu coal mine in Changzhi, Shanxi Province.</div>
+      </li>
+    </ol>
+
+  </section>
+
+  <footer>
+    Generated by Cowork briefing job · 2026-06-01 11:22 PT
+  </footer>
+
+</div>
+</body>
+</html>
