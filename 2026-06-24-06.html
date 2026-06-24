@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing — 2026-06-24 06:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e5;
+    }
+    header h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.5px; }
+    header .subtitle { color: #666; font-size: 0.9rem; margin-top: 4px; }
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 28px;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e5;
+    }
+    .section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f2;
+      letter-spacing: -0.3px;
+    }
+    .section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 18px 0 10px;
+      color: #444;
+    }
+    /* Market grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .market-card {
+      background: #f9f9fb;
+      border-radius: 10px;
+      padding: 14px 16px;
+      border: 1px solid #e8e8ed;
+    }
+    .market-card .label { font-size: 0.78rem; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .market-card .value { font-size: 1.25rem; font-weight: 700; margin: 4px 0 2px; }
+    .market-card .change { font-size: 0.88rem; font-weight: 600; }
+    .market-card .meta { font-size: 0.75rem; color: #999; margin-top: 4px; }
+    .up { color: #27ae60; }
+    .down { color: #e74c3c; }
+    .neutral { color: #888; }
+    .sources { font-size: 0.78rem; color: #888; margin-top: 12px; }
+    .sources a { color: #007aff; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    /* News list */
+    ol.news-list { list-style: none; counter-reset: news; padding: 0; }
+    ol.news-list li { counter-increment: news; display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #f0f0f2; }
+    ol.news-list li:last-child { border-bottom: none; }
+    ol.news-list li::before { content: counter(news); font-weight: 700; font-size: 1.1rem; color: #ccc; min-width: 24px; padding-top: 2px; }
+    .news-body {}
+    .news-headline { font-weight: 600; font-size: 0.97rem; line-height: 1.4; }
+    .news-headline a { color: #1d1d1f; text-decoration: none; }
+    .news-headline a:hover { color: #007aff; }
+    .news-meta { font-size: 0.82rem; color: #888; margin: 3px 0 6px; }
+    .news-summary { font-size: 0.88rem; color: #444; line-height: 1.5; }
+    /* Spotlight list */
+    ul.spotlight-list { list-style: none; padding: 0; }
+    ul.spotlight-list li { padding: 12px 0; border-bottom: 1px solid #f0f0f2; }
+    ul.spotlight-list li:last-child { border-bottom: none; }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-top: 24px;
+      padding: 12px;
+    }
+    .state-badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #27ae60;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 6px;
+      padding: 2px 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📋 Briefing — 2026-06-24 <span style="color:#007aff;">06:00</span></h1>
+    <div class="subtitle">Generated at 2026-06-24 06:50 PT &nbsp;·&nbsp; Wednesday morning edition</div>
+  </header>
+
+  <!-- ===== MARKET SNAPSHOT ===== -->
+  <div class="section">
+    <h2>📈 Market Snapshot <span class="state-badge">Open / Intraday</span></h2>
+    <p style="font-size:0.82rem;color:#888;margin-bottom:14px;">U.S. regular session is open (9:30am–4:00pm ET). Showing intraday values as of ~6:50am PT / 9:50am ET.</p>
+
+    <h3>Oil</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="value">$74.07</div>
+        <div class="change down">▼ −$1.78 (−2.35%)</div>
+        <div class="meta">Prev close ~$75.85 · Range $73.26–$78.08</div>
+        <div class="meta">As of Jun 24 morning PT</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="value">~$77.20</div>
+        <div class="change down">▼ Near 3-month low</div>
+        <div class="meta">Strait of Hormuz traffic recovering</div>
+        <div class="meta">As of Jun 23–24</div>
+      </div>
+    </div>
+
+    <h3>Gold</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">Spot Gold (XAU/USD)</div>
+        <div class="value">$4,074.69</div>
+        <div class="change down">▼ −0.95% · Open $4,110.11</div>
+        <div class="meta">Range $4,050.63–$4,114.93</div>
+        <div class="meta">As of Jun 24 morning PT</div>
+      </div>
+    </div>
+
+    <h3>Major U.S. Indices</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500 (^GSPC)</div>
+        <div class="value">+0.35%</div>
+        <div class="change up">▲ Intraday recovery</div>
+        <div class="meta">Prior close (Jun 23): 7,365.46</div>
+        <div class="meta">ES futures: 7,433.75</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones (^DJI)</div>
+        <div class="value">Mixed</div>
+        <div class="change neutral">— Near flat intraday</div>
+        <div class="meta">Prior close (Jun 23): 51,666.84 (−0.09%)</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq (^IXIC)</div>
+        <div class="value">+0.62%</div>
+        <div class="change up">▲ Intraday recovery</div>
+        <div class="meta">Prior close (Jun 23): 25,587.04 (−2.21%)</div>
+        <div class="meta">Micron earnings after close today</div>
+      </div>
+    </div>
+
+    <h3>U.S. Treasury Yields</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">2-Year Yield</div>
+        <div class="value">4.21%</div>
+        <div class="change neutral">Highest since Feb 2025</div>
+        <div class="meta">As of Jun 24, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">10-Year Yield</div>
+        <div class="value">4.51%</div>
+        <div class="change neutral">2-week high</div>
+        <div class="meta">As of Jun 22–24, 2026</div>
+      </div>
+      <div class="market-card">
+        <div class="label">20-Year Yield</div>
+        <div class="value">N/A</div>
+        <div class="change neutral">Not available for Jun 24</div>
+        <div class="meta">Check <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026">Treasury.gov</a></div>
+      </div>
+    </div>
+
+    <div class="sources">
+      Sources:
+      <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics – WTI</a> ·
+      <a href="https://tradingeconomics.com/commodity/brent-crude-oil">Trading Economics – Brent</a> ·
+      <a href="https://www.investing.com/currencies/xau-usd">Investing.com – Gold</a> ·
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-24-2026">TheStreet – Market Today</a> ·
+      <a href="https://fred.stlouisfed.org/series/DGS2">FRED – 2yr Yield</a> ·
+      <a href="https://fred.stlouisfed.org/series/DGS10">FRED – 10yr Yield</a>
+    </div>
+  </div>
+
+  <!-- ===== TOP GLOBAL HEADLINES ===== -->
+  <div class="section">
+    <h2>🌐 Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div class="news-body">
+          <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/6/24/iran-war-live-trump-tehran-at-odds-over-nuclear-inspections-hormuz">Iran War Live: Tehran Says Deal to End War a "Declaration of US Defeat" Amid Nuclear Inspection Dispute</a></div>
+          <div class="news-meta"><strong>Al Jazeera</strong> · <span style="color:#666;font-size:0.9em">2026-06-24 — time unknown</span></div>
+          <div class="news-summary">The June 17 MOU between the US and Iran is under strain as President Trump insists Iran agreed to nuclear weapons inspections while Iranian leaders flatly deny this. Iran's parliamentary speaker called the ceasefire deal a "US defeat," and President Pezeshkian stressed that missiles are not part of negotiations.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="news-body">
+          <div class="news-headline"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-24-2026">S&amp;P 500 Attempting to Regain Momentum After Tuesday Tech Selloff</a></div>
+          <div class="news-meta"><strong>TheStreet / 247WallSt</strong> · <span style="color:#666;font-size:0.9em">2026-06-24 — time unknown</span></div>
+          <div class="news-summary">Stocks are recovering Wednesday after the S&amp;P 500 fell 1.44% and Nasdaq lost 2.21% on Tuesday, as global AI chip skepticism sparked a broad tech selloff. Markets are now focused on Micron Technology's earnings report due after today's close, with analysts expecting $20.83 EPS on $35.75 billion in revenue.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="news-body">
+          <div class="news-headline"><a href="https://www.cnn.com/2026/06/23/world/live-news/iran-war-trump-lebanon-israel">Strait of Hormuz Traffic Stabilizing; Iran Ships 30M+ Barrels in Past Week</a></div>
+          <div class="news-meta"><strong>CNN</strong> · <span style="color:#666;font-size:0.9em">2026-06-23 — time unknown</span></div>
+          <div class="news-summary">Nearly two dozen vessels transited the Strait of Hormuz in the last 24 hours as Gulf producers including Kuwait and UAE use alternative export routes. Iran shipped over 30 million barrels in the past week, contributing to falling oil prices.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="news-body">
+          <div class="news-headline"><a href="https://247wallst.com/investing/2026/06/24/stock-market-live-june-24-2026-sp-500-spy-attempting-to-regain-momentum/">BofA and Deutsche Bank Expect Fed Rate Hike in 2026 Under New Chair Kevin Warsh</a></div>
+          <div class="news-meta"><strong>247 Wall St.</strong> · <span style="color:#666;font-size:0.9em">2026-06-24 — time unknown</span></div>
+          <div class="news-summary">BofA Global Research and Deutsche Bank both project the Federal Reserve will raise rates in 2026 due to economic resilience and a more hawkish stance from new Fed Chair Kevin Warsh. Treasury Secretary Bessent separately expressed confidence the US economy can return to 3% growth as the Iran war winds down.</div>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+
+  <!-- ===== TOPIC SPOTLIGHTS ===== -->
+  <div class="section">
+    <h2>🔦 Topic Spotlights</h2>
+
+    <!-- Tesla / TSLA -->
+    <h3>🚗 Tesla (TSLA)</h3>
+    <ul class="spotlight-list">
+      <li>
+        <div class="news-headline"><a href="https://finance.yahoo.com/quote/TSLA/">Tesla Shares Stabilize Around $382 After 5% Decline Tuesday</a></div>
+        <div class="news-meta"><strong>Yahoo Finance / Fox Business</strong> · <span style="color:#666;font-size:0.9em">2026-06-24 — time unknown</span></div>
+        <div class="news-summary">TSLA opened Wednesday in the $379–$397 intraday range after falling ~5% on June 23 amid the broader tech selloff. Current market cap is approximately $1.43 trillion. Analyst consensus is "Hold" with a price target of $409.18.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://stockanalysis.com/stocks/tsla/">Tesla Announces Multi-Year Battery Storage Partnership With NatPower Worth $15B+</a></div>
+        <div class="news-meta"><strong>StockAnalysis / Yahoo Finance</strong> · <span style="color:#666;font-size:0.9em">2026-06-23 — time unknown</span></div>
+        <div class="news-summary">Despite Tuesday's share decline, Tesla announced a significant multi-year battery storage deal with NatPower projected to generate over $15 billion in revenue. Q2 delivery results are expected on July 2, with analysts forecasting 400,000–420,000 units.</div>
+      </li>
+    </ul>
+
+    <!-- US–Iran -->
+    <h3>⚔️ US–Iran</h3>
+    <ul class="spotlight-list">
+      <li>
+        <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/6/24/iran-war-live-trump-tehran-at-odds-over-nuclear-inspections-hormuz">Trump and Tehran at Odds Over Nuclear Inspections Despite June 17 MOU</a></div>
+        <div class="news-meta"><strong>Al Jazeera</strong> · <span style="color:#666;font-size:0.9em">2026-06-24 — time unknown</span></div>
+        <div class="news-summary">President Trump insists Iran agreed to allow weapons inspections as part of the ceasefire, while Iranian leadership flatly denies any such commitment. The 60-day MOU signed June 17 aims for a formal peace, but several sticking points remain including nuclear oversight and ballistic missiles.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://www.aljazeera.com/amp/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds">Iran to Access Billions in Frozen Funds Under MOU; Pezeshkian Rules Out Missile Talks</a></div>
+        <div class="news-meta"><strong>Al Jazeera</strong> · <span style="color:#666;font-size:0.9em">2026-06-23 — time unknown</span></div>
+        <div class="news-summary">Iran's President Pezeshkian confirmed Tehran will access billions in frozen funds as part of the MOU, while categorically stating ballistic missiles are off the table in any negotiation. Iran's parliamentary speaker said the deal was "not the result of pressure and coercion."</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://www.britannica.com/event/2026-Iran-war">Background: 2026 Iran War — From Conflict to MOU</a></div>
+        <div class="news-meta"><strong>Britannica</strong> · <span style="color:#666;font-size:0.9em">time unknown</span></div>
+        <div class="news-summary">On June 14, mediators announced the MOU intended to end the conflict within 60 days. It was signed by both presidents on June 17. Key unresolved issues include maritime security and nuclear oversight verification mechanisms.</div>
+      </li>
+    </ul>
+
+    <!-- Economy -->
+    <h3>💹 Economy</h3>
+    <ul class="spotlight-list">
+      <li>
+        <div class="news-headline"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-24-2026">Nasdaq Edges Higher Wednesday; Micron Earnings the Day's Key Event</a></div>
+        <div class="news-meta"><strong>TheStreet</strong> · <span style="color:#666;font-size:0.9em">2026-06-24 — time unknown</span></div>
+        <div class="news-summary">After Tuesday's rout, Nasdaq futures rose as investors await Micron Technology's Q2 earnings after the close. Analysts expect Micron to post EPS of $20.83 on revenues of $35.75 billion — the marquee report of the earnings season.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://247wallst.com/investing/2026/06/24/stock-market-live-june-24-2026-sp-500-spy-attempting-to-regain-momentum/">Bessent Sees Path to 3% GDP Growth; BofA and Deutsche Bank Eye Fed Rate Hike</a></div>
+        <div class="news-meta"><strong>247 Wall St.</strong> · <span style="color:#666;font-size:0.9em">2026-06-24 — time unknown</span></div>
+        <div class="news-summary">Treasury Secretary Scott Bessent said he is confident the U.S. economy can return to 3% growth as the Iran conflict moves toward resolution. Separately, BofA and Deutsche Bank analysts now project the Federal Reserve will raise rates in 2026 under new Chair Kevin Warsh, citing economic resilience.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-23-2026">Tuesday Tech Rout: S&amp;P −1.44%, Nasdaq −2.21% as Korea's KOSPI Plunges 10%</a></div>
+        <div class="news-meta"><strong>TheStreet</strong> · <span style="color:#666;font-size:0.9em">2026-06-23 — time unknown</span></div>
+        <div class="news-summary">South Korea's KOSPI plummeted 9.99% on June 23 — its steepest drop in over three months — as overseas investors dumped chip stocks on doubts about AI spending returns. The selloff spread to US markets, dragging the Nasdaq down 2.21% and the S&amp;P 500 down 1.44%.</div>
+      </li>
+    </ul>
+
+    <!-- China -->
+    <h3>🇨🇳 China</h3>
+    <ul class="spotlight-list">
+      <li>
+        <div class="news-headline"><a href="https://english.www.gov.cn/news/">Premier Li Qiang Attends World Economic Forum AMNC 2026 in Dalian</a></div>
+        <div class="news-meta"><strong>Chinese Government / CGTN</strong> · <span style="color:#666;font-size:0.9em">2026-06-23 to 06-24 — time unknown</span></div>
+        <div class="news-summary">Premier Li Qiang is attending the 17th Annual Meeting of the New Champions (Summer Davos) in Dalian, June 23–24. The event focuses on global economic challenges, AI, and green transition. Bangladesh PM Tarique Rahman is also visiting China June 24–26 at Li's invitation.</div>
+      </li>
+      <li>
+        <div class="news-headline"><a href="https://www.cgtn.com/">China's EV Charging Infrastructure Surpasses 22 Million Stations</a></div>
+        <div class="news-meta"><strong>CGTN / China Daily</strong> · <span style="color:#666;font-size:0.9em">2026-06-24 — time unknown</span></div>
+        <div class="news-summary">China's EV charging station count exceeded 22 million units by end of May, underscoring the country's continued dominance in electric vehicle infrastructure buildout. The milestone reflects accelerating EV adoption across the country.</div>
+      </li>
+    </ul>
+
+  </div>
+
+  <footer>
+    Generated by Cowork briefing job · 2026-06-24 06:50 PT
+  </footer>
+
+</div>
+</body>
+</html>
