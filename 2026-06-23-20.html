@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefing — 2026-06-23 20:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f7f8fa;
+      color: #1a1a2e;
+      line-height: 1.6;
+      padding: 16px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    header h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.5px; }
+    header .sub { font-size: 0.9rem; color: #a0aec0; margin-top: 6px; }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin: 18px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    /* Market grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .market-card {
+      background: #f7f8fa;
+      border-radius: 8px;
+      padding: 14px 16px;
+      border: 1px solid #e2e8f0;
+    }
+    .market-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #718096;
+      margin-bottom: 4px;
+    }
+    .market-card .price {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .market-card .change {
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .market-card .as-of {
+      font-size: 0.72rem;
+      color: #a0aec0;
+      margin-top: 4px;
+    }
+    .market-card .state-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      background: #edf2f7;
+      color: #4a5568;
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin-top: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .up { color: #38a169; }
+    .down { color: #e53e3e; }
+    .neutral { color: #718096; }
+    /* Sources row */
+    .sources {
+      font-size: 0.78rem;
+      color: #718096;
+      margin-top: 10px;
+    }
+    .sources a { color: #4299e1; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    /* News items */
+    ol.news-list { list-style: decimal; padding-left: 20px; }
+    ol.news-list li {
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f0f4f8;
+    }
+    ol.news-list li:last-child { border-bottom: none; margin-bottom: 0; }
+    .news-headline a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      text-decoration: none;
+    }
+    .news-headline a:hover { color: #4299e1; text-decoration: underline; }
+    .news-meta {
+      font-size: 0.82rem;
+      color: #4a5568;
+      margin: 3px 0 6px;
+    }
+    .news-meta .ts {
+      color: #718096;
+      font-size: 0.78rem;
+    }
+    .news-summary { font-size: 0.9rem; color: #4a5568; }
+    /* Spotlight items (unordered) */
+    ul.story-list { list-style: none; padding-left: 0; }
+    ul.story-list li {
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f0f4f8;
+    }
+    ul.story-list li:last-child { border-bottom: none; margin-bottom: 0; }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #a0aec0;
+      padding: 20px 0 8px;
+    }
+    @media (max-width: 600px) {
+      header { padding: 20px 18px; }
+      section { padding: 18px 16px; }
+      .market-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Briefing — 2026-06-23 &nbsp;20:00 PT</h1>
+    <div class="sub">Generated at 2026-06-23 20:00 PT &nbsp;·&nbsp; Evening Edition</div>
+  </header>
+
+  <!-- ===== MARKET SNAPSHOT ===== -->
+  <section>
+    <h2>Market Snapshot</h2>
+    <p style="font-size:0.82rem;color:#718096;margin-bottom:14px;">U.S. markets are <strong>closed</strong> (after 1:00 PM PT). Showing today's closing prices.</p>
+
+    <!-- Indices -->
+    <h3>U.S. Equity Indices — Today's Close</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500</div>
+        <div class="price">7,365.46</div>
+        <div class="change down">▼ −107.52 &nbsp;(−1.44%)</div>
+        <div class="state-badge">Close</div>
+        <div class="as-of">Jun 23, 2026 · Yahoo Finance / TheStreet</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones</div>
+        <div class="price">51,666.84</div>
+        <div class="change down">▼ −46.50 &nbsp;(−0.09%)</div>
+        <div class="state-badge">Close</div>
+        <div class="as-of">Jun 23, 2026 · TheStreet</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq Composite</div>
+        <div class="price">25,587.04</div>
+        <div class="change down">▼ −577.95 &nbsp;(−2.21%)</div>
+        <div class="state-badge">Close</div>
+        <div class="as-of">Jun 23, 2026 · TheStreet / Yahoo Finance</div>
+      </div>
+    </div>
+
+    <!-- Commodities -->
+    <h3>Commodities</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="price">~$73.40</div>
+        <div class="change down">▼ Lowest in ~3 months</div>
+        <div class="state-badge">Close</div>
+        <div class="as-of">Jun 23, 2026 · TradingEconomics</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="price">$76.68</div>
+        <div class="change down">▼ −$0.84 &nbsp;(−1.08%)</div>
+        <div class="state-badge">Close</div>
+        <div class="as-of">Jun 23, 2026 · Investing.com</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Gold (XAU/USD)</div>
+        <div class="price">$4,124.22</div>
+        <div class="change down">▼ −$66.97 &nbsp;(−1.60%)</div>
+        <div class="state-badge">Close</div>
+        <div class="as-of">Jun 23, 2026 · USAGOLD</div>
+      </div>
+    </div>
+
+    <!-- Treasuries -->
+    <h3>U.S. Treasury Yields</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">2-Year</div>
+        <div class="price">4.21%</div>
+        <div class="change neutral">~Steady</div>
+        <div class="as-of">Jun 23, 2026 · TradingEconomics</div>
+      </div>
+      <div class="market-card">
+        <div class="label">10-Year</div>
+        <div class="price">4.48%</div>
+        <div class="change down">▼ Fell on the day</div>
+        <div class="as-of">Jun 23, 2026 · TradingEconomics</div>
+      </div>
+      <div class="market-card">
+        <div class="label">20-Year</div>
+        <div class="price">~4.91%</div>
+        <div class="change neutral">As of Jun 18 est.</div>
+        <div class="as-of">Jun 18, 2026 · FRED / US Treasury</div>
+      </div>
+    </div>
+
+    <div class="sources">
+      Sources: &nbsp;
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-23-2026">TheStreet</a> ·
+      <a href="https://finance.yahoo.com/quote/%5EGSPC/history/">Yahoo Finance</a> ·
+      <a href="https://www.investing.com/commodities/brent-oil">Investing.com (Brent)</a> ·
+      <a href="https://tradingeconomics.com/commodity/crude-oil">TradingEconomics (WTI)</a> ·
+      <a href="https://www.usagold.com/daily-gold-price-history/">USAGOLD</a> ·
+      <a href="https://tradingeconomics.com/united-states/government-bond-yield">TradingEconomics (10Y)</a> ·
+      <a href="https://fred.stlouisfed.org/series/DGS20">FRED (20Y)</a>
+    </div>
+  </section>
+
+  <!-- ===== TOP GLOBAL HEADLINES ===== -->
+  <section>
+    <h2>Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds">US–Iran Dispute Over Nuclear Inspections Clouds War-Ending Deal</a></div>
+        <div class="news-meta">Al Jazeera &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">The US and Iran clashed over whether Tehran agreed to allow UN inspectors into bombed nuclear sites, as mediators worked toward a permanent ceasefire. Iran's President Pezeshkian stated ballistic missiles are not part of the MoU and "never will be."</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.npr.org/2026/06/23/nx-s1-5867322/us-iran-finalize-war-ending-deal">A U.S.–Iran Dispute Over Nuclear Inspections Clouds Finalization of War-Ending Deal</a></div>
+        <div class="news-meta">NPR &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">Diplomats in Switzerland are attempting to bridge gaps on nuclear monitoring as a June 17 MoU ceasefire remains fragile, complicated by renewed violence in Lebanon between Israel and Hezbollah.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-23-2026">Nasdaq, S&P 500 Fall as Bank of America Rate-Hike Note and Semiconductor Selloff Hit Markets</a></div>
+        <div class="news-meta">TheStreet &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">Tech stocks led a broad market selloff, with the Nasdaq dropping 2.21% and the S&P 500 falling 1.44%, driven by semiconductor fears after South Korea's chip-heavy KOSPI fell nearly double digits and Micron dropped over 10%.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.cnbc.com/2026/06/23/us-fights-with-brazil-for-chinas-giant-soybean-market.html">U.S. Fights with Brazil for China's Giant Soybean Market</a></div>
+        <div class="news-meta">CNBC &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">Brazil now supplies over 60% of China's soybean imports (vs. 23% from the U.S.), and American farmers are fighting back by emphasizing crop quality to recapture buyers.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.scmp.com/news/china">China's Liaoning Carrier Group Returns After 40-Day South China Sea Drills</a></div>
+        <div class="news-meta">South China Morning Post &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">China's Liaoning aircraft carrier group completed more than 40 days of drills in the South China Sea and western Pacific, practicing combat readiness, air defense, anti-ship strikes, and live-fire exercises.</div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ===== TOPIC SPOTLIGHTS ===== -->
+  <section>
+    <h2>Topic Spotlights</h2>
+
+    <!-- Tesla -->
+    <h3>Tesla (TSLA)</h3>
+    <ul class="story-list">
+
+      <li>
+        <div class="news-headline"><a href="https://markets.financialcontent.com/stocks/article/stockstory-2026-6-23-why-tesla-tsla-shares-are-trading-lower-today">TSLA Shares Fall ~3.9%–4.8% — FSD Scrutiny &amp; EV Growth Fears Mount</a></div>
+        <div class="news-meta">FinancialContent / StockStory &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">Tesla slid amid a broad Magnificent Seven selloff compounded by a fresh federal safety probe and regulatory headwinds on its Full Self-Driving stack.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.timothysykes.com/news/tesla-inc-tsla-news-2026_06_23/">NHTSA Opens Fatal Model 3 Crash Investigation Near Houston</a></div>
+        <div class="news-meta">Timothy Sykes / NHTSA &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">The National Highway Traffic Safety Administration opened a special investigation after a Tesla Model 3 with automated driving engaged struck a home and killed a 76-year-old woman near Houston.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://finance.yahoo.com/markets/stocks/articles/why-tesla-tsla-shares-trading-193646091.html">Swedish Regulator Recommends EU Block Tesla FSD Approval</a></div>
+        <div class="news-meta">Yahoo Finance &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">Sweden's Transport Administration formally urged the EU's Technical Committee to reject Tesla's Full Self-Driving (Supervised) system at its June 30 meeting, citing safety objections to Tesla's speed-limit-exceeding "Speed Offset" feature.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.tradingkey.com/news/market-movers/261985190-market-movers-tsla-20260623">Tesla Warns of Negative Free Cash Flow; Commits $25B+ in CapEx for 2026</a></div>
+        <div class="news-meta">TradingKey &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">Tesla's management flagged negative free cash flow for the remaining quarters of 2026, raising concerns about financial vulnerability if EV demand or margins deteriorate further.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://finance.yahoo.com/quote/TSLA/news/">Tesla Announces Multi-Year Battery Storage Partnership with NatPower — $15B Projected Revenue</a></div>
+        <div class="news-meta">Yahoo Finance / Tesla &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">On a positive note, Tesla announced a long-term battery energy storage partnership with NatPower projected to generate over $15 billion in revenue, offering a bright spot amid a difficult day for the stock.</div>
+      </li>
+
+    </ul>
+
+    <!-- US-Iran -->
+    <h3>US–Iran</h3>
+    <ul class="story-list">
+
+      <li>
+        <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds">Iran to Access Billions in Frozen Funds as Nuclear Talks Continue</a></div>
+        <div class="news-meta">Al Jazeera &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">Tehran was set to access billions in frozen assets per the June 17 MoU framework, even as the nuclear inspection dispute threatened to derail a permanent peace deal.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.aljazeera.com/news/liveblog/2026/6/22/iran-war-live-first-day-of-us-talks-covers-lebanon-hormuz-frozen-assets">Trump Says Iran "Will Agree" to Allow Weapons Inspections</a></div>
+        <div class="news-meta">Al Jazeera &nbsp;<span class="ts">2026-06-22 (time unknown)</span></div>
+        <div class="news-summary">President Trump insisted Iran agreed to resume UN nuclear inspections, but Iranian state media denied any new commitment, and VP Vance's announcement from Switzerland sparked a public dispute.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.cnn.com/2026/06/23/world/live-news/iran-war-trump-lebanon-israel">Violence Flares in Lebanon; Iran Closes Strait Again</a></div>
+        <div class="news-meta">CNN &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">The ceasefire was further tested as Iran again closed the Strait of Hormuz over renewed fighting between Israel and Hezbollah in Lebanon, threatening oil supply routes once more.</div>
+      </li>
+
+    </ul>
+
+    <!-- Economy -->
+    <h3>Economy</h3>
+    <ul class="story-list">
+
+      <li>
+        <div class="news-headline"><a href="https://247wallst.com/investing/2026/06/23/stock-market-live-june-23-2026-sp-500-spy-futures-under-significant-pressure/">S&P 500 Futures Under Significant Pressure Ahead of Open</a></div>
+        <div class="news-meta">247 Wall St. &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">SPY futures were under significant pressure before the open on June 23, foreshadowing the broad selloff driven by tech weakness, Bank of America's rate-hike note, and geopolitical caution.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://markets.financialcontent.com/stocks/article/stockstory-2026-6-23-why-tesla-tsla-shares-are-trading-lower-today">AMC Entertainment Tumbles ~24% on $200M Share Offering</a></div>
+        <div class="news-meta">FinancialContent &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">AMC announced plans to raise $200 million through a registered direct offering, sending its shares down nearly 24%, as most proceeds are slated to reduce outstanding debt rather than grow the business.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-23-2026">Oil Falls as Washington Grants Iran 60-Day License to Sell Oil Internationally</a></div>
+        <div class="news-meta">TheStreet &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">WTI crude fell to its lowest level in nearly three months after Washington granted Iran a 60-day oil sales license, raising expectations of faster global supply increases. Strait of Hormuz traffic picked up, with Kuwait, UAE, and Iran exporting more than 30 million barrels last week.</div>
+      </li>
+
+    </ul>
+
+    <!-- China -->
+    <h3>China</h3>
+    <ul class="story-list">
+
+      <li>
+        <div class="news-headline"><a href="https://www.cnbc.com/2026/06/23/us-fights-with-brazil-for-chinas-giant-soybean-market.html">U.S. vs. Brazil for China Soybean Share</a></div>
+        <div class="news-meta">CNBC &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">Brazil now commands 60%+ of China's soybean imports; the U.S. holds 23% and is trying to compete on quality amid an ongoing trade-realignment driven by geopolitical tensions.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.scmp.com/news/china">Liaoning Carrier Group Returns After 40-Day Drills in South China Sea</a></div>
+        <div class="news-meta">South China Morning Post &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">China's Liaoning carrier group completed an extensive 40+ day exercise including live-fire drills, anti-ship strikes, and joint exercises with an amphibious assault ship group in the South China Sea and western Pacific.</div>
+      </li>
+
+      <li>
+        <div class="news-headline"><a href="https://www.theasiacable.com/p/asia-daily-june-23-2026">Philippine Navy Encounters Four Chinese Warships Near Scarborough Shoal</a></div>
+        <div class="news-meta">The Asia Cable &nbsp;<span class="ts">2026-06-23 (time unknown)</span></div>
+        <div class="news-summary">The Philippine Navy's guided-missile frigate BRP Diego Silang encountered four Chinese warships near the disputed Scarborough Shoal on Saturday, adding to ongoing South China Sea tensions.</div>
+      </li>
+
+    </ul>
+  </section>
+
+  <footer>
+    Generated by Cowork briefing job &nbsp;·&nbsp; 2026-06-23 20:00 PT
+  </footer>
+
+</div>
+</body>
+</html>
