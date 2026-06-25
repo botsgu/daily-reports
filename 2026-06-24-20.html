@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing — 2026-06-24 20:00</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+      padding: 16px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #1d1d1f;
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    header h1 { font-size: 1.6rem; font-weight: 700; }
+    header .subtitle { color: #a1a1a6; font-size: 0.9rem; margin-top: 4px; }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 16px;
+      border: 1px solid #e5e5ea;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e5e5ea;
+    }
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #6e6e73;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 18px 0 10px;
+    }
+    h3:first-child { margin-top: 0; }
+    /* Market grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .market-card {
+      background: #f5f5f7;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .market-card .label { font-size: 0.8rem; color: #6e6e73; font-weight: 600; margin-bottom: 4px; }
+    .market-card .value { font-size: 1.3rem; font-weight: 700; }
+    .market-card .change { font-size: 0.85rem; margin-top: 2px; }
+    .market-card .ts { font-size: 0.75rem; color: #aeaeb2; margin-top: 4px; }
+    .market-card .badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: #e5e5ea;
+      color: #6e6e73;
+      margin-bottom: 4px;
+    }
+    .pos { color: #34c759; }
+    .neg { color: #ff3b30; }
+    .sources { font-size: 0.8rem; color: #6e6e73; margin-top: 10px; }
+    .sources a { color: #007aff; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    /* News */
+    ol.news-list { list-style: none; counter-reset: news-counter; }
+    ol.news-list li {
+      counter-increment: news-counter;
+      padding: 14px 0;
+      border-bottom: 1px solid #f2f2f7;
+      display: flex;
+      gap: 14px;
+    }
+    ol.news-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-num {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #c7c7cc;
+      min-width: 22px;
+    }
+    .news-body { flex: 1; }
+    .news-headline {
+      font-weight: 600;
+      font-size: 0.97rem;
+      margin-bottom: 4px;
+    }
+    .news-headline a { color: #1d1d1f; text-decoration: none; }
+    .news-headline a:hover { color: #007aff; text-decoration: underline; }
+    .news-meta { font-size: 0.82rem; color: #6e6e73; margin-bottom: 6px; }
+    .news-meta .source-name { font-weight: 600; }
+    .news-summary { font-size: 0.9rem; color: #3a3a3c; }
+    /* Spotlights */
+    .spotlight-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #f2f2f7;
+    }
+    .spotlight-item:last-child { border-bottom: none; }
+    .spotlight-headline {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 3px;
+    }
+    .spotlight-headline a { color: #1d1d1f; text-decoration: none; }
+    .spotlight-headline a:hover { color: #007aff; text-decoration: underline; }
+    .spotlight-meta { font-size: 0.82rem; color: #6e6e73; margin-bottom: 5px; }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aeaeb2;
+      padding: 16px 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📋 Briefing — 2026-06-24 20:00</h1>
+    <div class="subtitle">Generated at 2026-06-24 20:00 PT · U.S. markets closed</div>
+  </header>
+
+  <!-- ══════════════ MARKET SNAPSHOT ══════════════ -->
+  <section>
+    <h2>📈 Market Snapshot</h2>
+    <h3>U.S. Indices — Close (Wed Jun 24, 2026)</h3>
+    <div class="market-grid">
+
+      <div class="market-card">
+        <div class="badge">Close</div>
+        <div class="label">S&amp;P 500</div>
+        <div class="value">7,358.22</div>
+        <div class="change neg">▼ −0.10%</div>
+        <div class="ts">Jun 24 close · TheStreet</div>
+      </div>
+
+      <div class="market-card">
+        <div class="badge">Close</div>
+        <div class="label">Dow Jones</div>
+        <div class="value">51,848.90</div>
+        <div class="change pos">▲ +182.06 (+0.35%)</div>
+        <div class="ts">Jun 24 close · TheStreet</div>
+      </div>
+
+      <div class="market-card">
+        <div class="badge">Close</div>
+        <div class="label">Nasdaq Composite</div>
+        <div class="value">25,476.64</div>
+        <div class="change neg">▼ −0.43%</div>
+        <div class="ts">Jun 24 close · TheStreet</div>
+      </div>
+
+    </div>
+
+    <h3>Commodities</h3>
+    <div class="market-grid">
+
+      <div class="market-card">
+        <div class="badge">Close</div>
+        <div class="label">WTI Crude Oil</div>
+        <div class="value">$69.13</div>
+        <div class="change neg">▼ −$1.21 (−1.72%) vs prev close $70.34</div>
+        <div class="ts">Jun 24 · CNBC / Investing.com</div>
+      </div>
+
+      <div class="market-card">
+        <div class="badge">Close</div>
+        <div class="label">Brent Crude Oil</div>
+        <div class="value">$75.47</div>
+        <div class="change neg">▼ −$1.33 (−1.73%) vs prev close $76.80</div>
+        <div class="ts">Jun 24 · Investing.com</div>
+      </div>
+
+      <div class="market-card">
+        <div class="badge">Close</div>
+        <div class="label">Gold (XAU/USD)</div>
+        <div class="value">$3,985</div>
+        <div class="change neg">▼ −$14 (−0.35%) vs prev close $3,999</div>
+        <div class="ts">Jun 24 · Investing.com (fell below $4,000)</div>
+      </div>
+
+    </div>
+
+    <h3>U.S. Treasury Yields</h3>
+    <div class="market-grid">
+
+      <div class="market-card">
+        <div class="label">2-Year Yield</div>
+        <div class="value">4.21%</div>
+        <div class="ts">Jun 24 · Trading Economics / FRED</div>
+      </div>
+
+      <div class="market-card">
+        <div class="label">10-Year Yield</div>
+        <div class="value">4.45%</div>
+        <div class="ts">Jun 24 · CNBC / Trading Economics</div>
+      </div>
+
+      <div class="market-card">
+        <div class="label">20-Year Yield</div>
+        <div class="value">N/A</div>
+        <div class="ts">Data not available at run time</div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      Sources:
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-24-2026" target="_blank">TheStreet</a> ·
+      <a href="https://www.cnbc.com/2026/06/24/oil-prices-wti-brent-crude-trump-doj-gasoline-prices-strait-of-hormuz.html" target="_blank">CNBC</a> ·
+      <a href="https://www.investing.com/currencies/xau-usd" target="_blank">Investing.com (Gold)</a> ·
+      <a href="https://www.investing.com/commodities/crude-oil" target="_blank">Investing.com (WTI)</a> ·
+      <a href="https://tradingeconomics.com/united-states/2-year-note-yield" target="_blank">Trading Economics</a>
+    </div>
+  </section>
+
+  <!-- ══════════════ TOP GLOBAL HEADLINES ══════════════ -->
+  <section>
+    <h2>🌍 Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div class="news-num">1</div>
+        <div class="news-body">
+          <div class="news-headline">
+            <a href="https://www.aljazeera.com/news/liveblog/2026/6/24/iran-war-live-trump-tehran-at-odds-over-nuclear-inspections-hormuz" target="_blank">Iran War Updates: Rubio Calls Gulf Discussions Frank; Iran Talks Planned for Next Week</a>
+          </div>
+          <div class="news-meta">
+            <span class="source-name">Al Jazeera</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+          </div>
+          <div class="news-summary">Secretary of State Rubio described discussions with Gulf partners as "frank," with further nuclear talks with Iran scheduled for the coming week. Negotiations remain contentious over nuclear facility inspection protocols and ballistic missiles.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="news-num">2</div>
+        <div class="news-body">
+          <div class="news-headline">
+            <a href="https://www.cnbc.com/2026/06/24/oil-prices-wti-brent-crude-trump-doj-gasoline-prices-strait-of-hormuz.html" target="_blank">U.S. Crude Oil Briefly Dips Below $70 as Tankers Resume Transit of Strait of Hormuz</a>
+          </div>
+          <div class="news-meta">
+            <span class="source-name">CNBC</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+          </div>
+          <div class="news-summary">WTI crude fell to its lowest level since late February as increasing tanker traffic through the Strait of Hormuz and progress in U.S.-Iran peace talks eased supply fears. Brent also dropped toward its lowest level since before the conflict began.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="news-num">3</div>
+        <div class="news-body">
+          <div class="news-headline">
+            <a href="https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump" target="_blank">US Senate Passes Iran War Powers Resolution 50–48, Defying Trump</a>
+          </div>
+          <div class="news-meta">
+            <span class="source-name">Al Jazeera</span> · <span style="color:#666;font-size:0.9em">2026-06-23 · time unknown</span>
+          </div>
+          <div class="news-summary">The U.S. Senate voted 50 to 48 to pass a war powers resolution requiring Trump to either halt military operations against Iran or seek congressional authorization. The House had previously passed the resolution earlier this month.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="news-num">4</div>
+        <div class="news-body">
+          <div class="news-headline">
+            <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-24-2026" target="_blank">Nasdaq, S&amp;P 500 Fall Before Micron's After-Hours Earnings; Dow Adds 182 Points</a>
+          </div>
+          <div class="news-meta">
+            <span class="source-name">TheStreet</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+          </div>
+          <div class="news-summary">Stocks closed mixed as tech weakness in energy and communication sectors weighed on the S&amp;P 500 and Nasdaq, while the Dow eked out gains. Markets awaited Micron Technology's earnings report after the bell as the next major AI sentiment test.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="news-num">5</div>
+        <div class="news-body">
+          <div class="news-headline">
+            <a href="https://fortune.com/2026/06/23/stock-markets-fed-interest-rate-expectations-400-billion-spacex/" target="_blank">Markets Tumble as Fed Resets Rate Expectations; $400 Billion Wiped Off SpaceX Stock</a>
+          </div>
+          <div class="news-meta">
+            <span class="source-name">Fortune</span> · <span style="color:#666;font-size:0.9em">2026-06-23 · time unknown</span>
+          </div>
+          <div class="news-summary">BofA now expects the Fed under Chair Kevin Warsh to hike rates three times in 2026 (September, October, December), rattling global markets and wiping hundreds of billions off tech valuations including SpaceX.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="news-num">6</div>
+        <div class="news-body">
+          <div class="news-headline">
+            <a href="https://www.scmp.com/news/china" target="_blank">Chinese Warships Confront Philippine Navy Near Scarborough Shoal</a>
+          </div>
+          <div class="news-meta">
+            <span class="source-name">South China Morning Post</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+          </div>
+          <div class="news-summary">Four Chinese warships confronted the Philippine Navy's BRP Diego Silang near Scarborough Shoal in the South China Sea, with personnel exchanging radio challenges over several hours. The encounter ended without incident.</div>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ══════════════ TOPIC SPOTLIGHTS ══════════════ -->
+  <section>
+    <h2>🔍 Topic Spotlights</h2>
+
+    <!-- TESLA -->
+    <h3>⚡ Tesla (TSLA)</h3>
+    <p style="font-size:0.88rem;color:#6e6e73;margin-bottom:12px;">TSLA closed at <strong>$374.84</strong> (prev close $381.61, <span class="neg">−1.77%</span>) · Vol: 45.3M · Source: <a href="https://public.com/stocks/tsla/news" style="color:#007aff;">Public.com</a></p>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.wsj.com/business/autos/tesla-announces-rollout-of-fully-self-driving-tech-in-china-2711fdb2" target="_blank">Tesla Announces Rollout of Fully Self-Driving Tech in China</a>
+      </div>
+      <div class="spotlight-meta">
+        <span class="source-name" style="font-weight:600;">WSJ</span> · <span style="color:#666;font-size:0.9em">~2h ago — 2026-06-24 18:00 PT</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.businessinsider.com/elon-musk-moonshot-spacex-pay-package-requires-mars-city-development-2026-5" target="_blank">Elon Musk's New 'Marshot' Pay Package Could Be Worth Billions — If He Helps Colonize Mars</a>
+      </div>
+      <div class="spotlight-meta">
+        <span class="source-name" style="font-weight:600;">Business Insider</span> · <span style="color:#666;font-size:0.9em">~2h ago — 2026-06-24 18:00 PT</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-june-24-220824700.html" target="_blank">Sunrun Jumps After Announcing Deal With Tesla and Renew Home for 16 Gigawatts of Flexible Power</a>
+      </div>
+      <div class="spotlight-meta">
+        <span class="source-name" style="font-weight:600;">Yahoo Finance</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://finance.yahoo.com/markets/stocks/articles/why-tesla-tsla-shares-trading-193646091.html" target="_blank">Why Tesla (TSLA) Shares Are Trading Lower Today</a>
+      </div>
+      <div class="spotlight-meta">
+        <span class="source-name" style="font-weight:600;">Yahoo Finance</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+    <!-- US-IRAN -->
+    <h3>🕊️ US–Iran</h3>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.aljazeera.com/news/liveblog/2026/6/24/iran-war-live-trump-tehran-at-odds-over-nuclear-inspections-hormuz" target="_blank">Iran War Updates: Rubio Calls Gulf Discussions Frank; Iran Talks Next Week</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">Al Jazeera</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.cnbc.com/2026/06/24/oil-prices-wti-brent-crude-trump-doj-gasoline-prices-strait-of-hormuz.html" target="_blank">U.S. Crude Dips Below $70 as Tankers Transit Strait of Hormuz, Peace Talks Progress</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">CNBC</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump" target="_blank">US Senate Passes Iran War Powers Resolution 50–48, Defying Trump</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">Al Jazeera</span> · <span style="color:#666;font-size:0.9em">2026-06-23 · time unknown</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds" target="_blank">Iran War Updates: Pezeshkian Says No Negotiation on Ballistic Missiles</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">Al Jazeera</span> · <span style="color:#666;font-size:0.9em">2026-06-23 · time unknown</span>
+      </div>
+    </div>
+
+    <!-- ECONOMY -->
+    <h3>💰 Economy</h3>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-24-2026" target="_blank">Nasdaq, S&amp;P 500 Fall Before Micron's After-Hours Earnings; Dow Adds 182 Points</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">TheStreet</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-jun-24-132200682.html" target="_blank">Bessent: US Economy Can Return to 3% Growth as Iran War Nears an End</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">Yahoo Finance</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://fortune.com/2026/06/23/stock-markets-fed-interest-rate-expectations-400-billion-spacex/" target="_blank">BofA Forecasts Three Fed Rate Hikes in 2026 Under Chair Warsh; Markets Tumble</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">Fortune</span> · <span style="color:#666;font-size:0.9em">2026-06-23 · time unknown</span>
+      </div>
+    </div>
+
+    <!-- CHINA -->
+    <h3>🇨🇳 China</h3>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.scmp.com/news/china" target="_blank">Four Chinese Warships Confront Philippine Navy Near Scarborough Shoal</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">South China Morning Post</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.theasiacable.com/p/asia-daily-june-24-2026" target="_blank">Bangladesh PM Arrives in Beijing for Official Visit June 24–26</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">The Asia Cable</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="spotlight-headline">
+        <a href="https://www.cnn.com/world/china" target="_blank">US Supreme Court Ends Lawsuit Accusing Cisco of Helping China Persecute Falun Gong Members</a>
+      </div>
+      <div class="spotlight-meta">
+        <span style="font-weight:600;">CNN</span> · <span style="color:#666;font-size:0.9em">2026-06-24 · time unknown</span>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    Generated by Cowork briefing job · 2026-06-24 20:00 PT
+  </footer>
+
+</div>
+</body>
+</html>
