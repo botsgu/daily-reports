@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefing — 2026-06-25 06:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f6f8;
+      color: #222;
+      line-height: 1.6;
+      padding: 16px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #1a1f36;
+      color: #fff;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.3px; }
+    header .sub { font-size: 0.85rem; color: #a0aec0; margin-top: 4px; }
+    section {
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    section h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1f36;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    section h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin: 14px 0 8px;
+    }
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .market-card {
+      background: #f7f8fc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .market-card .label { font-size: 0.75rem; color: #718096; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+    .market-card .value { font-size: 1.15rem; font-weight: 700; margin: 4px 0 2px; }
+    .market-card .change { font-size: 0.82rem; font-weight: 600; }
+    .market-card .asof { font-size: 0.72rem; color: #a0aec0; margin-top: 3px; }
+    .market-card .state-label { font-size: 0.7rem; color: #718096; background: #edf2f7; border-radius: 4px; padding: 1px 5px; display: inline-block; margin-bottom: 2px; }
+    .up { color: #22863a; }
+    .down { color: #c0392b; }
+    .neutral { color: #718096; }
+    .sources { font-size: 0.78rem; color: #718096; margin-top: 8px; }
+    .sources a { color: #4a6cf7; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    ol.news-list { padding-left: 0; list-style: none; counter-reset: news; }
+    ol.news-list li { counter-increment: news; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+    ol.news-list li:last-child { border-bottom: none; }
+    ol.news-list li::before { content: counter(news) ". "; font-weight: 700; color: #4a6cf7; }
+    .story-title a { font-weight: 600; color: #1a1f36; text-decoration: none; }
+    .story-title a:hover { color: #4a6cf7; text-decoration: underline; }
+    .story-meta { font-size: 0.82rem; color: #555; margin: 2px 0; }
+    .story-meta .time { color: #888; font-size: 0.8rem; }
+    .story-summary { font-size: 0.88rem; color: #444; margin-top: 4px; }
+    .spotlight-item { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+    .spotlight-item:last-child { border-bottom: none; }
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #a0aec0;
+      padding: 14px 0 6px;
+    }
+    @media (max-width: 540px) {
+      .market-grid { grid-template-columns: 1fr 1fr; }
+      header h1 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📋 Briefing — 2026-06-25 06:00</h1>
+    <div class="sub">Generated at 2026-06-25 06:50 PT (America/Los_Angeles) · Thursday</div>
+  </header>
+
+  <!-- SECTION 1: MARKET SNAPSHOT -->
+  <section>
+    <h2>Market Snapshot</h2>
+    <p style="font-size:0.82rem;color:#718096;margin-bottom:12px;">
+      U.S. equity regular session is <strong>open</strong> (6:30 AM–1:00 PM PT). Showing early intraday levels as of ~6:50 AM PT.
+    </p>
+
+    <h3>U.S. Equity Indices — Intraday</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500</div>
+        <div class="state-label">Intraday</div>
+        <div class="value">7,421.85</div>
+        <div class="change up">▲ +0.77%</div>
+        <div class="asof">Early session · Jun 25</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones</div>
+        <div class="state-label">Intraday</div>
+        <div class="value">52,226.45</div>
+        <div class="change up">▲ +1.08%</div>
+        <div class="asof">Early session · Jun 25</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq</div>
+        <div class="state-label">Intraday</div>
+        <div class="value">25,783.52</div>
+        <div class="change up">▲ +0.77%</div>
+        <div class="asof">Early session · Jun 25</div>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:#718096;margin-bottom:12px;">
+      Context: Micron beat earnings, sparking AI rally. Prior close (Jun 24): S&amp;P 500 −0.10%, Dow +0.35% (51,848.90), Nasdaq −0.43%.
+    </p>
+
+    <h3>Commodities</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="value">$69.42</div>
+        <div class="change down">▼ −1.31%</div>
+        <div class="asof">Jun 25 · TradingEconomics</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="value">$73.43</div>
+        <div class="change down">▼ vs. prev. close $73.87</div>
+        <div class="asof">Jun 25 · Investing.com</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Gold (XAU/USD)</div>
+        <div class="value">$3,980.16</div>
+        <div class="change down">▼ −0.49%</div>
+        <div class="asof">Jun 25 · TradingEconomics</div>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:#718096;margin-bottom:12px;">
+      Oil near lowest level since pre-Iran-war. Gold below $4,000 for first time since Nov 2025, pressured by hawkish Fed expectations and stronger USD.
+    </p>
+
+    <h3>U.S. Treasury Yields</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">2-Year Yield</div>
+        <div class="value neutral">N/A</div>
+        <div class="asof">Data not confirmed for Jun 25</div>
+      </div>
+      <div class="market-card">
+        <div class="label">10-Year Yield</div>
+        <div class="value">~4.45%</div>
+        <div class="change down">▼ ~10 bps recent session</div>
+        <div class="asof">Jun 25 · Bloomberg/FRED</div>
+      </div>
+      <div class="market-card">
+        <div class="label">20-Year Yield</div>
+        <div class="value neutral">N/A</div>
+        <div class="asof">Data not confirmed for Jun 25</div>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:#718096;margin-bottom:8px;">
+      10yr fell ~10 bps in prior session to six-week low as US-Iran peace progress eased oil/inflation concerns.
+    </p>
+
+    <div class="sources">
+      Sources:
+      <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">TradingEconomics – WTI</a> ·
+      <a href="https://www.investing.com/commodities/brent-oil" target="_blank">Investing.com – Brent</a> ·
+      <a href="https://tradingeconomics.com/commodity/gold" target="_blank">TradingEconomics – Gold</a> ·
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-25-2026" target="_blank">TheStreet – Indices</a> ·
+      <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank">FRED – 10yr Yield</a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: TOP GLOBAL HEADLINES -->
+  <section>
+    <h2>Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div class="story-title"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-25-2026" target="_blank">Stocks Climb as Micron Blowout Earnings Spark AI Rally</a></div>
+        <div class="story-meta">TheStreet · <span class="time">2026-06-25 — time unknown</span></div>
+        <div class="story-summary">Stocks opened higher Thursday after Micron Technology crushed quarterly expectations on strong demand for AI memory chips. Markets also await PCE inflation data — May core PCE came in at 3.4%, nudging up from April.</div>
+      </li>
+
+      <li>
+        <div class="story-title"><a href="https://www.aljazeera.com/news/liveblog/2026/6/25/iran-war-live-us-vows-to-defend-gulf-interests-israel-kills-2-in-lebanon" target="_blank">Iran Rejects New Hormuz Shipping Lane, Warns Vessels of Danger</a></div>
+        <div class="story-meta">Al Jazeera · <span class="time">2026-06-25 — time unknown</span></div>
+        <div class="story-summary">Iran's Revolutionary Guard declared a new US-proposed Hormuz shipping route "unacceptable and dangerous," warning any vessel using it would be at risk. Secretary Rubio said no GCC reconstruction fund for Iran was discussed during his Gulf trip.</div>
+      </li>
+
+      <li>
+        <div class="story-title"><a href="https://www.cnn.com/2026/06/24/world/live-news/iran-war-trump-israel-lebanon" target="_blank">Global Oil Prices Fall to Lowest Level Since Before US-Iran War</a></div>
+        <div class="story-meta">CNN · <span class="time">2026-06-24 — time unknown</span></div>
+        <div class="story-summary">Crude prices have tumbled since the US and Iran signed a ceasefire MOU on June 17, setting a 60-day negotiation window. WTI is now at $69.42, down 1.31% today.</div>
+      </li>
+
+      <li>
+        <div class="story-title"><a href="https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump" target="_blank">US Senate Passes Iran War Powers Resolution 50-48, Bucking Trump</a></div>
+        <div class="story-meta">Al Jazeera · <span class="time">2026-06-23 — time unknown</span></div>
+        <div class="story-summary">The Senate voted to require President Trump to halt military operations against Iran or seek congressional approval before further action, in a rare bipartisan rebuke. The resolution passed 50–48.</div>
+      </li>
+
+      <li>
+        <div class="story-title"><a href="https://www.japantimes.co.jp/business/2026/06/24/economy/china-shock-opportunity/" target="_blank">China Premier Reframes Export Surge as "China Opportunity 2.0" at WEF Dalian</a></div>
+        <div class="story-meta">Japan Times · <span class="time">2026-06-24 — time unknown</span></div>
+        <div class="story-summary">Premier Li Qiang told the World Economic Forum in Dalian that China's industrial exports reflect innovation and hard work, not state subsidies — dismissing "China Shock" narratives. Separately, domestic consumer spending and investment fell to pandemic-era lows.</div>
+      </li>
+
+      <li>
+        <div class="story-title"><a href="https://ts2.tech/en/stock-market-today-25-06-2026/" target="_blank">US Inflation Rose to 4.1% in May — Highest in Three Years</a></div>
+        <div class="story-meta">ts2.tech / Multiple sources · <span class="time">2026-06-25 — time unknown</span></div>
+        <div class="story-summary">The PCE price index showed US inflation hit 4.1% in May, its highest in three years, driven by elevated gas prices related to the US-Iran conflict period. Core PCE inched up to 3.4% from 3.3% in April.</div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- SECTION 3: TOPIC SPOTLIGHTS -->
+  <section>
+    <h2>Topic Spotlights</h2>
+
+    <!-- Tesla / TSLA -->
+    <h3>🚗 Tesla (TSLA)</h3>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://www.investing.com/analysis/teslas-new-nhtsa-probe-lands-at-the-worst-possible-time-200682738" target="_blank">NHTSA Opens Probe Into Fatal Model 3 Crash in Houston</a></div>
+      <div class="story-meta">Investing.com · <span class="time">2026-06-22 — time unknown</span></div>
+      <div class="story-summary">NHTSA launched a special investigation after a Tesla Model 3 crashed into a home near Houston, killing a 76-year-old woman, with the driver saying automated driving software was engaged. Tesla/Musk countered that vehicle data shows the driver floored the accelerator to 73 mph before impact. This probe lands at a critical moment as Tesla is rolling out its unsupervised robotaxi service.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://ts2.tech/en/tesla-stock-tsla-slips-as-robotaxi-deadline-and-nhtsa-probe-collide-in-thin-holiday-trading/" target="_blank">TSLA Shares Down ~5% as NHTSA Probe and Robotaxi Rollout Collide</a></div>
+      <div class="story-meta">ts2.tech · <span class="time">2026-06-25 — time unknown</span></div>
+      <div class="story-summary">Tesla shares fell ~4.8% in the morning session, now trading around $374.84 (down ~12% YTD). The stock is off ~15% from its May high as the NHTSA investigation deepens investor concern about the autonomous driving rollout. Tesla launched unsupervised robotaxi service in Austin on June 6.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://finance.yahoo.com/markets/stocks/articles/tesla-stock-could-soar-second-100500511.html" target="_blank">Tesla/Sunrun/Renew Home Announce 16 GW Flexible Energy Partnership</a></div>
+      <div class="story-meta">Yahoo Finance · <span class="time">time unknown</span></div>
+      <div class="story-summary">Tesla, Sunrun, and Renew Home signed an agreement to deliver more than 16 gigawatts of flexible energy capacity, targeting rising electricity demand from AI data centers. The deal highlights Tesla's expanding role beyond EVs.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://finance.yahoo.com/markets/stocks/articles/why-tesla-tsla-shares-trading-193646091.html" target="_blank">Q2 Deliveries Expected to Miss Consensus; Baird Forecasts 392,900 Units</a></div>
+      <div class="story-meta">Yahoo Finance · <span class="time">time unknown</span></div>
+      <div class="story-summary">Baird projected weak Q2 deliveries of 392,900 units; UBS estimates ~405,000 — both below Wall Street's consensus of ~410,000. The delivery miss, if confirmed, could put further pressure on shares.</div>
+    </div>
+
+    <!-- US-Iran -->
+    <h3>🌍 US–Iran Conflict</h3>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://www.aljazeera.com/news/liveblog/2026/6/25/iran-war-live-us-vows-to-defend-gulf-interests-israel-kills-2-in-lebanon" target="_blank">Iran Warns Ships Against New Hormuz Route; Rubio in Gulf for Diplomacy</a></div>
+      <div class="story-meta">Al Jazeera · <span class="time">2026-06-25 — time unknown</span></div>
+      <div class="story-summary">Iran's Revolutionary Guard rejected the proposed alternative Hormuz shipping lane as dangerous. Secretary Rubio visited Manama and Kuwait, raising the US flag at the reopened embassy. Talks with Iran are scheduled for next week in Switzerland.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://www.britannica.com/event/2026-Iran-war" target="_blank">Ceasefire MOU Signed June 17; 60-Day Negotiation Window Active</a></div>
+      <div class="story-meta">Britannica · <span class="time">time unknown</span></div>
+      <div class="story-summary">On June 14 mediators announced a ceasefire MOU, signed by Trump and Iran's president on June 17, establishing a 60-day window for formal peace talks. Negotiations continue in Switzerland over nuclear inspections and Hormuz transit terms.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://www.ncr-iran.org/en/news/iran-news-in-brief-news/iran-news-in-brief-june-25-2026/" target="_blank">Iran News in Brief — June 25, 2026</a></div>
+      <div class="story-meta">NCRI · <span class="time">2026-06-25 — time unknown</span></div>
+      <div class="story-summary">Latest roundup of Iran developments including diplomatic posturing on nuclear inspections. Iran and the US remain at odds over specific terms of ceasefire implementation.</div>
+    </div>
+
+    <!-- Economy -->
+    <h3>📈 Economy</h3>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-25-2026" target="_blank">Micron Earnings Beat Sends Semiconductor and AI Stocks Higher</a></div>
+      <div class="story-meta">TheStreet · <span class="time">2026-06-25 — time unknown</span></div>
+      <div class="story-summary">Micron Technology crushed Q3 expectations on strong AI memory demand and pricing, lifting the broader market Thursday. The results reinforce the AI infrastructure build-out narrative that has driven tech valuations in 2026.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://ts2.tech/en/stock-market-today-25-06-2026/" target="_blank">Alphabet Replaces Verizon in Dow Jones Industrial Average on June 29</a></div>
+      <div class="story-meta">Multiple sources · <span class="time">2026-06-25 — time unknown</span></div>
+      <div class="story-summary">Verizon will be removed from the DJIA before the open on June 29 and replaced by Alphabet, broadening the index's exposure to AI, cloud, and advertising. The change reflects how much the economy has shifted toward tech-driven growth.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://fortune.com/2026/06/23/stock-markets-fed-interest-rate-expectations-400-billion-spacex/" target="_blank">Fed Signals Hawkish Hold; Markets Price in Possible Rate Hike</a></div>
+      <div class="story-meta">Fortune · <span class="time">2026-06-23 — time unknown</span></div>
+      <div class="story-summary">Hawkish Fed rhetoric reset rate-cut expectations, with traders now pricing in a possible rate increase later this year. The move wiped ~$400 billion off SpaceX's valuation in a market-wide selloff last Monday.</div>
+    </div>
+
+    <!-- China -->
+    <h3>🇨🇳 China</h3>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://www.japantimes.co.jp/business/2026/06/24/economy/china-shock-opportunity/" target="_blank">Premier Li Qiang at WEF Dalian: Exports Are "Innovation Dividends," Not Dumping</a></div>
+      <div class="story-meta">Japan Times · <span class="time">2026-06-24 — time unknown</span></div>
+      <div class="story-summary">Li Qiang told global executives in Dalian that China's export competitiveness comes from hard work and a deep supply chain, not subsidies — reframing it as "China Opportunity 2.0." He dismissed concerns about another "China Shock" to global manufacturing.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://www.weforum.org/stories/2026/06/china-trade-policy-us-relations/" target="_blank">US-China Establish "Managed Trade" Board Under New Bilateral Framework</a></div>
+      <div class="story-meta">World Economic Forum · <span class="time">2026-06-25 — time unknown</span></div>
+      <div class="story-summary">Trump and Xi agreed to a "constructive relationship of strategic stability" built around a bilateral trade board managing non-sensitive goods. The framework aims to reduce friction while leaving strategic competition intact.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="story-title"><a href="https://www.scmp.com/news/china" target="_blank">China Consumer Spending and Investment Fall to Post-Pandemic Lows</a></div>
+      <div class="story-meta">South China Morning Post · <span class="time">time unknown</span></div>
+      <div class="story-summary">Data released last week showed Chinese consumer spending and fixed investment fell to their worst levels since the pandemic era, raising concerns about domestic demand. Analysts warn that trade tensions could compound the weakness.</div>
+    </div>
+
+  </section>
+
+  <footer>
+    Generated by Cowork briefing job · 2026-06-25 06:50 PT
+  </footer>
+
+</div>
+</body>
+</html>
