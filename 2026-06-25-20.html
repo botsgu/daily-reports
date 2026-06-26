@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing — 2026-06-25 20:00</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+      padding: 24px 16px 48px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      border: 1px solid #e0e0e5;
+    }
+    header h1 { font-size: 1.8rem; font-weight: 700; color: #1d1d1f; }
+    header .sub { font-size: 0.9rem; color: #666; margin-top: 4px; }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      border: 1px solid #e0e0e5;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1d1d1f;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #f0f0f5;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #444;
+      margin: 20px 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.8rem;
+    }
+
+    /* Market snapshot grid */
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .market-card {
+      background: #f9f9fb;
+      border: 1px solid #e8e8ed;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .market-card .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .market-card .price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1d1d1f;
+    }
+    .market-card .change {
+      font-size: 0.85rem;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+    .market-card .state-label {
+      font-size: 0.7rem;
+      background: #e8e8ed;
+      color: #555;
+      border-radius: 4px;
+      padding: 2px 6px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+    .up { color: #1a9c3e; }
+    .down { color: #d93025; }
+    .neutral { color: #888; }
+    .market-sources {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 12px;
+    }
+    .market-sources a { color: #0071e3; text-decoration: none; }
+    .market-sources a:hover { text-decoration: underline; }
+
+    /* Yields table */
+    .yield-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .yield-table th {
+      text-align: left;
+      font-weight: 600;
+      color: #888;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 8px 12px;
+      border-bottom: 1px solid #e8e8ed;
+    }
+    .yield-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f0f0f5;
+      color: #1d1d1f;
+    }
+    .yield-table tr:last-child td { border-bottom: none; }
+
+    /* News items */
+    ol.news-list { list-style: none; counter-reset: news; }
+    ol.news-list li {
+      counter-increment: news;
+      position: relative;
+      padding: 16px 0 16px 40px;
+      border-bottom: 1px solid #f0f0f5;
+    }
+    ol.news-list li:last-child { border-bottom: none; }
+    ol.news-list li::before {
+      content: counter(news);
+      position: absolute;
+      left: 0;
+      top: 17px;
+      background: #1d1d1f;
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .news-headline { font-weight: 600; font-size: 0.98rem; margin-bottom: 4px; }
+    .news-headline a { color: #0071e3; text-decoration: none; }
+    .news-headline a:hover { text-decoration: underline; }
+    .news-meta { font-size: 0.82rem; color: #555; margin-bottom: 6px; }
+    .news-meta .source { font-weight: 600; }
+    .news-meta .time { color: #888; font-size: 0.8em; margin-left: 6px; }
+    .news-summary { font-size: 0.9rem; color: #444; }
+
+    /* Spotlight sub-items */
+    .spotlight-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f5;
+    }
+    .spotlight-item:last-child { border-bottom: none; }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📋 Briefing — 2026-06-25 20:00</h1>
+    <div class="sub">Generated at 2026-06-25 20:40 PT &nbsp;·&nbsp; Evening edition</div>
+  </header>
+
+  <!-- ── MARKET SNAPSHOT ── -->
+  <section>
+    <h2>📈 Market Snapshot</h2>
+    <p style="font-size:0.82rem;color:#888;margin-bottom:16px;">U.S. equities market is <strong>closed</strong> (after regular session). Showing today's close values.</p>
+
+    <h3>Crude Oil</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">WTI Crude (CL=F)</div>
+        <div class="price">~$69.65</div>
+        <div class="change down">Dropped below $70 · 4th consecutive decline</div>
+        <div class="state-label">Close · Approx.</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Brent Crude (BZ=F)</div>
+        <div class="price">$73.43</div>
+        <div class="change down">Off intraday high of $74.70</div>
+        <div class="state-label">Close · Approx.</div>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:#666;margin-bottom:16px;">Oil fell for a 4th straight session as progress in U.S.–Iran peace efforts improved the supply outlook, nearly wiping out all gains made since the outbreak of the Middle East conflict. WTI daily range: $69.65–$73.17.</p>
+
+    <h3>Gold</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">Spot Gold (XAU/USD)</div>
+        <div class="price">$4,039</div>
+        <div class="change down">↓ ~29% from Jan 29 record high of $5,595</div>
+        <div class="state-label">Close · Approx.</div>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:#666;margin-bottom:16px;">Gold briefly dipped below $4,000 on June 24 for the first time since November 2025 before rebounding. Hawkish Fed, elevated real yields, and fading Middle East risk premium are pressuring the metal.</p>
+
+    <h3>U.S. Stock Indices (Today's Close)</h3>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="label">S&amp;P 500 (^GSPC)</div>
+        <div class="price">7,357.49</div>
+        <div class="change down">−0.01%</div>
+        <div class="state-label">Close</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Dow Jones (^DJI)</div>
+        <div class="price">51,920.62</div>
+        <div class="change up">+71.72 pts (+0.14%)</div>
+        <div class="state-label">Close</div>
+      </div>
+      <div class="market-card">
+        <div class="label">Nasdaq (^IXIC)</div>
+        <div class="price">25,358.60</div>
+        <div class="change down">−0.46%</div>
+        <div class="state-label">Close</div>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:#666;margin-bottom:16px;">Nasdaq logged its first 4-day losing streak since February. Apple fell 6% on MacBook/iPad price hike; Microsoft down 3.78% on Xbox price increase. Micron surged 17% on blowout Q3 earnings; Qualcomm +9% on raised 2029 revenue guidance. Verizon exits Dow June 29, replaced by Alphabet.</p>
+
+    <h3>U.S. Treasury Yields</h3>
+    <table class="yield-table">
+      <thead>
+        <tr>
+          <th>Tenor</th>
+          <th>Yield</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2-Year</td>
+          <td><strong>4.16%</strong></td>
+          <td style="color:#666;font-size:0.85rem;">Held steady Jun 25</td>
+        </tr>
+        <tr>
+          <td>10-Year</td>
+          <td><strong>4.45%</strong></td>
+          <td style="color:#666;font-size:0.85rem;">Fell as Middle East tensions eased, oil dropped</td>
+        </tr>
+        <tr>
+          <td>20-Year</td>
+          <td><strong>N/A</strong></td>
+          <td style="color:#888;font-size:0.85rem;">Specific value unavailable in search results</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="market-sources" style="margin-top:16px;">
+      Sources:
+      <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics – WTI</a> ·
+      <a href="https://www.investing.com/commodities/brent-oil">Investing.com – Brent</a> ·
+      <a href="https://www.vantagemarkets.com/market-analysis/xauusd-gold-price-analysis-june-25-2026/">Vantage Markets – Gold</a> ·
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-25-2026">TheStreet – Indices</a> ·
+      <a href="https://tradingeconomics.com/united-states/2-year-note-yield">Trading Economics – 2yr</a> ·
+      <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics – 10yr</a>
+    </div>
+  </section>
+
+  <!-- ── TOP GLOBAL HEADLINES ── -->
+  <section>
+    <h2>🌐 Top Global Headlines</h2>
+    <ol class="news-list">
+
+      <li>
+        <div class="news-headline">
+          <a href="https://abcnews.com/International/live-updates/iran-live-updates/?id=134086780">Iranian Drone Strikes Singapore-Flagged Cargo Ship Near Strait of Hormuz; Trump Insists Waterway Is Open</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">ABC News / Fox News</span>
+          <span class="time">2026-06-25 (time unknown)</span>
+        </div>
+        <div class="news-summary">An Iranian drone struck a Singapore-flagged cargo ship leaving the Strait of Hormuz, raising fresh tensions even as the U.S.–Iran ceasefire framework remains nominally in place. President Trump insisted the strait is open and said Iran "wants to make a deal very badly."</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-25-2026">Mag 7 Falls: Apple −6%, Microsoft −3.78% After Price Hike Announcements; Micron Surges 17%</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">TheStreet</span>
+          <span class="time">2026-06-25 (time unknown)</span>
+        </div>
+        <div class="news-summary">Apple led the Nasdaq lower after announcing price increases on MacBook and iPad; Microsoft fell after raising Xbox prices. Countering the tech sell-off, Micron reported blowout Q3 earnings with revenue quadrupling YoY to $41.5B, and Qualcomm rose 9% after nearly doubling its 2029 non-handset revenue projection to $40B.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.zacks.com/stock/news/2942728/stock-market-news-for-jun-25-2026">PCE Inflation Hits Highest Level Since April 2023; Fed's Preferred Gauge Monitored</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Zacks / CNBC</span>
+          <span class="time">2026-06-25 (time unknown)</span>
+        </div>
+        <div class="news-summary">The personal consumption expenditures price index showed inflation at its highest rate since April 2023, reinforcing concerns about a hawkish Fed policy trajectory and weighing on bond markets with the 10-year yield pulling back to 4.45%.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.carbonbrief.org/china-briefing-25-june-2026-five-year-plans-passed-critical-mineral-tensions-industrial-decarbonisation-plan/">China Passes 15th Five-Year Plan for Energy; Sets 30% Clean Power Target by 2030</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Carbon Brief</span>
+          <span class="time">2026-06-25 (time unknown)</span>
+        </div>
+        <div class="news-summary">China released its 15th five-year plan for building a "new-type energy system," targeting clean energy at 30% of power generation by 2030 (up from ~22% today), with wind and solar becoming the "mainstay" of the country's power mix.</div>
+      </li>
+
+      <li>
+        <div class="news-headline">
+          <a href="https://www.npr.org/2026/06/23/nx-s1-5867322/us-iran-finalize-war-ending-deal">U.S.–Iran Dispute Over Nuclear Inspections Clouds Finalization of War-Ending Deal</a>
+        </div>
+        <div class="news-meta">
+          <span class="source">NPR</span>
+          <span class="time">2026-06-23 (time unknown)</span>
+        </div>
+        <div class="news-summary">Negotiations at Switzerland's Bürgenstock resort hit a snag over whether Iran agreed to allow U.N. inspectors to view bombed nuclear sites. The U.S. and Iran signed an MoU on June 15 establishing a 60-day ceasefire framework, but violence also resumed in Lebanon.</div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ── TOPIC SPOTLIGHTS ── -->
+  <section>
+    <h2>🔍 Topic Spotlights</h2>
+
+    <!-- Tesla -->
+    <h3>⚡ Tesla (TSLA)</h3>
+    <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">TSLA closed at $375.12, near flat (−0.11%). Analyst consensus: Hold · 12-month target $421.16.</p>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.wsj.com/business/autos/tesla-announces-rollout-of-fully-self-driving-tech-in-china-2711fdb2">Tesla Announces Rollout of Fully Self-Driving Tech in China</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">WSJ</span>
+        <span class="time">2026-06-25 ~18:40 PT (2h ago at run time)</span>
+      </div>
+      <div class="news-summary">Tesla announced it is rolling out its Full Self-Driving technology in China, a major expansion into one of the world's largest auto markets. This follows FSD launches in Lithuania and broader European expansion.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.businessinsider.com/elon-musk-moonshot-spacex-pay-package-requires-mars-city-development-2026-5">Elon Musk's New 'Marshot' Pay Package Could Be Worth Billions — If He Helps Colonize Mars</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Business Insider</span>
+        <span class="time">2026-06-25 ~18:40 PT (2h ago at run time)</span>
+      </div>
+      <div class="news-summary">Musk's new compensation package, nicknamed "Marshot," ties billions in potential pay to milestones in Mars city development — an unusual structure that draws attention to the blurring lines between Tesla, SpaceX, and Musk's personal ventures.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://invezz.com/news/2026/05/20/why-tesla-stock-is-up-around-2-today/">Tesla Berlin Plant to Raise Production 20% to 7,500 Vehicles/Week from October</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Reuters / Yahoo Finance</span>
+        <span class="time">2026-06-25 (time unknown)</span>
+      </div>
+      <div class="news-summary">Tesla announced plans to increase weekly vehicle production at its Berlin Gigafactory by 20%, rising to 7,500 units per week starting in October, signaling ongoing European manufacturing expansion.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://finance.yahoo.com/markets/stocks/articles/why-tesla-tsla-shares-trading-193646091.html">Sunrun–Tesla Framework Agreement: 16 GW of Flexible Power for Datacenters and Utilities</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Yahoo Finance</span>
+        <span class="time">2026-06-25 (time unknown)</span>
+      </div>
+      <div class="news-summary">Sunrun (RUN) announced a framework agreement with Tesla to supply more than 16 GW of flexible power to datacenters and utilities nationally, highlighting Tesla's growing role in the energy storage and grid services sector.</div>
+    </div>
+
+    <!-- US–Iran -->
+    <h3>🌍 U.S.–Iran</h3>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.foxnews.com/live-news/us-iran-peace-deal-nuclear-talks-israel-lebanon-conflict-june-25-2026">Iranian Drone Strikes Singapore-Flagged Cargo Ship; Trump Says Hormuz Is Open</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Fox News</span>
+        <span class="time">2026-06-25 (time unknown)</span>
+      </div>
+      <div class="news-summary">Despite ongoing peace talks, Iran struck a cargo vessel near the Strait of Hormuz via drone. Trump called it a provocation but insisted the strait remains navigable, while maintaining Iran cannot obtain a nuclear weapon and "they've agreed to that."</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.cbsnews.com/live-updates/iran-us-war-talks-suspended-trump-mou-israel-lebanon-hezbollah-fighting/">U.S.–Iran Nuclear Inspection Dispute Clouds Switzerland Talks; Violence Flares in Lebanon</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">CBS News</span>
+        <span class="time">2026-06-23 (time unknown)</span>
+      </div>
+      <div class="news-summary">Delegations met at Bürgenstock resort to negotiate a permanent war-ending deal based on the June 15 MoU, but hit an impasse over nuclear inspection access. Hezbollah fighting also resumed in Lebanon, complicating the broader peace framework.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.npr.org/2026/06/15/nx-s1-5858590/us-iran-deal-updates">U.S. and Iran Announced Initial Deal to End War and Reopen Strait of Hormuz (June 15)</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">NPR</span>
+        <span class="time">2026-06-15 (background context)</span>
+      </div>
+      <div class="news-summary">The U.S. and Iran signed a memorandum of understanding on June 15 establishing a 60-day ceasefire framework. The deal set the stage for deeper talks on Iran's nuclear program, enrichment levels, and existing highly enriched uranium stockpiles.</div>
+    </div>
+
+    <!-- Economy -->
+    <h3>💼 Economy</h3>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-25-2026">Micron Surges 17% on Blowout Q3 Earnings; Revenue Quadruples to $41.5B</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">TheStreet / CNBC</span>
+        <span class="time">2026-06-25 (time unknown)</span>
+      </div>
+      <div class="news-summary">Micron Technology reported Q3 adjusted EPS of $25.11 (vs. $20.78 expected) and revenue of $41.46B (up from $9.3B a year ago), driven by AI-related memory demand. Qualcomm also jumped 9% after nearly doubling its 2029 non-handset revenue projection to $40B.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.zacks.com/stock/news/2942728/stock-market-news-for-jun-25-2026">Alphabet to Replace Verizon in Dow Jones Industrial Average on June 29</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Zacks</span>
+        <span class="time">2026-06-25 (time unknown)</span>
+      </div>
+      <div class="news-summary">Verizon (VZ) will be removed from the 30-stock Dow Jones Industrial Average before the market open on June 29, replaced by Alphabet (GOOG), reflecting the tech giant's growing weight in the U.S. economy.</div>
+    </div>
+
+    <!-- China -->
+    <h3>🇨🇳 China</h3>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.carbonbrief.org/china-briefing-25-june-2026-five-year-plans-passed-critical-mineral-tensions-industrial-decarbonisation-plan/">China Issues Industrial Decarbonization Action Plan Targeting Heavy Industry 2026–2028</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Carbon Brief</span>
+        <span class="time">2026-06-25 (time unknown)</span>
+      </div>
+      <div class="news-summary">China issued a new action plan for energy conservation and carbon emission reductions across nine heavy industries, launching an "intensive campaign for energy conservation and carbon reduction upgrades" to run through 2028.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.theasiacable.com/p/asia-daily-june-25-2026">Xi Jinping's State Visit to Pyongyang Signals China's Push to Restore Influence Over North Korea</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">The Asia Cable</span>
+        <span class="time">2026-06-25 (time unknown)</span>
+      </div>
+      <div class="news-summary">Xi's 2026 visit to Pyongyang signals Beijing's effort to restore influence over North Korea after years of strained ties. China views North Korea as vital to counter U.S. alliances with Japan and South Korea amid broader Indo-Pacific tensions.</div>
+    </div>
+
+    <div class="spotlight-item">
+      <div class="news-headline">
+        <a href="https://www.carbonbrief.org/china-briefing-25-june-2026-five-year-plans-passed-critical-mineral-tensions-industrial-decarbonisation-plan/">China Space Official Bian Zhigang Under Investigation for "Serious Violations of Discipline"</a>
+      </div>
+      <div class="news-meta">
+        <span class="source">Carbon Brief</span>
+        <span class="time">2026-06-25 (time unknown)</span>
+      </div>
+      <div class="news-summary">Senior defence industry official Bian Zhigang, deputy head of SASTIND and deputy director of the China National Space Administration, is under investigation for suspected "serious violations of discipline and law," the latest in a series of anti-corruption probes in the sector.</div>
+    </div>
+
+  </section>
+
+  <footer>
+    Generated by Cowork briefing job &nbsp;·&nbsp; 2026-06-25 20:40 PT
+  </footer>
+
+</div>
+</body>
+</html>
